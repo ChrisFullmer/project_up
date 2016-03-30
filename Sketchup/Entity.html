@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Sketchup::Entity
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup::Entity";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Sketchup::Entity</li>
           
@@ -553,7 +570,7 @@ deleted by another script, for example.).</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -641,7 +658,7 @@ deleted by another script, for example.).</p>
       <div class="method_details ">
   <h3 class="signature " id="attribute_dictionaries-instance_method">
   
-    #<strong>attribute_dictionaries</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>attribute_dictionaries</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -728,7 +745,7 @@ exception, not return 0.</p>
       <div class="method_details ">
   <h3 class="signature " id="attribute_dictionary-instance_method">
   
-    #<strong>attribute_dictionary</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>attribute_dictionary</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -849,7 +866,7 @@ if there is no attribute dictionary</p>
       <div class="method_details ">
   <h3 class="signature " id="delete_attribute-instance_method">
   
-    #<strong>delete_attribute</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>delete_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -970,7 +987,7 @@ the given key from the given dictionary.</p>
       <div class="method_details ">
   <h3 class="signature " id="deleted?-instance_method">
   
-    #<strong>deleted?</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>deleted?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1058,7 +1075,7 @@ deleted by another script, for example.)</p>
       <div class="method_details ">
   <h3 class="signature " id="entityID-instance_method">
   
-    #<strong>entityID</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>entityID</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1138,7 +1155,7 @@ deleted by another script, for example.)</p>
       <div class="method_details ">
   <h3 class="signature " id="get_attribute-instance_method">
   
-    #<strong>get_attribute</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1279,7 +1296,7 @@ the given value. It does not create an attribute with that name though.</p>
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1361,7 +1378,7 @@ entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="model-instance_method">
   
-    #<strong>model</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>model</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1442,7 +1459,7 @@ entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="parent-instance_method">
   
-    #<strong>parent</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>parent</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1526,7 +1543,7 @@ entity is contained within.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1615,7 +1632,7 @@ object.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_attribute-instance_method">
   
-    #<strong>set_attribute</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1755,7 +1772,7 @@ strings, such as nil.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1837,7 +1854,7 @@ entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="typename-instance_method">
   
-    #<strong>typename</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>typename</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1919,7 +1936,7 @@ string such as “Face”, “Edge”, or “Group”.</p>
       <div class="method_details ">
   <h3 class="signature " id="valid?-instance_method">
   
-    #<strong>valid?</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>valid?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2011,11 +2028,13 @@ deleted by another script, for example.)</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:50 2016 by
+  Generated on Wed Mar 30 17:21:55 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

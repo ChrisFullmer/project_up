@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Geom::PolygonMesh
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Geom::PolygonMesh";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Geom::PolygonMesh</li>
           
@@ -151,23 +168,18 @@ faces.</p>
     <dl class="constants">
       
         <dt id="NO_SMOOTH_OR_HIDE-constant" class="">Geom::PolygonMesh::NO_SMOOTH_OR_HIDE
-          
         </dt>
       
         <dt id="HIDE_BASED_ON_INDEX-constant" class="">Geom::PolygonMesh::HIDE_BASED_ON_INDEX
-          
         </dt>
       
         <dt id="SOFTEN_BASED_ON_INDEX-constant" class="">Geom::PolygonMesh::SOFTEN_BASED_ON_INDEX
-          
         </dt>
       
         <dt id="AUTO_SOFTEN-constant" class="">Geom::PolygonMesh::AUTO_SOFTEN
-          
         </dt>
       
         <dt id="SMOOTH_SOFT_EDGES-constant" class="">Geom::PolygonMesh::SMOOTH_SOFT_EDGES
-          
         </dt>
       
     </dl>
@@ -616,7 +628,7 @@ index.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -708,7 +720,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_point-instance_method">
   
-    #<strong>add_point</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>add_point</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -797,7 +809,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_polygon-instance_method">
   
-    #<strong>add_polygon</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>add_polygon</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -886,7 +898,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="count_points-instance_method">
   
-    #<strong>count_points</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>count_points</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -954,7 +966,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="count_polygons-instance_method">
   
-    #<strong>count_polygons</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>count_polygons</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1024,7 +1036,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="normal_at-instance_method">
   
-    #<strong>normal_at</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>normal_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1113,7 +1125,7 @@ in the mesh. This only works for meshes retrieved from Sketchup::Face.mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="point_at-instance_method">
   
-    #<strong>point_at</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>point_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1206,7 +1218,7 @@ the mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="point_index-instance_method">
   
-    #<strong>point_index</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>point_index</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1299,7 +1311,7 @@ mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="points-instance_method">
   
-    #<strong>points</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>points</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1371,7 +1383,7 @@ mesh</p>
       <div class="method_details ">
   <h3 class="signature " id="polygon_at-instance_method">
   
-    #<strong>polygon_at</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>polygon_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1469,7 +1481,7 @@ the arg to point_at.</p>
       <div class="method_details ">
   <h3 class="signature " id="polygon_points_at-instance_method">
   
-    #<strong>polygon_points_at</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>polygon_points_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1561,7 +1573,7 @@ failure</p>
       <div class="method_details ">
   <h3 class="signature " id="polygons-instance_method">
   
-    #<strong>polygons</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>polygons</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1631,7 +1643,7 @@ edge from 1 to 2 is hidden.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_point-instance_method">
   
-    #<strong>set_point</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_point</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1737,7 +1749,7 @@ mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_uv-instance_method">
   
-    #<strong>set_uv</strong>(arg_index, arg_uv, arg_frontside)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_uv</strong>(arg_index, arg_uv, arg_frontside)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1876,7 +1888,7 @@ you have called set_uv.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transform!</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1966,7 +1978,7 @@ you have called set_uv.</p>
       <div class="method_details ">
   <h3 class="signature " id="uv_at-instance_method">
   
-    #<strong>uv_at</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>uv_at</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2080,7 +2092,7 @@ the v value. Returns nil on failure.</p>
       <div class="method_details ">
   <h3 class="signature " id="uvs-instance_method">
   
-    #<strong>uvs</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>uvs</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2149,11 +2161,13 @@ the v value. Returns nil on failure.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:56 2016 by
+  Generated on Wed Mar 30 17:22:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

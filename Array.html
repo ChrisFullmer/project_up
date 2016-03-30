@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Array
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Array";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Array</li>
           
@@ -100,9 +117,10 @@
     
 <p>The SketchUp Array class adds additional methods to the standard Ruby Array
 class. Specifically, it contains methods allowing an array to behave just
-as a Vector3d or Point3d object (which can be thought of as arrays of 3
-coordinate values). Therefore, you can use the Array class in place of a
-Point3d or Vector3d as a way to pass coordinate values.</p>
+as a <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span> or <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object (which can be thought of as
+arrays of 3 coordinate values). Therefore, you can use the Array class in
+place of a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> or <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span> as a way to pass coordinate
+values.</p>
 
 
   </div>
@@ -169,7 +187,7 @@ Point3d or Vector3d as a way to pass coordinate values.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#cross-instance_method" title="#cross (instance method)">#<strong>cross</strong>(arg)  &#x21d2; Object </a>
+      <a href="#cross-instance_method" title="#cross (instance method)">#<strong>cross</strong>(vector)  &#x21d2; Geom::Vector3d </a>
     
 
     
@@ -184,7 +202,8 @@ Point3d or Vector3d as a way to pass coordinate values.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The cross method is used to compute the cross product between two vectors.</p>
+<p>The <span class='object_link'><a href="#cross-instance_method" title="Array#cross (method)">#cross</a></span> method is used to compute the cross product between two
+vectors.</p>
 </div></span>
   
 </li>
@@ -193,7 +212,7 @@ Point3d or Vector3d as a way to pass coordinate values.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distance-instance_method" title="#distance (instance method)">#<strong>distance</strong>(arg)  &#x21d2; Object </a>
+      <a href="#distance-instance_method" title="#distance (instance method)">#<strong>distance</strong>(point)  &#x21d2; Length </a>
     
 
     
@@ -208,7 +227,7 @@ Point3d or Vector3d as a way to pass coordinate values.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The distance method is used to compute the distance between two points.</p>
+<p>The <span class='object_link'><a href="#distance-instance_method" title="Array#distance (method)">#distance</a></span> method is used to compute the distance between two points.</p>
 </div></span>
   
 </li>
@@ -232,8 +251,8 @@ Point3d or Vector3d as a way to pass coordinate values.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The distance_to_line method is used to compute the distance from a Point3d
-object to a line.</p>
+<p>The <span class='object_link'><a href="#distance_to_line-instance_method" title="Array#distance_to_line (method)">#distance_to_line</a></span> method is used to compute the distance from a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object to a line.</p>
 </div></span>
   
 </li>
@@ -257,8 +276,8 @@ object to a line.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The distance_to_plane method is used to compute the distance from a Point3d
-object to a plane.</p>
+<p>The <span class='object_link'><a href="#distance_to_plane-instance_method" title="Array#distance_to_plane (method)">#distance_to_plane</a></span> method is used to compute the distance from a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object to a plane.</p>
 </div></span>
   
 </li>
@@ -267,7 +286,7 @@ object to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#dot-instance_method" title="#dot (instance method)">#<strong>dot</strong>(arg)  &#x21d2; Object </a>
+      <a href="#dot-instance_method" title="#dot (instance method)">#<strong>dot</strong>(vector)  &#x21d2; Float </a>
     
 
     
@@ -282,7 +301,7 @@ object to a plane.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The dot method is used to compute the dot product between two vectors.</p>
+<p>The <span class='object_link'><a href="#dot-instance_method" title="Array#dot (method)">#dot</a></span> method is used to compute the dot product between two vectors.</p>
 </div></span>
   
 </li>
@@ -291,7 +310,7 @@ object to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normalize-instance_method" title="#normalize (instance method)">#<strong>normalize</strong>  &#x21d2; Object </a>
+      <a href="#normalize-instance_method" title="#normalize (instance method)">#<strong>normalize</strong>  &#x21d2; Array(Float, Float, Float) </a>
     
 
     
@@ -306,8 +325,8 @@ object to a plane.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The normalize method is used to normalize a vector (setting its length to
-1).</p>
+<p>The <span class='object_link'><a href="#normalize-instance_method" title="Array#normalize (method)">#normalize</a></span> method is used to normalize a vector (setting its length
+to 1).</p>
 </div></span>
   
 </li>
@@ -316,7 +335,7 @@ object to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normalize%21-instance_method" title="#normalize! (instance method)">#<strong>normalize!</strong>  &#x21d2; Object </a>
+      <a href="#normalize%21-instance_method" title="#normalize! (instance method)">#<strong>normalize!</strong>  &#x21d2; Array </a>
     
 
     
@@ -331,8 +350,8 @@ object to a plane.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The normalize! method is used to normalize a vector in place (setting its
-length to 1).</p>
+<p>The <span class='object_link'><a href="#normalize%21-instance_method" title="Array#normalize! (method)">#normalize!</a></span> method is used to normalize a vector in place (setting
+its length to 1).</p>
 </div></span>
   
 </li>
@@ -356,7 +375,7 @@ length to 1).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The offset method is used to offset a point by a vector.</p>
+<p>The <span class='object_link'><a href="#offset-instance_method" title="Array#offset (method)">#offset</a></span> method is used to offset a point by a vector.</p>
 </div></span>
   
 </li>
@@ -380,7 +399,7 @@ length to 1).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The offset! method is used to offset a point by a vector.</p>
+<p>The <span class='object_link'><a href="#offset%21-instance_method" title="Array#offset! (method)">#offset!</a></span> method is used to offset a point by a vector.</p>
 </div></span>
   
 </li>
@@ -389,7 +408,7 @@ length to 1).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_line%3F-instance_method" title="#on_line? (instance method)">#<strong>on_line?</strong>(*args)  &#x21d2; Object </a>
+      <a href="#on_line%3F-instance_method" title="#on_line? (instance method)">#<strong>on_line?</strong>(*args)  &#x21d2; Boolean </a>
     
 
     
@@ -404,7 +423,8 @@ length to 1).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The on_line? method is used to determine if a Point3d object is on a line.</p>
+<p>The <span class='object_link'><a href="#on_line%3F-instance_method" title="Array#on_line? (method)">#on_line?</a></span> method is used to determine if a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object is
+on a line.</p>
 </div></span>
   
 </li>
@@ -413,7 +433,7 @@ length to 1).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_plane%3F-instance_method" title="#on_plane? (instance method)">#<strong>on_plane?</strong>(*args)  &#x21d2; Object </a>
+      <a href="#on_plane%3F-instance_method" title="#on_plane? (instance method)">#<strong>on_plane?</strong>(*args)  &#x21d2; Boolean </a>
     
 
     
@@ -428,8 +448,8 @@ length to 1).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The on_plane? method is used to determine if a Point3d object is on a plane
-(to within SketchUp&#39;s standard floating point tolerance).</p>
+<p>The <span class='object_link'><a href="#on_plane%3F-instance_method" title="Array#on_plane? (method)">#on_plane?</a></span> method is used to determine if a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object is
+on a plane (to within SketchUp&#39;s standard floating point tolerance).</p>
 </div></span>
   
 </li>
@@ -453,8 +473,8 @@ length to 1).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The project_to_line method is used to retrieve the projection of a Point3d
-object onto a line.</p>
+<p>The <span class='object_link'><a href="#project_to_line-instance_method" title="Array#project_to_line (method)">#project_to_line</a></span> method is used to retrieve the projection of a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object onto a line.</p>
 </div></span>
   
 </li>
@@ -478,8 +498,8 @@ object onto a line.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The project_to_plane method retrieves the projection of a Point3d object
-onto a plane.</p>
+<p>The <span class='object_link'><a href="#project_to_plane-instance_method" title="Array#project_to_plane (method)">#project_to_plane</a></span> method retrieves the projection of a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> onto a plane.</p>
 </div></span>
   
 </li>
@@ -488,7 +508,7 @@ onto a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform-instance_method" title="#transform (instance method)">#<strong>transform</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform-instance_method" title="#transform (instance method)">#<strong>transform</strong>(transform)  &#x21d2; Array(Length, Length, Length) </a>
     
 
     
@@ -503,8 +523,8 @@ onto a plane.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The transform method is used to apply a Transformation object to a Point3d
-object defined by an Array object.</p>
+<p>The <span class='object_link'><a href="#transform-instance_method" title="Array#transform (method)">#transform</a></span> method is used to apply a <span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span> object to
+a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object defined by an <span class='object_link'><a href="" title="Array (class)">Array</a></span> object.</p>
 </div></span>
   
 </li>
@@ -513,7 +533,7 @@ object defined by an Array object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(transform)  &#x21d2; Array </a>
     
 
     
@@ -528,8 +548,8 @@ object defined by an Array object.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The transform! method is used to apply a Transformation object to a Point3d
-object defined by an Array object.</p>
+<p>The <span class='object_link'><a href="#transform%21-instance_method" title="Array#transform! (method)">#transform!</a></span> method is used to apply a <span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span> object
+to a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object defined by an <span class='object_link'><a href="" title="Array (class)">Array</a></span> object.</p>
 </div></span>
   
 </li>
@@ -538,7 +558,7 @@ object defined by an Array object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#vector_to-instance_method" title="#vector_to (instance method)">#<strong>vector_to</strong>(arg)  &#x21d2; Object </a>
+      <a href="#vector_to-instance_method" title="#vector_to (instance method)">#<strong>vector_to</strong>(point)  &#x21d2; Geom::Vector3d </a>
     
 
     
@@ -553,8 +573,8 @@ object defined by an Array object.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The vector_to method is used to create an array as a vector from one point
-to a second point.</p>
+<p>The <span class='object_link'><a href="#vector_to-instance_method" title="Array#vector_to (method)">#vector_to</a></span> method is used to create an array as a vector from one
+point to a second point.</p>
 </div></span>
   
 </li>
@@ -563,7 +583,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#x-instance_method" title="#x (instance method)">#<strong>x</strong>  &#x21d2; Object </a>
+      <a href="#x-instance_method" title="#x (instance method)">#<strong>x</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -578,7 +598,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The x method retrieves the x coordinate.</p>
+<p>The <span class='object_link'><a href="#x-instance_method" title="Array#x (method)">#x</a></span> method retrieves the x coordinate.</p>
 </div></span>
   
 </li>
@@ -587,7 +607,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#x%3D-instance_method" title="#x= (instance method)">#<strong>x=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#x%3D-instance_method" title="#x= (instance method)">#<strong>x=</strong>(x)  &#x21d2; Object </a>
     
 
     
@@ -602,7 +622,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The x= method sets the x coordinate.</p>
+<p>The <span class='object_link'><a href="#x%3D-instance_method" title="Array#x= (method)">#x=</a></span> method sets the x coordinate.</p>
 </div></span>
   
 </li>
@@ -611,7 +631,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#y-instance_method" title="#y (instance method)">#<strong>y</strong>  &#x21d2; Object </a>
+      <a href="#y-instance_method" title="#y (instance method)">#<strong>y</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -626,7 +646,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The y method retrieves the y coordinate.</p>
+<p>The <span class='object_link'><a href="#y-instance_method" title="Array#y (method)">#y</a></span> method retrieves the y coordinate.</p>
 </div></span>
   
 </li>
@@ -635,7 +655,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#y%3D-instance_method" title="#y= (instance method)">#<strong>y=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#y%3D-instance_method" title="#y= (instance method)">#<strong>y=</strong>(y)  &#x21d2; Object </a>
     
 
     
@@ -650,7 +670,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The y= method sets the y coordinate.</p>
+<p>The <span class='object_link'><a href="#y%3D-instance_method" title="Array#y= (method)">#y=</a></span> method sets the y coordinate.</p>
 </div></span>
   
 </li>
@@ -659,7 +679,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#z-instance_method" title="#z (instance method)">#<strong>z</strong>  &#x21d2; Object </a>
+      <a href="#z-instance_method" title="#z (instance method)">#<strong>z</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -674,7 +694,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The z method retrieves the z coordinate.</p>
+<p>The <span class='object_link'><a href="#z-instance_method" title="Array#z (method)">#z</a></span> method retrieves the z coordinate.</p>
 </div></span>
   
 </li>
@@ -683,7 +703,7 @@ to a second point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#z%3D-instance_method" title="#z= (instance method)">#<strong>z=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#z%3D-instance_method" title="#z= (instance method)">#<strong>z=</strong>(z)  &#x21d2; Object </a>
     
 
     
@@ -698,7 +718,7 @@ to a second point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The z= method sets the z coordinate.</p>
+<p>The <span class='object_link'><a href="#z%3D-instance_method" title="Array#z= (method)">#z=</a></span> method sets the z coordinate.</p>
 </div></span>
   
 </li>
@@ -716,7 +736,7 @@ to a second point.</p>
       <div class="method_details first">
   <h3 class="signature first" id="cross-instance_method">
   
-    #<strong>cross</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>cross</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt> 
   
 
   
@@ -725,7 +745,8 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The cross method is used to compute the cross product between two vectors.</p>
+<p>The <span class='object_link'><a href="#cross-instance_method" title="Array#cross (method)">#cross</a></span> method is used to compute the cross product between two
+vectors.</p>
 
 
   </div>
@@ -750,14 +771,9 @@ to a second point.</p>
         <span class='name'>vector</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>The Vector object used to compute the cross product.</p>
-</div>
       
     </li>
   
@@ -769,14 +785,9 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>A Vector3d object if successful</p>
-</div>
       
     </li>
   
@@ -804,7 +815,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance-instance_method">
   
-    #<strong>distance</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>distance</strong>(point)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> 
   
 
   
@@ -813,7 +824,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The distance method is used to compute the distance between two points.</p>
+<p>The <span class='object_link'><a href="#distance-instance_method" title="Array#distance (method)">#distance</a></span> method is used to compute the distance between two points.</p>
 
 
   </div>
@@ -838,14 +849,9 @@ to a second point.</p>
         <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>The Point3d object used to compute the distance.</p>
-</div>
       
     </li>
   
@@ -857,14 +863,9 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>The distance if successful</p>
-</div>
       
     </li>
   
@@ -892,7 +893,11 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_line-instance_method">
   
-    #<strong>distance_to_line</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>distance_to_line</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_line</strong>(point1, point2)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
   
 
   
@@ -901,9 +906,8 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The distance_to_line method is used to compute the distance from a Point3d
-object to a line. Lines are defined by an array of a point and a vector or
-an array of two points. See the Geom module for how to create a line.</p>
+<p>The <span class='object_link'><a href="#distance_to_line-instance_method" title="Array#distance_to_line (method)">#distance_to_line</a></span> method is used to compute the distance from a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object to a line.</p>
 
 
   </div>
@@ -920,23 +924,42 @@ an array of two points. See the Geom module for how to create a line.</p>
 </span><span class='id identifier rubyid_distance'>distance</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_distance_to_line'>distance_to_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_line</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>line</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>An array with a Point3d object and a Vector3d object if successful. See the
-Geom module for further information on lines.</p>
-</div>
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
       
     </li>
   
@@ -948,18 +971,80 @@ Geom module for further information on lines.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>The distance if successful</p>
-</div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_line</strong>(point1, point2)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a line.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -983,7 +1068,19 @@ Geom module for further information on lines.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_plane-instance_method">
   
-    #<strong>distance_to_plane</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(point1, point2, point3)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(float1, float2, float3, float4)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
+      <span class="overload">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+    
   
 
   
@@ -992,9 +1089,8 @@ Geom module for further information on lines.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The distance_to_plane method is used to compute the distance from a Point3d
-object to a plane. See the Geom module for instructions on how to create a
-plane.</p>
+<p>The <span class='object_link'><a href="#distance_to_plane-instance_method" title="Array#distance_to_plane (method)">#distance_to_plane</a></span> method is used to compute the distance from a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object to a plane.</p>
 
 
   </div>
@@ -1011,23 +1107,44 @@ plane.</p>
 </span><span class='id identifier rubyid_distance'>distance</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_distance_to_plane'>distance_to_plane</span><span class='lparen'>(</span><span class='id identifier rubyid_plane'>plane</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>plane</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>A plane used to compute the distance. See the Geom module description for
-further information on planes.</p>
-</div>
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
       
     </li>
   
@@ -1039,18 +1156,352 @@ further information on planes.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>The distance if successful</p>
+<p>The distance between the two points.</p>
 </div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(point1, point2, point3)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point3</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The distance between the two points.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(float1, float2, float3, float4)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>float1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float3</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float4</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The distance between the two points.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The distance between the two points.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The distance between the two points.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>distance_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;Float, Float, Float, Float&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The distance between the two points.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a plane.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1074,7 +1525,7 @@ further information on planes.</p>
       <div class="method_details ">
   <h3 class="signature " id="dot-instance_method">
   
-    #<strong>dot</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>dot</strong>(vector)  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -1083,7 +1534,7 @@ further information on planes.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The dot method is used to compute the dot product between two vectors.</p>
+<p>The <span class='object_link'><a href="#dot-instance_method" title="Array#dot (method)">#dot</a></span> method is used to compute the dot product between two vectors.</p>
 
 
   </div>
@@ -1108,14 +1559,9 @@ further information on planes.</p>
         <span class='name'>vector</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Vector3d object used to compute the dot product.</p>
-</div>
       
     </li>
   
@@ -1127,14 +1573,9 @@ further information on planes.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>The dot product if successful</p>
-</div>
       
     </li>
   
@@ -1162,7 +1603,7 @@ further information on planes.</p>
       <div class="method_details ">
   <h3 class="signature " id="normalize-instance_method">
   
-    #<strong>normalize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>normalize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(Float, Float, Float)</tt> 
   
 
   
@@ -1171,11 +1612,17 @@ further information on planes.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The normalize method is used to normalize a vector (setting its length to
-1). It returns a new array rather than changing the original in place.</p>
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The arguments and return value will be converted to a floating point value.
+(Unlike in the <span class='object_link'><a href="Geom/Vector3d.html#normalize%21-instance_method" title="Geom::Vector3d#normalize! (method)">Geom::Vector3d#normalize!</a></span> method.)</p>
+</div>
+  </div>
 
-<p>The arguments and return value will be converted to a floating point value
-(unlike in the Vector3d.normalize!).</p>
+
+<p>The <span class='object_link'><a href="#normalize-instance_method" title="Array#normalize (method)">#normalize</a></span> method is used to normalize a vector (setting its length
+to 1). It returns a new array rather than changing the original in place.</p>
 
 
   </div>
@@ -1198,13 +1645,13 @@ further information on planes.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(Float, Float, Float)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>An array object representing a vector if successful</p>
+<p>An array object representing a vector</p>
 </div>
       
     </li>
@@ -1233,7 +1680,7 @@ further information on planes.</p>
       <div class="method_details ">
   <h3 class="signature " id="normalize!-instance_method">
   
-    #<strong>normalize!</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>normalize!</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -1242,8 +1689,8 @@ further information on planes.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The normalize! method is used to normalize a vector in place (setting its
-length to 1).</p>
+<p>The <span class='object_link'><a href="#normalize%21-instance_method" title="Array#normalize! (method)">#normalize!</a></span> method is used to normalize a vector in place (setting
+its length to 1).</p>
 
 
   </div>
@@ -1266,14 +1713,9 @@ length to 1).</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>A Vector3d object if successful</p>
-</div>
       
     </li>
   
@@ -1301,7 +1743,11 @@ length to 1).</p>
       <div class="method_details ">
   <h3 class="signature " id="offset-instance_method">
   
-    #<strong>offset</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>offset!</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>offset!</strong>(vector, length)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
   
 
   
@@ -1310,8 +1756,8 @@ length to 1).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The offset method is used to offset a point by a vector. it returns a new
-array rather than modifying the original in place.</p>
+<p>The <span class='object_link'><a href="#offset-instance_method" title="Array#offset (method)">#offset</a></span> method is used to offset a point by a vector. it returns a
+new array rather than modifying the original in place.</p>
 
 
   </div>
@@ -1328,15 +1774,31 @@ array rather than modifying the original in place.</p>
 </span><span class='id identifier rubyid_point'>point</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span><span class='lparen'>(</span><span class='id identifier rubyid_vector'>vector</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>offset!</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The newly offset point or vector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>vector1</span>
+        <span class='name'>vector</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
       
@@ -1355,11 +1817,11 @@ array rather than modifying the original in place.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The newly offset point or vector.</p>
 </div>
@@ -1367,6 +1829,83 @@ array rather than modifying the original in place.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>offset!</strong>(vector, length)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The newly offset point or vector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Vector3d object used to offset the point.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>length</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An overriding distance for how far to offset.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The newly offset point or vector.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1390,7 +1929,11 @@ array rather than modifying the original in place.</p>
       <div class="method_details ">
   <h3 class="signature " id="offset!-instance_method">
   
-    #<strong>offset!</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>offset!</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>offset!</strong>(vector, length)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
   
 
   
@@ -1399,7 +1942,7 @@ array rather than modifying the original in place.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The offset! method is used to offset a point by a vector. The array is
+<p>The <span class='object_link'><a href="#offset%21-instance_method" title="Array#offset! (method)">#offset!</a></span> method is used to offset a point by a vector. The array is
 modified in place.</p>
 
 
@@ -1417,15 +1960,31 @@ modified in place.</p>
 </span><span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_offset!'>offset!</span><span class='lparen'>(</span><span class='id identifier rubyid_vector'>vector</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>offset!</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The newly offset array representing a point or vector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>vector1</span>
+        <span class='name'>vector</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
       
@@ -1444,11 +2003,11 @@ modified in place.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The newly offset array representing a point or vector.</p>
 </div>
@@ -1456,6 +2015,83 @@ modified in place.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>offset!</strong>(vector, length)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The newly offset array representing a point or vector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Vector3d object used to offset the point.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>length</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An overriding distance for how far to offset.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The newly offset array representing a point or vector.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1479,7 +2115,11 @@ modified in place.</p>
       <div class="method_details ">
   <h3 class="signature " id="on_line?-instance_method">
   
-    #<strong>on_line?</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>on_line?</strong>(point, vector)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_line?</strong>(point1, point2)  &#x21d2; <tt>Boolean</tt> </span>
+    
   
 
   
@@ -1488,8 +2128,8 @@ modified in place.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The on_line? method is used to determine if a Point3d object is on a line.
-See the Geom module for how to create a line.</p>
+<p>The <span class='object_link'><a href="#on_line%3F-instance_method" title="Array#on_line? (method)">#on_line?</a></span> method is used to determine if a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object is
+on a line.</p>
 
 
   </div>
@@ -1507,22 +2147,139 @@ See the Geom module for how to create a line.</p>
     
   </div>
 
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_line?</strong>(point, vector)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns <code>true</code> if the point is on the line, <code>false</code>
+if the point is not on the line.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>true if the point is on the line, false if the on_plane is not on the line.</p>
+<p><code>true</code> if the point is on the line, <code>false</code> if the
+point is not on the line.</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_line?</strong>(point1, point2)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns <code>true</code> if the point is on the line, <code>false</code>
+if the point is not on the line.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><code>true</code> if the point is on the line, <code>false</code> if the
+point is not on the line.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -1534,6 +2291,13 @@ See the Geom module for how to create a line.</p>
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a line.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1557,7 +2321,19 @@ See the Geom module for how to create a line.</p>
       <div class="method_details ">
   <h3 class="signature " id="on_plane?-instance_method">
   
-    #<strong>on_plane?</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>on_plane?</strong>(point, vector)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_plane?</strong>(point1, point2, point3)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_plane?</strong>(float1, float2, float3, float4)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+    
   
 
   
@@ -1566,10 +2342,8 @@ See the Geom module for how to create a line.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The on_plane? method is used to determine if a Point3d object is on a plane
-(to within SketchUp&#39;s standard floating point tolerance).</p>
-
-<p>See the Geom module for instructions on how to create a plane.</p>
+<p>The <span class='object_link'><a href="#on_plane%3F-instance_method" title="Array#on_plane? (method)">#on_plane?</a></span> method is used to determine if a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object is
+on a plane (to within SketchUp&#39;s standard floating point tolerance).</p>
 
 
   </div>
@@ -1586,43 +2360,288 @@ See the Geom module for how to create a line.</p>
 </span><span class='id identifier rubyid_on_plane'>on_plane</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_on_plane?'>on_plane?</span><span class='lparen'>(</span><span class='id identifier rubyid_plane'>plane</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(point, vector)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>plane</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>The plane to check against the Point3d represented by the Array.</p>
-</div>
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
       
     </li>
   
 </ul>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(point1, point2, point3)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
-      
-        <span class='type'></span>
-      
+        <span class='name'>point1</span>
       
       
-        
-        <div class='inline'>
-<p>true if successful, false if unsuccessful.</p>
-</div>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
       
     </li>
+  
+    <li>
+      
+        <span class='name'>point2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point3</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(float1, float2, float3, float4)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>float1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float3</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float4</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>on_plane?</strong>(array)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;Float, Float, Float, Float&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -1634,6 +2653,13 @@ See the Geom module for how to create a line.</p>
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a plane.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1657,7 +2683,11 @@ See the Geom module for how to create a line.</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_line-instance_method">
   
-    #<strong>project_to_line</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>project_to_line</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_line</strong>(point1, point2)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
   
 
   
@@ -1666,8 +2696,8 @@ See the Geom module for how to create a line.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The project_to_line method is used to retrieve the projection of a Point3d
-object onto a line. See the Geom module for how to create a line.</p>
+<p>The <span class='object_link'><a href="#project_to_line-instance_method" title="Array#project_to_line (method)">#project_to_line</a></span> method is used to retrieve the projection of a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object onto a line.</p>
 
 
   </div>
@@ -1684,22 +2714,44 @@ object onto a line. See the Geom module for how to create a line.</p>
 </span><span class='id identifier rubyid_point_on_line'>point_on_line</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_project_to_line'>project_to_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_line</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns A new  point on the line that is closest to this point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>line</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>An array with a Point3d object and a Vector3d object.</p>
-</div>
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
       
     </li>
   
@@ -1711,19 +2763,92 @@ object onto a line. See the Geom module for how to create a line.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>A new Point3d object that is the point on the line that is closest to this
-point (if successful)</p>
+<p>A new  point on the line that is closest to this point</p>
 </div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_line</strong>(point1, point2)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns A new  point on the line that is closest to this point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A new  point on the line that is closest to this point</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a line.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1747,7 +2872,19 @@ point (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_plane-instance_method">
   
-    #<strong>project_to_plane</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>project_to_plane</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_plane</strong>(point1, point2, point3)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_plane</strong>(float1, float2, float3, float4)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
+      <span class="overload">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+    
   
 
   
@@ -1756,10 +2893,8 @@ point (if successful)</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The project_to_plane method retrieves the projection of a Point3d object
-onto a plane.</p>
-
-<p>See the Geom module for instructions on how to create a plane.</p>
+<p>The <span class='object_link'><a href="#project_to_plane-instance_method" title="Array#project_to_plane (method)">#project_to_plane</a></span> method retrieves the projection of a
+<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> onto a plane.</p>
 
 
   </div>
@@ -1772,26 +2907,47 @@ onto a plane.</p>
       
       <pre class="example code"><code><span class='id identifier rubyid_plane'>plane</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span>
-<span class='comment'># This will return a new Array
-</span><span class='id identifier rubyid_point_on_plane'>point_on_plane</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_project_to_plane'>project_to_plane</span><span class='lparen'>(</span><span class='id identifier rubyid_plane'>plane</span><span class='rparen'>)</span></code></pre>
+<span class='id identifier rubyid_point_on_plane'>point_on_plane</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_project_to_plane'>project_to_plane</span><span class='lparen'>(</span><span class='id identifier rubyid_plane'>plane</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(point, vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>plane</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>The plane used to determine the projection from.</p>
-</div>
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
       
     </li>
   
@@ -1803,19 +2959,322 @@ onto a plane.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>A new Point3d object that is the point on the plane that is closest to this
-plane (if successful)</p>
-</div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(point1, point2, point3)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>point3</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(float1, float2, float3, float4)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>float1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float3</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>float4</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The three points should not be co-linear or duplicate.</p>
+</div>
+  </div>
+
+
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by three points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>project_to_plane</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Plane defined by its coefficents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(Float, Float, Float, Float)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Geom.html" title="Geom (module)">The Geom module for instructions on how to create a plane.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1839,7 +3298,7 @@ plane (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="transform-instance_method">
   
-    #<strong>transform</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transform</strong>(transform)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt> 
   
 
   
@@ -1848,10 +3307,10 @@ plane (if successful)</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The transform method is used to apply a Transformation object to a Point3d
-object defined by an Array object.</p>
+<p>The <span class='object_link'><a href="#transform-instance_method" title="Array#transform (method)">#transform</a></span> method is used to apply a <span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span> object to
+a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object defined by an <span class='object_link'><a href="" title="Array (class)">Array</a></span> object.</p>
 
-<p>This method returns a new Array object instead of modifying the original.</p>
+<p>This method returns a new <span class='object_link'><a href="" title="Array (class)">Array</a></span> object instead of modifying the original.</p>
 
 
   </div>
@@ -1877,14 +3336,9 @@ object defined by an Array object.</p>
         <span class='name'>transform</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Transformation object.</p>
-</div>
       
     </li>
   
@@ -1896,11 +3350,11 @@ object defined by an Array object.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>, <span class='object_link'><a href="Length.html" title="Length (class)">Length</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The newly transformed point.</p>
 </div>
@@ -1931,7 +3385,7 @@ object defined by an Array object.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transform!</strong>(transform)  &#x21d2; <tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -1940,10 +3394,16 @@ object defined by an Array object.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The transform! method is used to apply a Transformation object to a Point3d
-object defined by an Array object.</p>
-
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
 <p>This method modifies the original.</p>
+</div>
+  </div>
+
+
+<p>The <span class='object_link'><a href="#transform%21-instance_method" title="Array#transform! (method)">#transform!</a></span> method is used to apply a <span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span> object
+to a <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span> object defined by an <span class='object_link'><a href="" title="Array (class)">Array</a></span> object.</p>
 
 
   </div>
@@ -1969,14 +3429,9 @@ object defined by an Array object.</p>
         <span class='name'>transform</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Transformation.html" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Transformation object.</p>
-</div>
       
     </li>
   
@@ -1988,11 +3443,11 @@ object defined by an Array object.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The newly transformed point.</p>
 </div>
@@ -2023,7 +3478,7 @@ object defined by an Array object.</p>
       <div class="method_details ">
   <h3 class="signature " id="vector_to-instance_method">
   
-    #<strong>vector_to</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>vector_to</strong>(point)  &#x21d2; <tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt> 
   
 
   
@@ -2032,8 +3487,8 @@ object defined by an Array object.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The vector_to method is used to create an array as a vector from one point
-to a second point.</p>
+<p>The <span class='object_link'><a href="#vector_to-instance_method" title="Array#vector_to (method)">#vector_to</a></span> method is used to create an array as a vector from one
+point to a second point.</p>
 
 
   </div>
@@ -2058,14 +3513,9 @@ to a second point.</p>
         <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d object representing the second point.</p>
-</div>
       
     </li>
   
@@ -2077,14 +3527,9 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>A Vector3d object if successful</p>
-</div>
       
     </li>
   
@@ -2112,7 +3557,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="x-instance_method">
   
-    #<strong>x</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>x</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
@@ -2121,7 +3566,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The x method retrieves the x coordinate.</p>
+<p>The <span class='object_link'><a href="#x-instance_method" title="Array#x (method)">#x</a></span> method retrieves the x coordinate.</p>
 
 
   </div>
@@ -2148,11 +3593,11 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The x coordinate if successful</p>
 </div>
@@ -2183,7 +3628,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="x=-instance_method">
   
-    #<strong>x=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>x=</strong>(x)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2192,7 +3637,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The x= method sets the x coordinate.</p>
+<p>The <span class='object_link'><a href="#x%3D-instance_method" title="Array#x= (method)">#x=</a></span> method sets the x coordinate.</p>
 
 
   </div>
@@ -2272,7 +3717,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="y-instance_method">
   
-    #<strong>y</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>y</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
@@ -2281,7 +3726,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The y method retrieves the y coordinate.</p>
+<p>The <span class='object_link'><a href="#y-instance_method" title="Array#y (method)">#y</a></span> method retrieves the y coordinate.</p>
 
 
   </div>
@@ -2308,11 +3753,11 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The y coordinate if successful</p>
 </div>
@@ -2343,7 +3788,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="y=-instance_method">
   
-    #<strong>y=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>y=</strong>(y)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2352,7 +3797,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The y= method sets the y coordinate.</p>
+<p>The <span class='object_link'><a href="#y%3D-instance_method" title="Array#y= (method)">#y=</a></span> method sets the y coordinate.</p>
 
 
   </div>
@@ -2432,7 +3877,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="z-instance_method">
   
-    #<strong>z</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>z</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
@@ -2441,7 +3886,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The z method retrieves the z coordinate.</p>
+<p>The <span class='object_link'><a href="#z-instance_method" title="Array#z (method)">#z</a></span> method retrieves the z coordinate.</p>
 
 
   </div>
@@ -2468,11 +3913,11 @@ to a second point.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>The z coordinate if successful</p>
 </div>
@@ -2503,7 +3948,7 @@ to a second point.</p>
       <div class="method_details ">
   <h3 class="signature " id="z=-instance_method">
   
-    #<strong>z=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>z=</strong>(z)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2512,7 +3957,7 @@ to a second point.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The z= method sets the z coordinate.</p>
+<p>The <span class='object_link'><a href="#z%3D-instance_method" title="Array#z= (method)">#z=</a></span> method sets the z coordinate.</p>
 
 
   </div>
@@ -2594,11 +4039,13 @@ to a second point.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:50 2016 by
+  Generated on Wed Mar 30 17:21:56 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

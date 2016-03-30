@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Module: Sketchup
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="class_list.html"></iframe>
       <div id="resizer"></div>
@@ -1562,7 +1579,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp
       <div class="method_details first">
   <h3 class="signature first" id="active_model-class_method">
   
-    .<strong>active_model</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>active_model</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1636,7 +1653,7 @@ focused.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-class_method">
   
-    .<strong>add_observer</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1721,7 +1738,7 @@ focused.</p>
       <div class="method_details ">
   <h3 class="signature " id="app_name-class_method">
   
-    .<strong>app_name</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>app_name</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1789,7 +1806,7 @@ SketchUp”.</p>
       <div class="method_details ">
   <h3 class="signature " id="break_edges=-class_method">
   
-    .<strong>break_edges=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>break_edges=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1881,7 +1898,7 @@ user later draws lines into it with the break edges feature reactivated.</p>
       <div class="method_details ">
   <h3 class="signature " id="break_edges?-class_method">
   
-    .<strong>break_edges?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>break_edges?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1959,7 +1976,7 @@ user via the user interface.</p>
       <div class="method_details ">
   <h3 class="signature " id="create_texture_writer-class_method">
   
-    .<strong>create_texture_writer</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>create_texture_writer</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2024,7 +2041,7 @@ user via the user interface.</p>
       <div class="method_details ">
   <h3 class="signature " id="debug_mode=-class_method">
   
-    .<strong>debug_mode=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>debug_mode=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2111,7 +2128,7 @@ setting takes effect right away, no need to restart SketchUp.</p>
       <div class="method_details ">
   <h3 class="signature " id="debug_mode?-class_method">
   
-    .<strong>debug_mode?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>debug_mode?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2186,7 +2203,7 @@ console when it detects incorrect usage of the API.</p>
       <div class="method_details ">
   <h3 class="signature " id="display_name_from_action-class_method">
   
-    .<strong>display_name_from_action</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>display_name_from_action</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2275,7 +2292,7 @@ strings.</p>
       <div class="method_details ">
   <h3 class="signature " id="extensions-class_method">
   
-    .<strong>extensions</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>extensions</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2345,7 +2362,7 @@ SketchupExtension objects.</p>
       <div class="method_details ">
   <h3 class="signature " id="file_new-class_method">
   
-    .<strong>file_new</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>file_new</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2410,7 +2427,7 @@ SketchupExtension objects.</p>
       <div class="method_details ">
   <h3 class="signature " id="find_support_file-class_method">
   
-    .<strong>find_support_file</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>find_support_file</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2524,7 +2541,7 @@ false.</p>
       <div class="method_details ">
   <h3 class="signature " id="find_support_files-class_method">
   
-    .<strong>find_support_files</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>find_support_files</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2629,7 +2646,7 @@ result will be empty.</p>
       <div class="method_details ">
   <h3 class="signature " id="fix_shadow_strings=-class_method">
   
-    .<strong>fix_shadow_strings=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>fix_shadow_strings=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2718,7 +2735,7 @@ deactivated.</p>
       <div class="method_details ">
   <h3 class="signature " id="fix_shadow_strings?-class_method">
   
-    .<strong>fix_shadow_strings?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>fix_shadow_strings?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2795,7 +2812,7 @@ method can be used to test it.</p>
       <div class="method_details ">
   <h3 class="signature " id="format_angle-class_method">
   
-    .<strong>format_angle</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>format_angle</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2881,7 +2898,7 @@ it into degrees. For example, format_angle(Math::PI) will return 180.0.</p>
       <div class="method_details ">
   <h3 class="signature " id="format_area-class_method">
   
-    .<strong>format_area</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>format_area</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2970,7 +2987,7 @@ squared.</p>
       <div class="method_details ">
   <h3 class="signature " id="format_degrees-class_method">
   
-    .<strong>format_degrees</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>format_degrees</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3056,7 +3073,7 @@ For example, 10 becomes 10.0. This is the equivalent to a to_f call.</p>
       <div class="method_details ">
   <h3 class="signature " id="format_length-class_method">
   
-    .<strong>format_length</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>format_length</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3147,7 +3164,7 @@ units settings.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_datfile_info-class_method">
   
-    .<strong>get_datfile_info</strong>(rName, rValue)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>get_datfile_info</strong>(rName, rValue)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3251,7 +3268,7 @@ from Sketchup.dat.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_i18n_datfile_info-class_method">
   
-    .<strong>get_i18n_datfile_info</strong>(rName, rValue)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>get_i18n_datfile_info</strong>(rName, rValue)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3356,7 +3373,7 @@ multiple languages.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_locale-class_method">
   
-    .<strong>get_locale</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>get_locale</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3427,7 +3444,7 @@ default, en-US.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_resource_path-class_method">
   
-    .<strong>get_resource_path</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>get_resource_path</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3514,7 +3531,7 @@ localization files.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_shortcuts-class_method">
   
-    .<strong>get_shortcuts</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>get_shortcuts</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3582,7 +3599,7 @@ with the shortcut and the command separated by a tab, similar to
       <div class="method_details ">
   <h3 class="signature " id="install_from_archive-class_method">
   
-    .<strong>install_from_archive</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>install_from_archive</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3673,7 +3690,7 @@ have a .rbz file extension.</p>
       <div class="method_details ">
   <h3 class="signature " id="is_64bit?-class_method">
   
-    .<strong>is_64bit?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>is_64bit?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3756,7 +3773,7 @@ versions to load.</p>
       <div class="method_details ">
   <h3 class="signature " id="is_online-class_method">
   
-    .<strong>is_online</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>is_online</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3823,7 +3840,7 @@ often than you need.</p>
       <div class="method_details ">
   <h3 class="signature " id="is_pro?-class_method">
   
-    .<strong>is_pro?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>is_pro?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3902,7 +3919,7 @@ product.</p>
       <div class="method_details ">
   <h3 class="signature " id="is_valid_filename?-class_method">
   
-    .<strong>is_valid_filename?</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>is_valid_filename?</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3998,7 +4015,7 @@ illegal characters).</p>
       <div class="method_details ">
   <h3 class="signature " id="load-class_method">
   
-    .<strong>load</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>load</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4089,7 +4106,7 @@ article for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="open_file-class_method">
   
-    .<strong>open_file</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>open_file</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4174,7 +4191,7 @@ article for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="os_language-class_method">
   
-    .<strong>os_language</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>os_language</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4245,7 +4262,7 @@ default, en-US.</p>
       <div class="method_details ">
   <h3 class="signature " id="parse_length-class_method">
   
-    .<strong>parse_length</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>parse_length</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4334,7 +4351,7 @@ unsuccessful.</p>
       <div class="method_details ">
   <h3 class="signature " id="platform-class_method">
   
-    .<strong>platform</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>platform</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4416,7 +4433,7 @@ Windows since SketchUp 2014.</p>
       <div class="method_details ">
   <h3 class="signature " id="plugins_disabled=-class_method">
   
-    .<strong>plugins_disabled=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>plugins_disabled=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4510,7 +4527,7 @@ to see if the problem is fixed.</p>
       <div class="method_details ">
   <h3 class="signature " id="plugins_disabled?-class_method">
   
-    .<strong>plugins_disabled?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>plugins_disabled?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4585,7 +4602,7 @@ directory will be loaded at startup time.</p>
       <div class="method_details ">
   <h3 class="signature " id="quit-class_method">
   
-    .<strong>quit</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>quit</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4653,7 +4670,7 @@ the model save, in which case the application will not terminate.</p>
       <div class="method_details ">
   <h3 class="signature " id="read_default-class_method">
   
-    .<strong>read_default</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>read_default</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4773,7 +4790,7 @@ value within the specified sub-section section of a .INI file or registry
       <div class="method_details ">
   <h3 class="signature " id="register_extension-class_method">
   
-    .<strong>register_extension</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>register_extension</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4883,7 +4900,7 @@ that it will load automatically whenever SketchUp restarts.</p>
       <div class="method_details ">
   <h3 class="signature " id="register_importer-class_method">
   
-    .<strong>register_importer</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>register_importer</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4906,7 +4923,7 @@ that it will load automatically whenever SketchUp restarts.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-class_method">
   
-    .<strong>remove_observer</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4992,7 +5009,7 @@ object.</p>
       <div class="method_details ">
   <h3 class="signature " id="require-class_method">
   
-    .<strong>require</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>require</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5083,7 +5100,7 @@ look for .rb first (unencrypted) and then .rbe (encrypted) and finally .rbs
       <div class="method_details ">
   <h3 class="signature " id="save_thumbnail-class_method">
   
-    .<strong>save_thumbnail</strong>(vSkp, vImage)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>save_thumbnail</strong>(vSkp, vImage)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5186,7 +5203,7 @@ thumbnail.</p>
       <div class="method_details ">
   <h3 class="signature " id="send_action-class_method">
   
-    .<strong>send_action</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>send_action</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5475,7 +5492,7 @@ future versions of the API.)</p>
       <div class="method_details ">
   <h3 class="signature " id="set_status_text-class_method">
   
-    .<strong>set_status_text</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>set_status_text</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5587,7 +5604,7 @@ positions are:</p>
       <div class="method_details ">
   <h3 class="signature " id="status_text=-class_method">
   
-    .<strong>status_text=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>status_text=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5676,7 +5693,7 @@ SB_PROMPT.</p>
       <div class="method_details ">
   <h3 class="signature " id="temp_dir-class_method">
   
-    .<strong>temp_dir</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>temp_dir</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5743,7 +5760,7 @@ not required to persist between SketchUp sessions.</p>
       <div class="method_details ">
   <h3 class="signature " id="template-class_method">
   
-    .<strong>template</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>template</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5810,7 +5827,7 @@ New.</p>
       <div class="method_details ">
   <h3 class="signature " id="template=-class_method">
   
-    .<strong>template=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>template=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5897,7 +5914,7 @@ New.</p>
       <div class="method_details ">
   <h3 class="signature " id="template_dir-class_method">
   
-    .<strong>template_dir</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>template_dir</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5964,7 +5981,7 @@ loaded when the user select File &gt; New.</p>
       <div class="method_details ">
   <h3 class="signature " id="undo-class_method">
   
-    .<strong>undo</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>undo</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6029,7 +6046,7 @@ loaded when the user select File &gt; New.</p>
       <div class="method_details ">
   <h3 class="signature " id="vcb_label=-class_method">
   
-    .<strong>vcb_label=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>vcb_label=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6119,7 +6136,7 @@ SB_VCB_LABEL.</p>
       <div class="method_details ">
   <h3 class="signature " id="vcb_value=-class_method">
   
-    .<strong>vcb_value=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>vcb_value=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6209,7 +6226,7 @@ SB_VCB_VALUE.</p>
       <div class="method_details ">
   <h3 class="signature " id="version-class_method">
   
-    .<strong>version</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>version</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6279,7 +6296,7 @@ SB_VCB_VALUE.</p>
       <div class="method_details ">
   <h3 class="signature " id="version_number-class_method">
   
-    .<strong>version_number</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>version_number</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6368,7 +6385,7 @@ integer value as follows:</p>
       <div class="method_details ">
   <h3 class="signature " id="write_default-class_method">
   
-    .<strong>write_default</strong>(arg1, arg2, arg3)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>write_default</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6494,11 +6511,13 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:49 2016 by
+  Generated on Wed Mar 30 17:21:54 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

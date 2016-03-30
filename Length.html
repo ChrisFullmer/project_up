@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Length
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Length";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="class_list.html"></iframe>
       <div id="resizer"></div>
@@ -74,7 +91,7 @@
       <span class="inheritName">Float</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Float</li>
           
@@ -412,7 +429,7 @@ the model.</p>
       <div class="method_details first">
   <h3 class="signature first" id="<-instance_method">
   
-    #<strong>&lt;</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -523,7 +540,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id="<=-instance_method">
   
-    #<strong>&lt;=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -632,7 +649,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;=&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -738,7 +755,7 @@ tolerance into account.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -844,7 +861,7 @@ SketchUp uses for comparing lengths.</p>
       <div class="method_details ">
   <h3 class="signature " id=">-instance_method">
   
-    #<strong>&gt;</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -956,7 +973,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id=">=-instance_method">
   
-    #<strong>&gt;=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&gt;=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1068,7 +1085,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1137,7 +1154,7 @@ to the user&#39;s model units.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_f-instance_method">
   
-    #<strong>to_f</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_f</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1203,7 +1220,7 @@ to the user&#39;s model units.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1273,11 +1290,13 @@ return a nicely formatted length in feet.)</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:50 2016 by
+  Generated on Wed Mar 30 17:21:55 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

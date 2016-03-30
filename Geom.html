@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Module: Geom
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Geom";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="class_list.html"></iframe>
       <div id="resizer"></div>
@@ -82,6 +99,14 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Lines and Planes are infinite.</p>
+</div>
+  </div>
+
+
 <p>The Geom module defines a number of Module methods that let you perform
 different geometric operations.</p>
 
@@ -89,9 +114,18 @@ different geometric operations.</p>
 special class for representing lines or planes. Arrays are used for both.</p>
 
 <p>A line can be represented as either an Array of a point and a vector, or as
-an Array of two points. A plane can be represented as either an Array of a
-point and a vector, or as an Array of 4 numbers that give the coefficients
-of a plane equation. NOTE: Lines and Planes are infinite.</p>
+an Array of two points.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_line1'>line1</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_line2'>line2</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+</code></pre>
+
+<p>A plane can be represented as either an Array of a point and a vector, or
+as an Array of 4 numbers that give the coefficients of a plane equation.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plane1'>plane1</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_plane2'>plane2</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+</code></pre>
 
 <p>There are several good books on 3D math if you are new to the concepts of a
 line, plane, and vector.</p>
@@ -101,19 +135,6 @@ line, plane, and vector.</p>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_line1'>line1</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_line2'>line2</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span><span class='rbracket'>]</span></code></pre>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_plane1'>plane1</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_plane2'>plane2</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span></code></pre>
-    
-  </div>
-
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -159,7 +180,7 @@ line, plane, and vector.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#closest_points-class_method" title="closest_points (class method)">.<strong>closest_points</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#closest_points-class_method" title="closest_points (class method)">.<strong>closest_points</strong>(line1, line2)  &#x21d2; Array(Geom::Point3d, Geom::Point3d) </a>
     
 
     
@@ -174,7 +195,7 @@ line, plane, and vector.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The closest_points method is used to compute the closest points on two
+<p>The <span class='object_link'><a href="#closest_points-class_method" title="Geom.closest_points (method)">Geom.closest_points</a></span> method is used to compute the closest points on two
 lines.</p>
 </div></span>
   
@@ -184,7 +205,7 @@ lines.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fit_plane_to_points-class_method" title="fit_plane_to_points (class method)">.<strong>fit_plane_to_points</strong>(*args)  &#x21d2; Object </a>
+      <a href="#fit_plane_to_points-class_method" title="fit_plane_to_points (class method)">.<strong>fit_plane_to_points</strong>(*points)  &#x21d2; Array(Geom::Point3d, Geom::Vector3d) </a>
     
 
     
@@ -199,7 +220,7 @@ lines.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The fit_plane_to_points method is used to compute a plane that is a best
+<p>The <span class='object_link'><a href="#fit_plane_to_points-class_method" title="Geom.fit_plane_to_points (method)">Geom.fit_plane_to_points</a></span> method is used to compute a plane that is a best
 fit to an array of points.</p>
 </div></span>
   
@@ -209,7 +230,7 @@ fit to an array of points.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersect_line_line-class_method" title="intersect_line_line (class method)">.<strong>intersect_line_line</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#intersect_line_line-class_method" title="intersect_line_line (class method)">.<strong>intersect_line_line</strong>(line1, line2)  &#x21d2; Geom::Point3d<sup>?</sup> </a>
     
 
     
@@ -224,7 +245,7 @@ fit to an array of points.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The intersect_line_line computes the intersection of two lines.</p>
+<p>The <span class='object_link'><a href="#intersect_line_line-class_method" title="Geom.intersect_line_line (method)">Geom.intersect_line_line</a></span> computes the intersection of two lines.</p>
 </div></span>
   
 </li>
@@ -233,7 +254,7 @@ fit to an array of points.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersect_line_plane-class_method" title="intersect_line_plane (class method)">.<strong>intersect_line_plane</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#intersect_line_plane-class_method" title="intersect_line_plane (class method)">.<strong>intersect_line_plane</strong>(line, plane)  &#x21d2; Geom::Point3d<sup>?</sup> </a>
     
 
     
@@ -248,7 +269,7 @@ fit to an array of points.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The intersect_line_plane method is used to compute the intersection of a
+<p>The <span class='object_link'><a href="#intersect_line_plane-class_method" title="Geom.intersect_line_plane (method)">Geom.intersect_line_plane</a></span> method is used to compute the intersection of a
 line and a plane.</p>
 </div></span>
   
@@ -258,7 +279,7 @@ line and a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersect_plane_plane-class_method" title="intersect_plane_plane (class method)">.<strong>intersect_plane_plane</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#intersect_plane_plane-class_method" title="intersect_plane_plane (class method)">.<strong>intersect_plane_plane</strong>(plane1, plane2)  &#x21d2; Array(Geom::Point3d, Geom::Vector3d) </a>
     
 
     
@@ -273,8 +294,8 @@ line and a plane.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The intersect_plane_plane method is used to compute the intersection of two
-planes.</p>
+<p>The <span class='object_link'><a href="#intersect_plane_plane-class_method" title="Geom.intersect_plane_plane (method)">Geom.intersect_plane_plane</a></span> method is used to compute the intersection of
+two planes.</p>
 </div></span>
   
 </li>
@@ -283,7 +304,7 @@ planes.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#linear_combination-class_method" title="linear_combination (class method)">.<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; Object </a>
+      <a href="#linear_combination-class_method" title="linear_combination (class method)">.<strong>linear_combination</strong>(weight1, pt_or_vect1, weight2, pt_or_vect2)  &#x21d2; Object </a>
     
 
     
@@ -298,8 +319,8 @@ planes.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The linear_combination method is used to compute the linear combination of
-points or vectors.</p>
+<p>The <span class='object_link'><a href="#linear_combination-class_method" title="Geom.linear_combination (method)">Geom.linear_combination</a></span> method is used to compute the linear combination
+of points or vectors.</p>
 </div></span>
   
 </li>
@@ -308,7 +329,7 @@ points or vectors.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#point_in_polygon_2D-class_method" title="point_in_polygon_2D (class method)">.<strong>point_in_polygon_2D</strong>(arg1, *arg2, arg3)  &#x21d2; Object </a>
+      <a href="#point_in_polygon_2D-class_method" title="point_in_polygon_2D (class method)">.<strong>point_in_polygon_2D</strong>(point, *polygon, check_border)  &#x21d2; Boolean </a>
     
 
     
@@ -323,7 +344,7 @@ points or vectors.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The point_in_polygon_2D method is used to determine whether a point is
+<p>The <span class='object_link'><a href="#point_in_polygon_2D-class_method" title="Geom.point_in_polygon_2D (method)">Geom.point_in_polygon_2D</a></span> method is used to determine whether a point is
 inside a polygon.</p>
 </div></span>
   
@@ -342,7 +363,7 @@ inside a polygon.</p>
       <div class="method_details first">
   <h3 class="signature first" id="closest_points-class_method">
   
-    .<strong>closest_points</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>closest_points</strong>(line1, line2)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt> 
   
 
   
@@ -351,7 +372,7 @@ inside a polygon.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The closest_points method is used to compute the closest points on two
+<p>The <span class='object_link'><a href="#closest_points-class_method" title="Geom.closest_points (method)">closest_points</a></span> method is used to compute the closest points on two
 lines.</p>
 
 
@@ -369,6 +390,42 @@ lines.</p>
 </span><span class='id identifier rubyid_points'>points</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='period'>.</span><span class='id identifier rubyid_closest_points'>closest_points</span><span class='lparen'>(</span><span class='id identifier rubyid_line1'>line1</span><span class='comma'>,</span> <span class='id identifier rubyid_line2'>line2</span><span class='rparen'>)</span></code></pre>
     
   </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>line1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The first line to intersect</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>line2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The second line to intersect</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -376,11 +433,11 @@ lines.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>An array of two points. The first point is on the first line and the second
 point is on the second line.</p>
@@ -412,7 +469,7 @@ point is on the second line.</p>
       <div class="method_details ">
   <h3 class="signature " id="fit_plane_to_points-class_method">
   
-    .<strong>fit_plane_to_points</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>fit_plane_to_points</strong>(*points)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt> 
   
 
   
@@ -421,12 +478,12 @@ point is on the second line.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The fit_plane_to_points method is used to compute a plane that is a best
+<p>The <span class='object_link'><a href="#fit_plane_to_points-class_method" title="Geom.fit_plane_to_points (method)">fit_plane_to_points</a></span> method is used to compute a plane that is a best
 fit to an array of points. If more than three points are given some of the
 points may not be on the plane.</p>
 
-<p>The plane is returned as an Array of 4 numbers which are the coefficients
-of the plane equation Ax + By + Cz + D = 0.</p>
+<p>The plane is returned as an <span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span> of 4 numbers which are the coefficients
+of the plane equation <code>Ax + By + Cz + D = 0</code>.</p>
 
 
   </div>
@@ -443,7 +500,17 @@ of the plane equation Ax + By + Cz + D = 0.</p>
 <span class='id identifier rubyid_plane'>plane</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='period'>.</span><span class='id identifier rubyid_fit_plane_to_points'>fit_plane_to_points</span><span class='lparen'>(</span><span class='id identifier rubyid_point1'>point1</span><span class='comma'>,</span> <span class='id identifier rubyid_point2'>point2</span><span class='comma'>,</span> <span class='id identifier rubyid_point3'>point3</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns A plane</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -451,14 +518,9 @@ of the plane equation Ax + By + Cz + D = 0.</p>
         <span class='name'>points</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>&gt;</tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>An array of points or a series of points.</p>
-</div>
       
     </li>
   
@@ -470,11 +532,11 @@ of the plane equation Ax + By + Cz + D = 0.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>A plane</p>
 </div>
@@ -482,6 +544,9 @@ of the plane equation Ax + By + Cz + D = 0.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -505,7 +570,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
       <div class="method_details ">
   <h3 class="signature " id="intersect_line_line-class_method">
   
-    .<strong>intersect_line_line</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>intersect_line_line</strong>(line1, line2)  &#x21d2; <tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt><sup>?</sup> 
   
 
   
@@ -514,7 +579,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The intersect_line_line computes the intersection of two lines.</p>
+<p>The <span class='object_link'><a href="#intersect_line_line-class_method" title="Geom.intersect_line_line (method)">intersect_line_line</a></span> computes the intersection of two lines.</p>
 
 
   </div>
@@ -541,7 +606,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
         <span class='name'>line1</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
       
       
       
@@ -557,7 +622,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
         <span class='name'>line2</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
       
       
       
@@ -576,18 +641,25 @@ of the plane equation Ax + By + Cz + D = 0.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>, <tt>nil</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>The intersection point. Returns nil if they do not intersect.</p>
+<p>The intersection point. Returns <code>nil</code> if they do not intersect.</p>
 </div>
       
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="" title="Geom (module)">The Geom module for alternative versions of defining a line.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -611,7 +683,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
       <div class="method_details ">
   <h3 class="signature " id="intersect_line_plane-class_method">
   
-    .<strong>intersect_line_plane</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>intersect_line_plane</strong>(line, plane)  &#x21d2; <tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt><sup>?</sup> 
   
 
   
@@ -620,7 +692,7 @@ of the plane equation Ax + By + Cz + D = 0.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The intersect_line_plane method is used to compute the intersection of a
+<p>The <span class='object_link'><a href="#intersect_line_plane-class_method" title="Geom.intersect_line_plane (method)">intersect_line_plane</a></span> method is used to compute the intersection of a
 line and a plane.</p>
 
 
@@ -648,14 +720,9 @@ line and a plane.</p>
         <span class='name'>line</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A line.</p>
-</div>
       
     </li>
   
@@ -664,14 +731,9 @@ line and a plane.</p>
         <span class='name'>plane</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A plane.</p>
-</div>
       
     </li>
   
@@ -683,18 +745,25 @@ line and a plane.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>, <tt>nil</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>A Point3d object. Returns nil if they do not intersect.</p>
+<p>A Point3d object. Returns <code>nil</code> if they do not intersect.</p>
 </div>
       
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="" title="Geom (module)">The Geom module for alternative versions of defining lines and planes.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -718,7 +787,7 @@ line and a plane.</p>
       <div class="method_details ">
   <h3 class="signature " id="intersect_plane_plane-class_method">
   
-    .<strong>intersect_plane_plane</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>intersect_plane_plane</strong>(plane1, plane2)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt> 
   
 
   
@@ -727,8 +796,8 @@ line and a plane.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The intersect_plane_plane method is used to compute the intersection of two
-planes.</p>
+<p>The <span class='object_link'><a href="#intersect_plane_plane-class_method" title="Geom.intersect_plane_plane (method)">intersect_plane_plane</a></span> method is used to compute the intersection of
+two planes.</p>
 
 
   </div>
@@ -755,7 +824,7 @@ planes.</p>
         <span class='name'>plane1</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt>)</span>
       
       
       
@@ -771,7 +840,7 @@ planes.</p>
         <span class='name'>plane2</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>)</tt>)</span>
       
       
       
@@ -790,14 +859,14 @@ planes.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span>)</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>A line where the planes intersect if successful. Returns nil if the planes
-do not intersect.</p>
+<p>A line where the planes intersect if successful. Returns <code>nil</code>
+if the planes do not intersect.</p>
 </div>
       
     </li>
@@ -826,7 +895,11 @@ do not intersect.</p>
       <div class="method_details ">
   <h3 class="signature " id="linear_combination-class_method">
   
-    .<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">.<strong>linear_combination</strong>(weight1, point1, weight2, point2)  &#x21d2; <tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">.<strong>linear_combination</strong>(weight1, vector1, weight2, vector2)  &#x21d2; <tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt> </span>
+    
   
 
   
@@ -835,8 +908,8 @@ do not intersect.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The linear_combination method is used to compute the linear combination of
-points or vectors.</p>
+<p>The <span class='object_link'><a href="#linear_combination-class_method" title="Geom.linear_combination (method)">linear_combination</a></span> method is used to compute the linear combination
+of points or vectors.</p>
 
 
   </div>
@@ -854,7 +927,21 @@ points or vectors.</p>
 </span><span class='id identifier rubyid_point'>point</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='period'>.</span><span class='id identifier rubyid_linear_combination'>linear_combination</span><span class='lparen'>(</span><span class='float'>0.25</span><span class='comma'>,</span> <span class='id identifier rubyid_point1'>point1</span><span class='comma'>,</span> <span class='float'>0.75</span><span class='comma'>,</span> <span class='id identifier rubyid_point2'>point2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>linear_combination</strong>(weight1, point1, weight2, point2)  &#x21d2; <tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -862,7 +949,7 @@ points or vectors.</p>
         <span class='name'>weight1</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
       
@@ -875,17 +962,12 @@ points or vectors.</p>
   
     <li>
       
-        <span class='name'>pt_or_vect1</span>
+        <span class='name'>point1</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>The first point or vector to combine.</p>
-</div>
       
     </li>
   
@@ -894,7 +976,7 @@ points or vectors.</p>
         <span class='name'>weight2</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
       
@@ -907,17 +989,12 @@ points or vectors.</p>
   
     <li>
       
-        <span class='name'>pt_or_vect2</span>
+        <span class='name'>point2</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>The second point or vector to combine.</p>
-</div>
       
     </li>
   
@@ -929,18 +1006,105 @@ points or vectors.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>A Point3d or Vector3d object</p>
-</div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>linear_combination</strong>(weight1, vector1, weight2, vector2)  &#x21d2; <tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>weight1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A weight or percentage.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>weight2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A weight or percentage.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -964,7 +1128,7 @@ points or vectors.</p>
       <div class="method_details ">
   <h3 class="signature " id="point_in_polygon_2D-class_method">
   
-    .<strong>point_in_polygon_2D</strong>(arg1, *arg2, arg3)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>point_in_polygon_2D</strong>(point, *polygon, check_border)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -973,7 +1137,7 @@ points or vectors.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The point_in_polygon_2D method is used to determine whether a point is
+<p>The <span class='object_link'><a href="#point_in_polygon_2D-class_method" title="Geom.point_in_polygon_2D (method)">point_in_polygon_2D</a></span> method is used to determine whether a point is
 inside a polygon. The z component of both the point you&#39;re checking and
 the points in the polygon are ignored, effectively making it a 2-d check.</p>
 
@@ -1010,23 +1174,18 @@ the points in the polygon are ignored, effectively making it a 2-d check.</p>
         <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d object</p>
-</div>
       
     </li>
   
     <li>
       
-        <span class='name'>polygon_pts</span>
+        <span class='name'>polygon</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>&gt;</tt>)</span>
       
       
       
@@ -1043,14 +1202,13 @@ checking against.</p>
         <span class='name'>check_border</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Boolean. Pass true if a point on the border should be counted as inside the
-polygon.</p>
+<p>Pass true if a point on the border should be counted as inside the polygon.</p>
 </div>
       
     </li>
@@ -1063,13 +1221,13 @@ polygon.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>true if the point is inside the polygon.</p>
+<p><code>true</code> if the point is inside the polygon.</p>
 </div>
       
     </li>
@@ -1100,11 +1258,13 @@ polygon.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:49 2016 by
+  Generated on Wed Mar 30 17:21:54 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

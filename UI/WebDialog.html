@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: UI::WebDialog
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "UI::WebDialog";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">UI::WebDialog</li>
           
@@ -973,7 +990,7 @@ and save the image to the given file path.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1172,7 +1189,7 @@ stored.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_action_callback-instance_method">
   
-    #<strong>add_action_callback</strong>(rActionName)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>add_action_callback</strong>(rActionName)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1307,7 +1324,7 @@ string.</p>
       <div class="method_details ">
   <h3 class="signature " id="allow_actions_from_host-instance_method">
   
-    #<strong>allow_actions_from_host</strong>(rHost)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>allow_actions_from_host</strong>(rHost)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1396,7 +1413,7 @@ this method.</p>
       <div class="method_details ">
   <h3 class="signature " id="bring_to_front-instance_method">
   
-    #<strong>bring_to_front</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>bring_to_front</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1463,7 +1480,7 @@ WedDialogs are on top.</p>
       <div class="method_details ">
   <h3 class="signature " id="close-instance_method">
   
-    #<strong>close</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>close</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1528,7 +1545,7 @@ WedDialogs are on top.</p>
       <div class="method_details ">
   <h3 class="signature " id="execute_script-instance_method">
   
-    #<strong>execute_script</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>execute_script</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1615,7 +1632,7 @@ dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_default_dialog_color-instance_method">
   
-    #<strong>get_default_dialog_color</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_default_dialog_color</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1682,7 +1699,7 @@ for the web dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_element_value-instance_method">
   
-    #<strong>get_element_value</strong>(rElementID)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_element_value</strong>(rElementID)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1772,7 +1789,7 @@ dialog.get_element_value(&quot;myTextInput&quot;)
       <div class="method_details ">
   <h3 class="signature " id="max_height-instance_method">
   
-    #<strong>max_height</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max_height</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1838,7 +1855,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_height=-instance_method">
   
-    #<strong>max_height=</strong>(rHeight)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max_height=</strong>(rHeight)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1924,7 +1941,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_width-instance_method">
   
-    #<strong>max_width</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max_width</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1990,7 +2007,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_width=-instance_method">
   
-    #<strong>max_width=</strong>(rWidth)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max_width=</strong>(rWidth)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2076,7 +2093,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_height-instance_method">
   
-    #<strong>min_height</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min_height</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2142,7 +2159,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_height=-instance_method">
   
-    #<strong>min_height=</strong>(rHeight)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min_height=</strong>(rHeight)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2228,7 +2245,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_width-instance_method">
   
-    #<strong>min_width</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min_width</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2294,7 +2311,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_width=-instance_method">
   
-    #<strong>min_width=</strong>(rWidth)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min_width=</strong>(rWidth)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2380,7 +2397,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="navigation_buttons_enabled=-instance_method">
   
-    #<strong>navigation_buttons_enabled=</strong>(r_enabled)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>navigation_buttons_enabled=</strong>(r_enabled)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2467,7 +2484,7 @@ This method has no use on the PC, as these buttons are never displayed.</p>
       <div class="method_details ">
   <h3 class="signature " id="navigation_buttons_enabled?-instance_method">
   
-    #<strong>navigation_buttons_enabled?</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>navigation_buttons_enabled?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2545,7 +2562,7 @@ This method has no use on the PC, as these buttons are never displayed.</p>
       <div class="method_details ">
   <h3 class="signature " id="post_url-instance_method">
   
-    #<strong>post_url</strong>(rURL, rPostData)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>post_url</strong>(rURL, rPostData)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2647,7 +2664,7 @@ method.</p>
       <div class="method_details ">
   <h3 class="signature " id="screen_scale_factor-instance_method">
   
-    #<strong>screen_scale_factor</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>screen_scale_factor</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2715,7 +2732,7 @@ greater than 1.0.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_background_color-instance_method">
   
-    #<strong>set_background_color</strong>(rColorString)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_background_color</strong>(rColorString)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2801,7 +2818,7 @@ webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_file-instance_method">
   
-    #<strong>set_file</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_file</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2903,7 +2920,7 @@ webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_full_security-instance_method">
   
-    #<strong>set_full_security</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_full_security</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2970,7 +2987,7 @@ inside the browser. This defaults to false when a new WebDialog is created.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_html-instance_method">
   
-    #<strong>set_html</strong>(rHTML)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_html</strong>(rHTML)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3057,7 +3074,7 @@ HTML.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_on_close-instance_method">
   
-    #<strong>set_on_close</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_on_close</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3144,7 +3161,7 @@ dialog).</p>
       <div class="method_details ">
   <h3 class="signature " id="set_position-instance_method">
   
-    #<strong>set_position</strong>(rXPos, rYPos)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_position</strong>(rXPos, rYPos)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3246,7 +3263,7 @@ relative to the screen, in pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_size-instance_method">
   
-    #<strong>set_size</strong>(rWidth, rHeight)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_size</strong>(rWidth, rHeight)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3347,7 +3364,7 @@ relative to the screen, in pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_url-instance_method">
   
-    #<strong>set_url</strong>(rURL)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_url</strong>(rURL)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3433,7 +3450,7 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="show-instance_method">
   
-    #<strong>show</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3520,7 +3537,7 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="show_modal-instance_method">
   
-    #<strong>show_modal</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>show_modal</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3611,7 +3628,7 @@ behave this way, but instead are “always on top” of other windows.</p>
       <div class="method_details ">
   <h3 class="signature " id="visible?-instance_method">
   
-    #<strong>visible?</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>visible?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3685,7 +3702,7 @@ behave this way, but instead are “always on top” of other windows.</p>
       <div class="method_details ">
   <h3 class="signature " id="write_image-instance_method">
   
-    #<strong>write_image</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>write_image</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3839,11 +3856,13 @@ images this specifies the compression algorithm: &lt;4 (best speed), 4-8
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:55 2016 by
+  Generated on Wed Mar 30 17:22:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

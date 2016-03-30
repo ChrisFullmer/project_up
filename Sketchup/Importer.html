@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Sketchup::Importer
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup::Importer";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Sketchup::Importer</li>
           
@@ -190,23 +207,18 @@ displays its contents in a messagebox.</p>
     <dl class="constants">
       
         <dt id="ImportSuccess-constant" class="">Sketchup::Importer::ImportSuccess
-          
         </dt>
       
         <dt id="ImportFail-constant" class="">Sketchup::Importer::ImportFail
-          
         </dt>
       
         <dt id="ImportCanceled-constant" class="">Sketchup::Importer::ImportCanceled
-          
         </dt>
       
         <dt id="ImporterNotFound-constant" class="">Sketchup::Importer::ImporterNotFound
-          
         </dt>
       
         <dt id="ImportFileNotFound-constant" class="">Sketchup::Importer::ImportFileNotFound
-          
         </dt>
       
     </dl>
@@ -389,7 +401,7 @@ selected.</p>
       <div class="method_details first">
   <h3 class="signature first" id="description-instance_method">
   
-    #<strong>description</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>description</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -461,7 +473,7 @@ extension is defined in the file_extension method.</p>
       <div class="method_details ">
   <h3 class="signature " id="do_options-instance_method">
   
-    #<strong>do_options</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>do_options</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -533,7 +545,7 @@ supports_options method returns true.</p>
       <div class="method_details ">
   <h3 class="signature " id="file_extension-instance_method">
   
-    #<strong>file_extension</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>file_extension</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -604,7 +616,7 @@ shown to the user as they browse their harddrive for things to import.</p>
       <div class="method_details ">
   <h3 class="signature " id="id-instance_method">
   
-    #<strong>id</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>id</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -672,7 +684,7 @@ importer, typically something like “com.sketchup.importers.dxf”.</p>
       <div class="method_details ">
   <h3 class="signature " id="load_file-instance_method">
   
-    #<strong>load_file</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>load_file</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -789,7 +801,7 @@ SketchUp receives each key.</p>
       <div class="method_details ">
   <h3 class="signature " id="supports_options?-instance_method">
   
-    #<strong>supports_options?</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>supports_options?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -869,11 +881,13 @@ selected.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:56 2016 by
+  Generated on Wed Mar 30 17:22:02 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

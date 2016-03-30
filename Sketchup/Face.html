@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Sketchup::Face
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup::Face";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -74,7 +91,7 @@
       <span class="inheritName"><span class='object_link'><a href="Drawingelement.html" title="Sketchup::Drawingelement (class)">Drawingelement</a></span></span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next"><span class='object_link'><a href="Entity.html" title="Sketchup::Entity (class)">Entity</a></span></li>
           
@@ -132,108 +149,24 @@
     <dl class="constants">
       
         <dt id="PointUnknown-constant" class="">Sketchup::Face::PointUnknown
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Indicates error.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointInside-constant" class="">Sketchup::Face::PointInside
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point is on the face, not in a hole.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointOnVertex-constant" class="">Sketchup::Face::PointOnVertex
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point touches a vertex.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointOnEdge-constant" class="">Sketchup::Face::PointOnEdge
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point is on an edge.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointOnFace-constant" class="">Sketchup::Face::PointOnFace
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point is on the face.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointOutside-constant" class="">Sketchup::Face::PointOutside
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point outside the face or in a hole.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
         <dt id="PointNotOnPlane-constant" class="">Sketchup::Face::PointNotOnPlane
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>Point off the face&#39;s plane.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
         </dt>
       
     </dl>
@@ -829,7 +762,7 @@ bound the face.</p>
       <div class="method_details first">
   <h3 class="signature first" id="all_connected-instance_method">
   
-    #<strong>all_connected</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>all_connected</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -906,7 +839,7 @@ bound the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="area-instance_method">
   
-    #<strong>area</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>area</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1010,7 +943,7 @@ Transformation object.</p>
       <div class="method_details ">
   <h3 class="signature " id="back_material-instance_method">
   
-    #<strong>back_material</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>back_material</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1092,7 +1025,7 @@ face (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="back_material=-instance_method">
   
-    #<strong>back_material=</strong>(rbMaterial)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>back_material=</strong>(rbMaterial)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1190,7 +1123,7 @@ successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="classify_point-instance_method">
   
-    #<strong>classify_point</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>classify_point</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1327,7 +1260,7 @@ referenced Face.</p>
       <div class="method_details ">
   <h3 class="signature " id="edges-instance_method">
   
-    #<strong>edges</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>edges</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1403,7 +1336,7 @@ referenced Face.</p>
       <div class="method_details ">
   <h3 class="signature " id="followme-instance_method">
   
-    #<strong>followme</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>followme</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1506,7 +1439,7 @@ along an array of edges.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_glued_instances-instance_method">
   
-    #<strong>get_glued_instances</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_glued_instances</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1615,7 +1548,7 @@ to the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_texture_projection-instance_method">
   
-    #<strong>get_texture_projection</strong>(arg_frontside)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_texture_projection</strong>(arg_frontside)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1728,7 +1661,7 @@ projection for either the front or back side of the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_UVHelper-instance_method">
   
-    #<strong>get_UVHelper</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>get_UVHelper</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1859,7 +1792,7 @@ Defaults to true.</p>
       <div class="method_details ">
   <h3 class="signature " id="loops-instance_method">
   
-    #<strong>loops</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>loops</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1937,7 +1870,7 @@ face.</p>
       <div class="method_details ">
   <h3 class="signature " id="material-instance_method">
   
-    #<strong>material</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>material</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2020,7 +1953,7 @@ face (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="material=-instance_method">
   
-    #<strong>material=</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>material=</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2119,7 +2052,7 @@ successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="mesh-instance_method">
   
-    #<strong>mesh</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>mesh</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2227,7 +2160,7 @@ flags, for example.</p>
       <div class="method_details ">
   <h3 class="signature " id="normal-instance_method">
   
-    #<strong>normal</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>normal</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2305,7 +2238,7 @@ the front direction.</p>
       <div class="method_details ">
   <h3 class="signature " id="outer_loop-instance_method">
   
-    #<strong>outer_loop</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>outer_loop</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2381,7 +2314,7 @@ the front direction.</p>
       <div class="method_details ">
   <h3 class="signature " id="plane-instance_method">
   
-    #<strong>plane</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>plane</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2459,7 +2392,7 @@ class for information on how planes are stored.</p>
       <div class="method_details ">
   <h3 class="signature " id="position_material-instance_method">
   
-    #<strong>position_material</strong>(arg1, arg2, arg3)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>position_material</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2611,7 +2544,7 @@ it on the back of the Face.</p>
       <div class="method_details ">
   <h3 class="signature " id="pushpull-instance_method">
   
-    #<strong>pushpull</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>pushpull</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2726,7 +2659,7 @@ while in SketchUp), do not create a push/pull starting face if false.</p>
       <div class="method_details ">
   <h3 class="signature " id="reverse!-instance_method">
   
-    #<strong>reverse!</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>reverse!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2803,7 +2736,7 @@ the front becomes the back.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_texture_projection-instance_method">
   
-    #<strong>set_texture_projection</strong>(arg_vector, arg_frontside)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_texture_projection</strong>(arg_vector, arg_frontside)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2930,7 +2863,7 @@ projection.</p>
       <div class="method_details ">
   <h3 class="signature " id="vertices-instance_method">
   
-    #<strong>vertices</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>vertices</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3010,11 +2943,13 @@ bound the face.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:51 2016 by
+  Generated on Wed Mar 30 17:21:57 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

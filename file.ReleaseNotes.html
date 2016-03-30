@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: Release Notes
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "ReleaseNotes";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="file_list.html"></iframe>
       <div id="resizer"></div>
@@ -60,16 +77,16 @@
       <iframe id="search_frame" src="file_list.html"></iframe>
 
       <div id="content"><div id='filecontents'>
-<h1 id="label-Release+Notes">Release Notes</h1>
+<h1 id="release-notes">Release Notes</h1>
 
 <p>The SketchUp API has been around in some fashion since the early days of
-SketchUp, and with every release we have extended its capabilities. Read
-below for what&#39;s been changed.</p>
+SketchUp, and with every release we have extended its capabilities.
+Read below for what’s been changed.</p>
 
-<p>Though our adoption rate to the latest version is quite high, it can take
-time after a release before everyone upgrades. If you are building scripts
-that rely on functionality from the most recent version, be sure to check
-the Sketchup.version to make sure your users are able to run your script:</p>
+<p>Though our adoption rate to the latest version is quite high, it can take time
+after a release before everyone upgrades. If you are building scripts that rely
+on functionality from the most recent version, be sure to check the
+Sketchup.version to make sure your users are able to run your script:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='comment'># You do something like this in the initialization routine of your extension.
 </span><span class='id identifier rubyid_version_required'>version_required</span> <span class='op'>=</span> <span class='int'>16</span>
@@ -80,116 +97,108 @@ the Sketchup.version to make sure your users are able to run your script:</p>
 <span class='kw'>end</span>
 </code></pre>
 
-<h2 id="label-Build+Numbers">Build Numbers</h2>
+<h2 id="build-numbers">Build Numbers</h2>
 
-<p>Here are the build numbers for recent SketchUp releases. Note that build
-numbers in languages besides English are larger for each release, so it is
-best to check for builds that are greater than or equal to the numbers
-here.</p>
-<ul><li>
-<p><strong>SU2016 M0</strong> = 16.0.19912 on Windows 64-bit, 16.0.19911 on
-Windows 32-bit, 16.0.19913 on Mac 64-bit.</p>
-</li><li>
-<p><strong>SU2015 M2</strong> = 15.2.685 on Windows 64-bit, 15.2.687 on
-Windows 32-bit, 15.2.686 on Mac 64-bit.</p>
-</li><li>
-<p><strong>SU2015 M1</strong> = 15.1.106 on Windows 64-bit, 15.1.105 on
-Windows 32-bit, 15.1.104 on Mac 64-bit.</p>
-</li><li>
-<p><strong>SU2015</strong> = 15.0.9350 on Windows 64-bit, 15.0.9351 on Windows
-32-bit, 15.0.9349 on Mac 64-bit.</p>
-</li><li>
-<p><strong>SU2014 M1</strong> = 14.1.1282 on Windows, 14.1.1283 on Mac.</p>
-</li><li>
-<p><strong>SU2014</strong> = 14.0.4900 on Windows, 14.0.4899 on Mac.</p>
-</li><li>
-<p><strong>SU2013 M2</strong> = 13.0.4812 on Windows, 13.0.4811 on Mac.</p>
-</li><li>
-<p><strong>SU2013 M1</strong> = 13.0.4124 on Windows, 13.0.4123 on Mac.</p>
-</li><li>
-<p><strong>SU2013</strong> = 13.0.3689 on Windows, 13.0.3688 on Mac.</p>
-</li><li>
-<p><strong>SU8.0 M2</strong> = 8.0.11752 on Windows, 8.0.11751 on Mac.</p>
-</li><li>
-<p><strong>SU8.0 M1</strong> = 8.0.4811 on Windows, 8.0.4810 on Mac.</p>
-</li><li>
-<p><strong>SU8.0</strong> = 8.0.3117 on Windows, 8.0.3161 on Mac.</p>
-</li><li>
-<p><strong>SU7.1 M2</strong> = 7.1.6860 on Windows, 7.1.6859 on Mac.</p>
-</li><li>
-<p><strong>SU7.0 M1</strong> = 7.0.10247 on Windows, 7.0.10246 on Mac.</p>
-</li><li>
-<p><strong>SU7.0 M0</strong> = 7.0.8657 on Windows, 7.0.8656 on Mac.</p>
-</li><li>
-<p><strong>SU6 M6</strong> = 6.4.265 on Windows, 6.4.263 on Mac.</p>
-</li></ul>
+<p>Here are the build numbers for recent SketchUp releases. Note that build numbers
+in languages besides English are larger for each release, so it is best to check
+for builds that are greater than or equal to the numbers here.</p>
 
-<h2 id="label-What-27s+new+in+SketchUp+2016+M0">What&#39;s new in SketchUp 2016 M0</h2>
+<ul>
+  <li>
+    <p><strong>SU2016 M0</strong> = 16.0.19912 on Windows 64-bit, 16.0.19911 on Windows 32-bit, 16.0.19913 on Mac 64-bit.</p>
+  </li>
+  <li><strong>SU2015 M2</strong> = 15.2.685 on Windows 64-bit, 15.2.687 on Windows 32-bit, 15.2.686 on Mac 64-bit.</li>
+  <li><strong>SU2015 M1</strong> = 15.1.106 on Windows 64-bit, 15.1.105 on Windows 32-bit, 15.1.104 on Mac 64-bit.</li>
+  <li>
+    <p><strong>SU2015</strong> = 15.0.9350 on Windows 64-bit, 15.0.9351 on Windows 32-bit, 15.0.9349 on Mac 64-bit.</p>
+  </li>
+  <li><strong>SU2014 M1</strong> = 14.1.1282 on Windows, 14.1.1283 on Mac.</li>
+  <li>
+    <p><strong>SU2014</strong> = 14.0.4900 on Windows, 14.0.4899 on Mac.</p>
+  </li>
+  <li><strong>SU2013 M2</strong> = 13.0.4812 on Windows, 13.0.4811 on Mac.</li>
+  <li><strong>SU2013 M1</strong> = 13.0.4124 on Windows, 13.0.4123 on Mac.</li>
+  <li>
+    <p><strong>SU2013</strong> = 13.0.3689 on Windows, 13.0.3688 on Mac.</p>
+  </li>
+  <li><strong>SU8.0 M2</strong> = 8.0.11752 on Windows, 8.0.11751 on Mac.</li>
+  <li><strong>SU8.0 M1</strong> = 8.0.4811 on Windows, 8.0.4810 on Mac.</li>
+  <li>
+    <p><strong>SU8.0</strong> = 8.0.3117 on Windows, 8.0.3161 on Mac.</p>
+  </li>
+  <li><strong>SU7.1 M2</strong> = 7.1.6860 on Windows, 7.1.6859 on Mac.</li>
+  <li><strong>SU7.0 M1</strong> = 7.0.10247 on Windows, 7.0.10246 on Mac.</li>
+  <li>
+    <p><strong>SU7.0 M0</strong> = 7.0.8657 on Windows, 7.0.8656 on Mac.</p>
+  </li>
+  <li><strong>SU6 M6</strong> = 6.4.265 on Windows, 6.4.263 on Mac.</li>
+</ul>
 
-<h3 id="label-A+new+LayOut+API">A new LayOut API</h3>
+<h2 id="whats-new-in-sketchup-2016-m0">What’s new in SketchUp 2016 M0</h2>
+
+<h3 id="a-new-layout-api">A new LayOut API</h3>
 
 <p>We’re proud to announce our first step towards an extension ecosystem for
-LayOut. Using this new API developers can now open, create, modify, save,
-and export .layout files. Practically, this means that other applications
-can import or export the .layout file format using the C API. (This
-includes creating a .layout file from SketchUp). We have several sample
-scripts for developers to try out at release. Check out the API
-documentation in the <a
-href="http://extensions.sketchup.com/developer_center/layout_c_api/layout/index.html">Developer
-Center</a> for more information.</p>
+LayOut. Using this new API developers can now open, create, modify, save, and
+export .layout files. Practically, this means that other applications can import
+or export the .layout file format using the C API. (This includes creating a
+.layout file from SketchUp). We have several sample scripts for developers to
+try out at release. Check out the API documentation in the
+<a href="http://extensions.sketchup.com/developer_center/layout_c_api/layout/index.html">Developer Center</a>
+for more information.</p>
 
-<h2 id="label-Digitally+Signing+Extensions+-+Extensions+Loading+Policy">Digitally Signing Extensions - Extensions Loading Policy</h2>
+<h2 id="digitally-signing-extensions---extensions-loading-policy">Digitally Signing Extensions - Extensions Loading Policy</h2>
 
-<p>With SketchUp 2016 we introduced the ability for users to select which
-Extension Loading Policy they want to use. The options are “Identified
-Extensions Only”, “Approve Unidentified Extensions”, and “Unrestricted”.</p>
+<p>With SketchUp 2016 we introduced the ability for users to select which Extension
+Loading Policy they want to use. The options are “Identified Extensions Only”,
+“Approve Unidentified Extensions”, and “Unrestricted”.</p>
 
-<p>The developer side of this feature is known as a Digital Signature. All
-SketchUp extensions for 2016 or later will now require a Digital Signature
-to run in the highest security mode - “Identified Extensions Only”. If the
-user has chosen “Approve Unidentified Extensions” then all signed
-extensions will load automatically and any unsigned extension will have to
-be approved by the user. All extensions signed and unsigned, will load in
-“Unrestricted” mode.</p>
+<p>The developer side of this feature is known as a Digital Signature. All SketchUp
+extensions for 2016 or later will now require a Digital Signature to run in the
+highest security mode - “Identified Extensions Only”. If the user has chosen
+“Approve Unidentified Extensions” then all signed extensions will load
+automatically and any unsigned extension will have to be approved by the user.
+All extensions signed and unsigned, will load in “Unrestricted” mode.</p>
 
 <p>SketchUp 2016 M0 installs in “Unrestricted” mode by default.</p>
 
-<p>To digitally sign your extension, simply upload your .rbz package to our
-new Digital Signature and Encryption page and we will sign it and return it
-to you. Visit the new <a
-href="https://extensions.sketchup.com/en/developer_center/extension_signature">Extension
-Digital Signature page</a>.</p>
+<p>To digitally sign your extension, simply upload your .rbz package to our new
+Digital Signature and Encryption page and we will sign it and return it to you.
+Visit the new
+<a href="https://extensions.sketchup.com/en/developer_center/extension_signature">Extension Digital Signature page</a>.</p>
 
-<p>You will need to sign your extension each time you make code changes and
-want to re-release it. You will need to be a registered Developer on the
-xtension Warehouse to be able to sign or encrypt extensions. <a
-href="http://http//extensions.sketchup.com/en/developer">Apply here!</a></p>
+<p>You will need to sign your extension each time you make code changes and want to
+re-release it. You will need to be a registered Developer on the 
+xtension Warehouse to be able to sign or encrypt extensions.
+<a href="http://http//extensions.sketchup.com/en/developer">Apply here!</a></p>
 
 <p><em>spaceholder</em></p>
 
-<h2 id="label-What-27s+new+in+SketchUp+2015+M2">What&#39;s new in SketchUp 2015 M2</h2>
+<h2 id="whats-new-in-sketchup-2015-m2">What’s new in SketchUp 2015 M2</h2>
 
 <p>We fixed a crash on Mac that could occur when a timer was stopped via
 <code>UI.stop_timer</code> from within the timer procedure.</p>
 
-<h2 id="label-What-27s+new+in+SketchUp+2015">What&#39;s new in SketchUp 2015</h2>
+<h2 id="whats-new-in-sketchup-2015">What’s new in SketchUp 2015</h2>
 
-<h3 id="label-Renaming+the+Plugins+Menu">Renaming the Plugins Menu</h3>
+<h3 id="renaming-the-plugins-menu">Renaming the Plugins Menu</h3>
 
-<p>We renamed the “Plugins” menu to “Extensions” to be more inline with our
-current naming conventions. This should not break existing plugins. Adding
-a menu item to the “Plugins” menu will still work, it will be added to the
-“Extensions” menu.</p>
+<p>We renamed the “Plugins” menu to “Extensions” to be more inline with our current
+naming conventions. This should not break existing plugins. Adding a menu item
+to the “Plugins” menu will still work, it will be added to the “Extensions”
+menu.</p>
 
 <p><em>spaceholder</em></p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:49 2016 by
+  Generated on Wed Mar 30 17:21:54 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>

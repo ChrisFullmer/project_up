@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Geom::Point3d
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; SketchUp Ruby API Documentation
   
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Geom::Point3d";
@@ -25,8 +31,19 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
+
+  <div id="su-header">
+    <h1>
+      <a href="http://extensions.sketchup.com/developer_center">
+        <b>SketchUp</b> Developer Center
+      </a>
+    </h1>
+  </div>
+
+  <div id="su-content">
+
     <div class="nav_wrap">
       <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
@@ -71,10 +88,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Geom::Point3d</li>
           
@@ -943,7 +960,7 @@ create a new point.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1060,7 +1077,7 @@ values, it creates a point at (x,y,0).</p>
       <div class="method_details first">
   <h3 class="signature first" id="linear_combination-class_method">
   
-    .<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1213,7 +1230,7 @@ point = weight1 * point1 + weight2 * point2.</p>
       <div class="method_details first">
   <h3 class="signature first" id="+-instance_method">
   
-    #<strong>+</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>+</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1301,7 +1318,7 @@ points together.</p>
       <div class="method_details ">
   <h3 class="signature " id="--instance_method">
   
-    #<strong>-</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>-</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1388,7 +1405,7 @@ and z values of a point.</p>
       <div class="method_details ">
   <h3 class="signature " id="<-instance_method">
   
-    #<strong>&lt;</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1476,7 +1493,7 @@ closer to the origin.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1595,7 +1612,7 @@ z coordinates, as in the following examples:</p>
       <div class="method_details ">
   <h3 class="signature " id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1684,7 +1701,7 @@ index.</p>
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1771,7 +1788,7 @@ the specific index of the value.</p>
       <div class="method_details ">
   <h3 class="signature " id="clone-instance_method">
   
-    #<strong>clone</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>clone</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1838,7 +1855,7 @@ being cloned.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance-instance_method">
   
-    #<strong>distance</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>distance</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1926,7 +1943,7 @@ point.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_line-instance_method">
   
-    #<strong>distance_to_line</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>distance_to_line</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2017,7 +2034,7 @@ successful</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_plane-instance_method">
   
-    #<strong>distance_to_plane</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>distance_to_plane</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2106,7 +2123,7 @@ successful</p>
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2176,7 +2193,7 @@ automatically when an object is output using a print command like
       <div class="method_details ">
   <h3 class="signature " id="offset-instance_method">
   
-    #<strong>offset</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>offset</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2281,7 +2298,7 @@ to the vector length.</p>
       <div class="method_details ">
   <h3 class="signature " id="offset!-instance_method">
   
-    #<strong>offset!</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>offset!</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2371,7 +2388,7 @@ is modified.</p>
       <div class="method_details ">
   <h3 class="signature " id="on_line?-instance_method">
   
-    #<strong>on_line?</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>on_line?</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2470,7 +2487,7 @@ line</p>
       <div class="method_details ">
   <h3 class="signature " id="on_plane?-instance_method">
   
-    #<strong>on_plane?</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>on_plane?</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2549,7 +2566,7 @@ the plane</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_line-instance_method">
   
-    #<strong>project_to_line</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>project_to_line</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2640,7 +2657,7 @@ closest to this point.</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_plane-instance_method">
   
-    #<strong>project_to_plane</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>project_to_plane</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2732,7 +2749,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="set!-instance_method">
   
-    #<strong>set!</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set!</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2850,7 +2867,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_a-instance_method">
   
-    #<strong>to_a</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_a</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2920,7 +2937,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2986,7 +3003,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform-instance_method">
   
-    #<strong>transform</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transform</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3076,7 +3093,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transform!</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3165,7 +3182,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="vector_to-instance_method">
   
-    #<strong>vector_to</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>vector_to</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3258,7 +3275,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="x-instance_method">
   
-    #<strong>x</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>x</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3324,7 +3341,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="x=-instance_method">
   
-    #<strong>x=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>x=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3410,7 +3427,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="y-instance_method">
   
-    #<strong>y</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>y</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3476,7 +3493,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="y=-instance_method">
   
-    #<strong>y=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>y=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3562,7 +3579,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="z-instance_method">
   
-    #<strong>z</strong>  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>z</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3628,7 +3645,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="z=-instance_method">
   
-    #<strong>z=</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>z=</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3716,11 +3733,13 @@ create a new point.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 22 14:00:54 2016 by
+  Generated on Wed Mar 30 17:22:00 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
 </div>
 
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>
