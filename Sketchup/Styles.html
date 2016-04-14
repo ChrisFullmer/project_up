@@ -174,7 +174,7 @@ in a model. Typically, you will access this via the active_model:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(name_or_index)  &#x21d2; Object </a>
     
 
     
@@ -247,7 +247,7 @@ edited by the user since it was last saved.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_style-instance_method" title="#add_style (instance method)">#<strong>add_style</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#add_style-instance_method" title="#add_style (instance method)">#<strong>add_style</strong>(filename, select)  &#x21d2; Object </a>
     
 
     
@@ -296,7 +296,7 @@ file.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|style| ... } &#x21d2; Object </a>
     
 
     
@@ -417,7 +417,7 @@ collection.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#selected_style%3D-instance_method" title="#selected_style= (instance method)">#<strong>selected_style=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#selected_style%3D-instance_method" title="#selected_style (instance method)">#<strong>selected_style</strong>(style)  &#x21d2; Object </a>
     
 
     
@@ -512,7 +512,7 @@ changed (e.g. the user selected a different style).</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(name_or_index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -537,7 +537,17 @@ changed (e.g. the user selected a different style).</p>
 <span class='id identifier rubyid_style2'>style2</span> <span class='op'>=</span> <span class='id identifier rubyid_styles'>styles</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns style - a Style object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -576,6 +586,9 @@ changed (e.g. the user selected a different style).</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -735,7 +748,7 @@ saved.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_style-instance_method">
   
-    #<strong>add_style</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_style</strong>(filename, select)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -761,7 +774,17 @@ file.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A style was added: </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -816,6 +839,9 @@ file.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -915,7 +941,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|style| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -941,15 +967,14 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>style</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>style</tt>)</span>
       
       
       
@@ -961,7 +986,6 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1229,7 +1253,7 @@ collection.</p>
       <div class="method_details ">
   <h3 class="signature " id="selected_style=-instance_method">
   
-    #<strong>selected_style=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>selected_style</strong>(style)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1253,7 +1277,17 @@ collection.</p>
 <span class='id identifier rubyid_styles'>styles</span><span class='period'>.</span><span class='id identifier rubyid_selected_style'>selected_style</span> <span class='op'>=</span> <span class='id identifier rubyid_styles'>styles</span><span class='lbracket'>[</span><span class='id identifier rubyid_styles'>styles</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1292,6 +1326,9 @@ collection.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1454,7 +1491,7 @@ changed (e.g. the user selected a different style).</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:59 2016 by
+  Generated on Tue Apr 12 20:17:15 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

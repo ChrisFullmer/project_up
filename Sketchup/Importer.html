@@ -341,7 +341,7 @@ importer, typically something like “com.sketchup.importers.dxf”.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#load_file-instance_method" title="#load_file (instance method)">#<strong>load_file</strong>(arg)  &#x21d2; Object </a>
+      <a href="#load_file-instance_method" title="#load_file (instance method)">#<strong>load_file</strong>(file_path, status)  &#x21d2; Object </a>
     
 
     
@@ -684,7 +684,7 @@ importer, typically something like “com.sketchup.importers.dxf”.</p>
       <div class="method_details ">
   <h3 class="signature " id="load_file-instance_method">
   
-    #<strong>load_file</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>load_file</strong>(file_path, status)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -723,7 +723,17 @@ SketchUp receives each key.</p>
 </span><span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns success - an integer status code. See above.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -778,6 +788,9 @@ SketchUp receives each key.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -881,7 +894,7 @@ selected.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

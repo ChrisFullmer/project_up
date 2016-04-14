@@ -187,7 +187,7 @@ edge, including the edge itself.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#common_face-instance_method" title="#common_face (instance method)">#<strong>common_face</strong>(arg)  &#x21d2; Object </a>
+      <a href="#common_face-instance_method" title="#common_face (instance method)">#<strong>common_face</strong>(edge2)  &#x21d2; Object </a>
     
 
     
@@ -385,7 +385,7 @@ units.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#other_vertex-instance_method" title="#other_vertex (instance method)">#<strong>other_vertex</strong>(arg)  &#x21d2; Object </a>
+      <a href="#other_vertex-instance_method" title="#other_vertex (instance method)">#<strong>other_vertex</strong>(vertex1)  &#x21d2; Object </a>
     
 
     
@@ -410,7 +410,7 @@ vertex of the edge.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reversed_in%3F-instance_method" title="#reversed_in? (instance method)">#<strong>reversed_in?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#reversed_in%3F-instance_method" title="#reversed_in? (instance method)">#<strong>reversed_in?</strong>(face)  &#x21d2; Object </a>
     
 
     
@@ -435,7 +435,7 @@ traversed in the corresponding direction as its corresponding edge.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#smooth%3D-instance_method" title="#smooth= (instance method)">#<strong>smooth=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#smooth%3D-instance_method" title="#smooth= (instance method)">#<strong>smooth=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -484,7 +484,7 @@ edge.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#soft%3D-instance_method" title="#soft= (instance method)">#<strong>soft=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#soft%3D-instance_method" title="#soft= (instance method)">#<strong>soft=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -533,7 +533,7 @@ edge.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#split-instance_method" title="#split (instance method)">#<strong>split</strong>(arg)  &#x21d2; Object </a>
+      <a href="#split-instance_method" title="#split (instance method)">#<strong>split</strong>(position)  &#x21d2; Object </a>
     
 
     
@@ -583,7 +583,7 @@ edge.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#used_by%3F-instance_method" title="#used_by? (instance method)">#<strong>used_by?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#used_by%3F-instance_method" title="#used_by? (instance method)">#<strong>used_by?</strong>(element)  &#x21d2; Object </a>
     
 
     
@@ -749,7 +749,7 @@ edge, including the edge itself.</p>
       <div class="method_details ">
   <h3 class="signature " id="common_face-instance_method">
   
-    #<strong>common_face</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>common_face</strong>(edge2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -794,7 +794,18 @@ edges.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns face - the Face object that is common to the two edges if
+successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -833,6 +844,9 @@ edges.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1257,7 +1271,11 @@ edges, the triangle will be filled in.</p>
       <div class="method_details ">
   <h3 class="signature " id="length-instance_method">
   
-    #<strong>length</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>length</strong>  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>length</strong>(transform)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -1292,7 +1310,58 @@ transformation object to this method, you can account for that to get the
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>length</strong>  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns length - the length of the edge in current units</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>length - the length of the edge in current units</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>length</strong>(transform)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns length - the length of the edge in current units</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1300,7 +1369,7 @@ transformation object to this method, you can account for that to get the
         <span class='name'>transform</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1332,6 +1401,12 @@ Transformation object.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1430,7 +1505,7 @@ Array class for more information on lines.</p>
       <div class="method_details ">
   <h3 class="signature " id="other_vertex-instance_method">
   
-    #<strong>other_vertex</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>other_vertex</strong>(vertex1)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1470,7 +1545,17 @@ vertex of the edge.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vertex2 - the other Vertex object associated with the edge</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1509,6 +1594,9 @@ vertex of the edge.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1532,7 +1620,7 @@ vertex of the edge.</p>
       <div class="method_details ">
   <h3 class="signature " id="reversed_in?-instance_method">
   
-    #<strong>reversed_in?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>reversed_in?</strong>(face)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1572,7 +1660,17 @@ traversed in the corresponding direction as its corresponding edge.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the edge is reversed, nil if it is not reversed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1610,6 +1708,13 @@ traversed in the corresponding direction as its corresponding edge.</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -1643,7 +1748,7 @@ traversed in the corresponding direction as its corresponding edge.</p>
       <div class="method_details ">
   <h3 class="signature " id="smooth=-instance_method">
   
-    #<strong>smooth=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>smooth=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1677,7 +1782,17 @@ traversed in the corresponding direction as its corresponding edge.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1717,6 +1832,9 @@ to be smooth.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1826,7 +1944,7 @@ edge.</p>
       <div class="method_details ">
   <h3 class="signature " id="soft=-instance_method">
   
-    #<strong>soft=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>soft=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1860,7 +1978,17 @@ edge.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1900,6 +2028,9 @@ be soft.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2010,7 +2141,7 @@ profile edge.</p>
       <div class="method_details ">
   <h3 class="signature " id="split-instance_method">
   
-    #<strong>split</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>split</strong>(position)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2043,7 +2174,18 @@ the Edge.start.</p>
 <span class='id identifier rubyid_new_edge'>new_edge</span> <span class='op'>=</span> <span class='id identifier rubyid_edge'>edge</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span> <span class='float'>0.5</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns edge - the new Edge object that was split off the old one if
+successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2083,6 +2225,9 @@ and 1.0 defining how far along the edge to split.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2186,7 +2331,7 @@ edge.</p>
       <div class="method_details ">
   <h3 class="signature " id="used_by?-instance_method">
   
-    #<strong>used_by?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>used_by?</strong>(element)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2219,7 +2364,17 @@ Vertex.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the face belongs to the element, false if not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2256,6 +2411,13 @@ Vertex.</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -2358,7 +2520,7 @@ Vertex.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:57 2016 by
+  Generated on Tue Apr 12 20:17:13 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -484,7 +484,7 @@ maintained in SketchUp:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-class_method" title="each_key (class method)">.<strong>each_key</strong>  &#x21d2; Object </a>
+      <a href="#each_key-class_method" title="each_key (class method)">.<strong>each_key</strong> {|key| ... } &#x21d2; Object </a>
     
 
     
@@ -541,7 +541,7 @@ maintained in SketchUp:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -566,7 +566,7 @@ options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -591,7 +591,7 @@ options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -664,7 +664,7 @@ module.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong>  &#x21d2; Object </a>
+      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong> {|key| ... } &#x21d2; Object </a>
     
 
     
@@ -761,7 +761,7 @@ collection.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -832,7 +832,7 @@ collection.</p>
       <div class="method_details first">
   <h3 class="signature first" id="each_key-class_method">
   
-    .<strong>each_key</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>each_key</strong> {|key| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -857,15 +857,14 @@ collection.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>)</span>
       
       
       
@@ -877,7 +876,6 @@ collection.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -990,7 +988,7 @@ collection.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1014,7 +1012,17 @@ options.</p>
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_rendering_options'>rendering_options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DisplayInstanceAxes</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value that was found.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1053,6 +1061,9 @@ options.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1076,7 +1087,7 @@ options.</p>
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]=</strong>(key, value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1100,7 +1111,17 @@ options.</p>
       <pre class="example code"><code><span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_rendering_options'>rendering_options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DisplayInstanceAxes</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>false</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value that was set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1155,6 +1176,9 @@ options.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1178,7 +1202,7 @@ options.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1202,7 +1226,17 @@ options.</p>
 </span><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_rendering_options'>rendering_options</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1241,6 +1275,9 @@ options.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1398,7 +1435,7 @@ module.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_key-instance_method">
   
-    #<strong>each_key</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_key</strong> {|key| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1423,15 +1460,14 @@ module.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>)</span>
       
       
       
@@ -1443,7 +1479,6 @@ module.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1686,7 +1721,7 @@ collection</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1713,7 +1748,17 @@ object.</p>
 <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1752,6 +1797,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1846,7 +1894,7 @@ collection</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:04 2016 by
+  Generated on Tue Apr 12 20:17:21 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

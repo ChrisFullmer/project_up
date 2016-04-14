@@ -202,7 +202,7 @@ faces.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_point-instance_method" title="#add_point (instance method)">#<strong>add_point</strong>(*args)  &#x21d2; Object </a>
+      <a href="#add_point-instance_method" title="#add_point (instance method)">#<strong>add_point</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -226,7 +226,7 @@ faces.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_polygon-instance_method" title="#add_polygon (instance method)">#<strong>add_polygon</strong>(*args)  &#x21d2; Object </a>
+      <a href="#add_polygon-instance_method" title="#add_polygon (instance method)">#<strong>add_polygon</strong>(points)  &#x21d2; Object </a>
     
 
     
@@ -298,7 +298,7 @@ faces.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(numpts, numpolys)  &#x21d2; Object </a>
     
 
     
@@ -324,7 +324,7 @@ faces.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normal_at-instance_method" title="#normal_at (instance method)">#<strong>normal_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#normal_at-instance_method" title="#normal_at (instance method)">#<strong>normal_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -349,7 +349,7 @@ in the mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#point_at-instance_method" title="#point_at (instance method)">#<strong>point_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#point_at-instance_method" title="#point_at (instance method)">#<strong>point_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -374,7 +374,7 @@ the mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#point_index-instance_method" title="#point_index (instance method)">#<strong>point_index</strong>(arg)  &#x21d2; Object </a>
+      <a href="#point_index-instance_method" title="#point_index (instance method)">#<strong>point_index</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -424,7 +424,7 @@ mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#polygon_at-instance_method" title="#polygon_at (instance method)">#<strong>polygon_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#polygon_at-instance_method" title="#polygon_at (instance method)">#<strong>polygon_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -449,7 +449,7 @@ for a polygon at a specific index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#polygon_points_at-instance_method" title="#polygon_points_at (instance method)">#<strong>polygon_points_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#polygon_points_at-instance_method" title="#polygon_points_at (instance method)">#<strong>polygon_points_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -499,7 +499,7 @@ mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_point-instance_method" title="#set_point (instance method)">#<strong>set_point</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#set_point-instance_method" title="#set_point (instance method)">#<strong>set_point</strong>(index, point)  &#x21d2; Object </a>
     
 
     
@@ -524,7 +524,7 @@ mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_uv-instance_method" title="#set_uv (instance method)">#<strong>set_uv</strong>(arg_index, arg_uv, arg_frontside)  &#x21d2; Object </a>
+      <a href="#set_uv-instance_method" title="#set_uv (instance method)">#<strong>set_uv</strong>(index, point)  &#x21d2; Object </a>
     
 
     
@@ -549,7 +549,7 @@ mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(transform)  &#x21d2; Object </a>
     
 
     
@@ -573,7 +573,7 @@ mesh.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#uv_at-instance_method" title="#uv_at (instance method)">#<strong>uv_at</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#uv_at-instance_method" title="#uv_at (instance method)">#<strong>uv_at</strong>(index, front)  &#x21d2; Object </a>
     
 
     
@@ -598,7 +598,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#uvs-instance_method" title="#uvs (instance method)">#<strong>uvs</strong>(arg)  &#x21d2; Object </a>
+      <a href="#uvs-instance_method" title="#uvs (instance method)">#<strong>uvs</strong>(front)  &#x21d2; Object </a>
     
 
     
@@ -628,7 +628,7 @@ index.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(numpts, numpolys)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -653,7 +653,17 @@ pre-allocate to speed up adding points and polygons.</p>
       <pre class="example code"><code><span class='id identifier rubyid_mesh'>mesh</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>PolygonMesh</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns mesh - the new PolygonMesh.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -690,6 +700,9 @@ pre-allocate to speed up adding points and polygons.</p>
   
 </ul>
 
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -720,7 +733,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_point-instance_method">
   
-    #<strong>add_point</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_point</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -747,7 +760,17 @@ pre-allocate to speed up adding points and polygons.</p>
 <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_add_point'>add_point</span><span class='lparen'>(</span><span class='id identifier rubyid_point'>point</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns index - the index in the mesh for the point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -786,6 +809,9 @@ pre-allocate to speed up adding points and polygons.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -809,7 +835,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_polygon-instance_method">
   
-    #<strong>add_polygon</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_polygon</strong>(points)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -836,7 +862,17 @@ pre-allocate to speed up adding points and polygons.</p>
 <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_add_polygon'>add_polygon</span><span class='lparen'>(</span><span class='id identifier rubyid_point1'>point1</span><span class='comma'>,</span> <span class='id identifier rubyid_point2'>point2</span><span class='comma'>,</span> <span class='id identifier rubyid_point3'>point3</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns index - the index of the polygon in the mesh if successful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -875,6 +911,9 @@ pre-allocate to speed up adding points and polygons.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1036,7 +1075,7 @@ pre-allocate to speed up adding points and polygons.</p>
       <div class="method_details ">
   <h3 class="signature " id="normal_at-instance_method">
   
-    #<strong>normal_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>normal_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1063,7 +1102,17 @@ in the mesh. This only works for meshes retrieved from Sketchup::Face.mesh.</p>
 <span class='id identifier rubyid_normal'>normal</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_normal_at'>normal_at</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns normal - a normal on success, nil on failure</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1102,6 +1151,9 @@ in the mesh. This only works for meshes retrieved from Sketchup::Face.mesh.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1125,7 +1177,7 @@ in the mesh. This only works for meshes retrieved from Sketchup::Face.mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="point_at-instance_method">
   
-    #<strong>point_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>point_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1156,7 +1208,17 @@ the mesh.</p>
 <span class='id identifier rubyid_point_from_index'>point_from_index</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_point_at'>point_at</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object on success, nil on failure</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1195,6 +1257,9 @@ the mesh.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1218,7 +1283,7 @@ the mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="point_index-instance_method">
   
-    #<strong>point_index</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>point_index</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1249,7 +1314,17 @@ mesh.</p>
 <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_point_index'>point_index</span><span class='lparen'>(</span><span class='id identifier rubyid_point2'>point2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns index - the index in the mesh for the Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1288,6 +1363,9 @@ mesh.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1383,7 +1461,7 @@ mesh</p>
       <div class="method_details ">
   <h3 class="signature " id="polygon_at-instance_method">
   
-    #<strong>polygon_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>polygon_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1419,7 +1497,18 @@ the arg to point_at.</p>
 <span class='id identifier rubyid_polygon'>polygon</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_polygon_at'>polygon_at</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vertices - an array of vertex index values if successful nil on
+failure</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1458,6 +1547,9 @@ the arg to point_at.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1481,7 +1573,7 @@ the arg to point_at.</p>
       <div class="method_details ">
   <h3 class="signature " id="polygon_points_at-instance_method">
   
-    #<strong>polygon_points_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>polygon_points_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1510,7 +1602,18 @@ that is at a specific index in the mesh.</p>
 <span class='id identifier rubyid_points'>points</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_polygon_points_at'>polygon_points_at</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns points - an array of points that make up the polygon if successful,
+nil on failure</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1550,6 +1653,9 @@ failure</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1643,7 +1749,7 @@ edge from 1 to 2 is hidden.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_point-instance_method">
   
-    #<strong>set_point</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_point</strong>(index, point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1671,7 +1777,17 @@ mesh.</p>
 <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_set_point'>set_point</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='comma'>,</span> <span class='id identifier rubyid_point2'>point2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns polygonmesh - a PolygonMesh object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1726,6 +1842,9 @@ mesh.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1749,7 +1868,7 @@ mesh.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_uv-instance_method">
   
-    #<strong>set_uv</strong>(arg_index, arg_uv, arg_frontside)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_uv</strong>(index, point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1810,12 +1929,22 @@ you have called set_uv.</p>
 <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_add_polygon'>add_polygon</span><span class='lparen'>(</span><span class='id identifier rubyid_index1'>index1</span><span class='comma'>,</span> <span class='id identifier rubyid_index3'>index3</span><span class='comma'>,</span> <span class='id identifier rubyid_index4'>index4</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>integer</span>
+        <span class='name'>index</span>
       
       
         <span class='type'></span>
@@ -1865,6 +1994,9 @@ you have called set_uv.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1888,7 +2020,7 @@ you have called set_uv.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transform!</strong>(transform)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1916,7 +2048,17 @@ you have called set_uv.</p>
 <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_transform!'>transform!</span><span class='lparen'>(</span><span class='id identifier rubyid_tr'>tr</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns polygonmesh - the PolygonMesh object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1955,6 +2097,9 @@ you have called set_uv.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1978,7 +2123,7 @@ you have called set_uv.</p>
       <div class="method_details ">
   <h3 class="signature " id="uv_at-instance_method">
   
-    #<strong>uv_at</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>uv_at</strong>(index, front)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2013,7 +2158,18 @@ is referred to as UV mapping.</p>
       <pre class="example code"><code><span class='id identifier rubyid_point'>point</span> <span class='op'>=</span> <span class='id identifier rubyid_mesh'>mesh</span><span class='period'>.</span><span class='id identifier rubyid_uv_at'>uv_at</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object where the x equals the u value and the y
+equals the v value. Returns nil on failure.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2069,6 +2225,9 @@ the v value. Returns nil on failure.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2092,7 +2251,7 @@ the v value. Returns nil on failure.</p>
       <div class="method_details ">
   <h3 class="signature " id="uvs-instance_method">
   
-    #<strong>uvs</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>uvs</strong>(front)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2118,6 +2277,31 @@ the v value. Returns nil on failure.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns points - an array of uv coordinates if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>front</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2136,6 +2320,9 @@ the v value. Returns nil on failure.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2161,7 +2348,7 @@ the v value. Returns nil on failure.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

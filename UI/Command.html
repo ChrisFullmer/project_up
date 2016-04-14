@@ -191,7 +191,7 @@ single spot in your code.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#new-class_method" title="new (class method)">.<strong>new</strong>(arg)  &#x21d2; Object </a>
+      <a href="#new-class_method" title="new (class method)">.<strong>new</strong>(menutext) { ... } &#x21d2; Object </a>
     
 
     
@@ -249,7 +249,7 @@ icon.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#large_icon%3D-instance_method" title="#large_icon= (instance method)">#<strong>large_icon=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#large_icon%3D-instance_method" title="#large_icon= (instance method)">#<strong>large_icon=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -298,7 +298,7 @@ command&#39;s large icon.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#menu_text%3D-instance_method" title="#menu_text= (instance method)">#<strong>menu_text=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#menu_text%3D-instance_method" title="#menu_text (instance method)">#<strong>menu_text</strong>(menuitem)  &#x21d2; Object </a>
     
 
     
@@ -322,7 +322,7 @@ command&#39;s large icon.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_validation_proc-instance_method" title="#set_validation_proc (instance method)">#<strong>set_validation_proc</strong>(arg)  &#x21d2; Object </a>
+      <a href="#set_validation_proc-instance_method" title="#set_validation_proc (instance method)">#<strong>set_validation_proc</strong>(title) { ... } &#x21d2; Object </a>
     
 
     
@@ -372,7 +372,7 @@ icon.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#small_icon%3D-instance_method" title="#small_icon= (instance method)">#<strong>small_icon=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#small_icon%3D-instance_method" title="#small_icon= (instance method)">#<strong>small_icon=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -421,7 +421,7 @@ command&#39;s small icon.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#status_bar_text%3D-instance_method" title="#status_bar_text= (instance method)">#<strong>status_bar_text=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#status_bar_text%3D-instance_method" title="#status_bar_text= (instance method)">#<strong>status_bar_text=</strong>(text)  &#x21d2; Object </a>
     
 
     
@@ -470,7 +470,7 @@ command.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#tooltip%3D-instance_method" title="#tooltip= (instance method)">#<strong>tooltip=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#tooltip%3D-instance_method" title="#tooltip= (instance method)">#<strong>tooltip=</strong>(text)  &#x21d2; Object </a>
     
 
     
@@ -503,7 +503,7 @@ command.</p>
       <div class="method_details first">
   <h3 class="signature first" id="new-class_method">
   
-    .<strong>new</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>new</strong>(menutext) { ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -533,7 +533,17 @@ command.</p>
 <span class='id identifier rubyid_testmenu'>testmenu</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - the new Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -553,24 +563,27 @@ a menu.</p>
       
     </li>
   
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
     <li>
-      
-        <span class='name'>Code</span>
       
       
         <span class='type'></span>
       
       
       
-        &mdash;
+        
         <div class='inline'>
-<p>that executes the command when the menu item or toolbar item is selected.</p>
+<p>Code that executes the command when the menu item or toolbar item is
+selected.</p>
 </div>
       
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -589,6 +602,9 @@ a menu.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -691,7 +707,7 @@ icon.</p>
       <div class="method_details ">
   <h3 class="signature " id="large_icon=-instance_method">
   
-    #<strong>large_icon=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>large_icon=</strong>(path)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -727,7 +743,17 @@ only one vector image for both variants.</p>
 <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - the Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -766,6 +792,9 @@ only one vector image for both variants.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -860,7 +889,7 @@ only one vector image for both variants.</p>
       <div class="method_details ">
   <h3 class="signature " id="menu_text=-instance_method">
   
-    #<strong>menu_text=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>menu_text</strong>(menuitem)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -888,7 +917,17 @@ only one vector image for both variants.</p>
 <span class='id identifier rubyid_testmenu'>testmenu</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - a Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -927,6 +966,9 @@ only one vector image for both variants.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -950,7 +992,7 @@ only one vector image for both variants.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_validation_proc-instance_method">
   
-    #<strong>set_validation_proc</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_validation_proc</strong>(title) { ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -990,12 +1032,22 @@ MF_UNCHECKED, or MF_GRAYED.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_menu'>menu</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - a Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>Undefined.</span>
+        <span class='name'>title.</span>
       
       
         <span class='type'></span>
@@ -1006,6 +1058,19 @@ MF_UNCHECKED, or MF_GRAYED.</p>
   
 </ul>
 
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1024,6 +1089,9 @@ MF_UNCHECKED, or MF_GRAYED.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1120,7 +1188,7 @@ icon.</p>
       <div class="method_details ">
   <h3 class="signature " id="small_icon=-instance_method">
   
-    #<strong>small_icon=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>small_icon=</strong>(path)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1156,7 +1224,17 @@ only one vector image for both variants.</p>
 <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - the Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1195,6 +1273,9 @@ only one vector image for both variants.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1292,7 +1373,7 @@ only one vector image for both variants.</p>
       <div class="method_details ">
   <h3 class="signature " id="status_bar_text=-instance_method">
   
-    #<strong>status_bar_text=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>status_bar_text=</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1323,7 +1404,17 @@ command.</p>
 <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - the Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1363,6 +1454,9 @@ command&#39;s menu item.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1457,7 +1551,7 @@ command&#39;s menu item.</p>
       <div class="method_details ">
   <h3 class="signature " id="tooltip=-instance_method">
   
-    #<strong>tooltip=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>tooltip=</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1487,7 +1581,17 @@ user hovers their cursor over the icon.</p>
 <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns command - the Command object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1526,6 +1630,9 @@ user hovers their cursor over the icon.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1551,7 +1658,7 @@ user hovers their cursor over the icon.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:00 2016 by
+  Generated on Tue Apr 12 20:17:16 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

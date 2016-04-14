@@ -162,7 +162,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(schema2)  &#x21d2; Object </a>
     
 
     
@@ -245,7 +245,7 @@ sorting.</p>
       <div class="method_details first">
   <h3 class="signature first" id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;=&gt;</strong>(schema2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -274,24 +274,19 @@ for sorting. The comparison is done based on the schema name.</p>
 </span><span class='id identifier rubyid_schemas'>schemas</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_classifications'>classifications</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>schema1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The first schema in the comparison.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Integer - -1 if schema1 is less then schema2. 1 if schema1 is
+greater than schema2, 0 if the schemas are equal.</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -330,6 +325,9 @@ schema2, 0 if the schemas are equal.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -489,7 +487,7 @@ schema2, 0 if the schemas are equal.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:05 2016 by
+  Generated on Tue Apr 12 20:17:22 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

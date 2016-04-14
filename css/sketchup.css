@@ -22,6 +22,7 @@ a:hover, a:focus,
   color: #b11423;
 }
 
+.summary_desc .object_link a,
 .docstring .object_link a,
 .object_link a
 {
@@ -47,6 +48,7 @@ a:hover, a:focus,
   color: #e72b3d;
 }
 
+.summary_desc .object_link a,
 #content .signature,
 .summary .summary_signature,
 #filecontents pre.code,

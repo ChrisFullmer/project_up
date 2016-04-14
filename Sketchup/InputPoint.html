@@ -164,7 +164,7 @@ examples of using the InputPoint class.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(inputpoint2)  &#x21d2; Object </a>
     
 
     
@@ -212,7 +212,7 @@ examples of using the InputPoint class.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#copy%21-instance_method" title="#copy! (instance method)">#<strong>copy!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#copy%21-instance_method" title="#copy! (instance method)">#<strong>copy!</strong>(inputpoint)  &#x21d2; Object </a>
     
 
     
@@ -312,7 +312,7 @@ draw.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>(arg)  &#x21d2; Object </a>
+      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>(view)  &#x21d2; Object </a>
     
 
     
@@ -386,7 +386,7 @@ position from a face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(pt_or_vertex)  &#x21d2; Object </a>
     
 
     
@@ -412,7 +412,7 @@ position from a face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pick-instance_method" title="#pick (instance method)">#<strong>pick</strong>(*args)  &#x21d2; Object </a>
+      <a href="#pick-instance_method" title="#pick (instance method)">#<strong>pick</strong>(view, x, y, inputpoint)  &#x21d2; Object </a>
     
 
     
@@ -565,7 +565,7 @@ point.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(pt_or_vertex)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -592,7 +592,17 @@ point.</p>
 <span class='id identifier rubyid_ip2'>ip2</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>InputPoint</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_starting_point'>starting_point</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns inputpoint - the newly created InputPoint object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -612,6 +622,9 @@ point.</p>
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -643,7 +656,7 @@ point.</p>
       <div class="method_details first">
   <h3 class="signature first" id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>==</strong>(inputpoint2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -674,24 +687,19 @@ point.</p>
 </span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_ip1'>ip1</span> <span class='op'>==</span> <span class='id identifier rubyid_ip2'>ip2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>inputpoint1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The first input point in the comparison.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the InputPoint objects are the same object. False
+if the objects are not the same.</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -730,6 +738,9 @@ objects are not the same.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -826,7 +837,7 @@ false.</p>
       <div class="method_details ">
   <h3 class="signature " id="copy!-instance_method">
   
-    #<strong>copy!</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>copy!</strong>(inputpoint)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -856,7 +867,18 @@ this input point.</p>
 </span><span class='id identifier rubyid_ip'>ip</span> <span class='op'>=</span> <span class='id identifier rubyid_ip1'>ip1</span><span class='period'>.</span><span class='id identifier rubyid_copy!'>copy!</span> <span class='id identifier rubyid_ip2'>ip2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns inputpoint - the new input point that received the copy if
+successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -895,6 +917,9 @@ this input point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1158,7 +1183,7 @@ method has nothing to draw</p>
       <div class="method_details ">
   <h3 class="signature " id="draw-instance_method">
   
-    #<strong>draw</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>draw</strong>(view)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1189,7 +1214,17 @@ in the Plugins/examples directory.</p>
 <span class='id identifier rubyid_ip'>ip</span> <span class='op'>=</span> <span class='id identifier rubyid_ip1'>ip1</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='id identifier rubyid_view'>view</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns view</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1222,12 +1257,15 @@ in the Plugins/examples directory.</p>
       
         
         <div class='inline'>
-<p>nil</p>
+<p>view</p>
 </div>
       
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1393,7 +1431,7 @@ position from a face.</p>
       <div class="method_details ">
   <h3 class="signature " id="pick-instance_method">
   
-    #<strong>pick</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>pick</strong>(view, x, y, inputpoint)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1431,7 +1469,18 @@ the first point.</p>
 <span class='id identifier rubyid_inputpoint'>inputpoint</span><span class='period'>.</span><span class='id identifier rubyid_pick'>pick</span> <span class='id identifier rubyid_view'>view</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_inputpoint2'>inputpoint2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if a valid InputPoint was picked and it is different
+than it was before.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1487,7 +1536,7 @@ the first point.</p>
         <span class='name'>inputpoint</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>optional</tt>)</span>
       
       
       
@@ -1519,6 +1568,9 @@ was before.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1919,7 +1971,7 @@ InputPoint does not select any vertices this method returns nil.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

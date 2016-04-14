@@ -185,7 +185,7 @@ grabbing a handle from an existing entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -233,7 +233,7 @@ grabbing a handle from an existing entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(arg)  &#x21d2; Object </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(key_or_dict)  &#x21d2; Object </a>
     
 
     
@@ -257,7 +257,7 @@ grabbing a handle from an existing entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|dict| ... } &#x21d2; Object </a>
     
 
     
@@ -353,7 +353,7 @@ the collection.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -385,7 +385,17 @@ given name.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns dictionary - the dictionary</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -424,6 +434,9 @@ given name.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -522,7 +535,7 @@ given name.</p>
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    #<strong>delete</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>delete</strong>(key_or_dict)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -550,7 +563,17 @@ name.</p>
 </span><span class='id identifier rubyid_attrdicts'>attrdicts</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my_dictionary</span><span class='tstring_end'>&#39;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns dictionaries - the modified AttributeDictionaries object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -590,6 +613,9 @@ itself.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -613,7 +639,7 @@ itself.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|dict| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -642,15 +668,14 @@ dictionaries.</p>
 </span><span class='id identifier rubyid_attrdicts'>attrdicts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span> <span class='id identifier rubyid_dict'>dict</span> <span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_dict'>dict</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>dict</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>dict</tt>)</span>
       
       
       
@@ -662,7 +687,6 @@ dictionaries.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -848,7 +872,7 @@ the collection.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:04 2016 by
+  Generated on Tue Apr 12 20:17:21 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

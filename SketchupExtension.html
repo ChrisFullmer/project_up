@@ -242,7 +242,7 @@ extension inside the Extensions Manager dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#copyright%3D-instance_method" title="#copyright= (instance method)">#<strong>copyright=</strong>  &#x21d2; Object </a>
+      <a href="#copyright%3D-instance_method" title="#copyright= (instance method)">#<strong>copyright=</strong>(copyright)  &#x21d2; Object </a>
     
 
     
@@ -292,7 +292,7 @@ extension inside the Extensions Manager dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#creator%3D-instance_method" title="#creator= (instance method)">#<strong>creator=</strong>  &#x21d2; Object </a>
+      <a href="#creator%3D-instance_method" title="#creator= (instance method)">#<strong>creator=</strong>(creator)  &#x21d2; Object </a>
     
 
     
@@ -342,7 +342,7 @@ an extension inside the Extensions Manager dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description%3D-instance_method" title="#description= (instance method)">#<strong>description=</strong>  &#x21d2; Object </a>
+      <a href="#description%3D-instance_method" title="#description (instance method)">#<strong>description</strong>(description)  &#x21d2; Object </a>
     
 
     
@@ -416,7 +416,7 @@ extension&#39;s outer rb file.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(title, path)  &#x21d2; Object </a>
     
 
     
@@ -516,7 +516,7 @@ Extensions Manager dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name%3D-instance_method" title="#name= (instance method)">#<strong>name=</strong>  &#x21d2; Object </a>
+      <a href="#name%3D-instance_method" title="#name= (instance method)">#<strong>name=</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -615,7 +615,7 @@ inside the Extensions Manager dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version%3D-instance_method" title="#version= (instance method)">#<strong>version=</strong>  &#x21d2; Object </a>
+      <a href="#version%3D-instance_method" title="#version= (instance method)">#<strong>version=</strong>(version)  &#x21d2; Object </a>
     
 
     
@@ -670,7 +670,7 @@ inside the Extensions Manager dialog.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(title, path)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -702,7 +702,17 @@ method.</p>
 </span><span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_register_extension'>register_extension</span><span class='lparen'>(</span><span class='id identifier rubyid_extension'>extension</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns extension - the new Extension object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -738,6 +748,9 @@ method.</p>
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -912,7 +925,7 @@ extension inside the Extensions Manager dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="copyright=-instance_method">
   
-    #<strong>copyright=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>copyright=</strong>(copyright)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -940,7 +953,17 @@ extension inside the Extensions Manager dialog.</p>
 <span class='id identifier rubyid_copyright'>copyright</span> <span class='op'>=</span> <span class='id identifier rubyid_extension'>extension</span><span class='period'>.</span><span class='id identifier rubyid_copyright'>copyright</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns copyright - the new copyright</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -979,6 +1002,9 @@ extension inside the Extensions Manager dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1072,7 +1098,7 @@ extension inside the Extensions Manager dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="creator=-instance_method">
   
-    #<strong>creator=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>creator=</strong>(creator)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1100,7 +1126,17 @@ extension inside the Extensions Manager dialog.</p>
 <span class='id identifier rubyid_creator'>creator</span> <span class='op'>=</span> <span class='id identifier rubyid_extension'>extension</span><span class='period'>.</span><span class='id identifier rubyid_creator'>creator</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns creator - the new creator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1139,6 +1175,9 @@ extension inside the Extensions Manager dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1232,7 +1271,7 @@ an extension inside the Extensions Manager dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="description=-instance_method">
   
-    #<strong>description=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>description</strong>(description)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1260,7 +1299,17 @@ extension inside the Extensions Manager dialog.</p>
 <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_extension'>extension</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns description - the Extension description</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1299,6 +1348,9 @@ extension inside the Extensions Manager dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1661,7 +1713,7 @@ Extensions Manager dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="name=-instance_method">
   
-    #<strong>name=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>name=</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1688,7 +1740,17 @@ Extensions Manager dialog.</p>
 <span class='id identifier rubyid_extension'>extension</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Renamed Stair Tools</span><span class='tstring_end'>&#39;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns name - the Extension name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1727,6 +1789,9 @@ Extensions Manager dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1972,7 +2037,7 @@ inside the Extensions Manager dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="version=-instance_method">
   
-    #<strong>version=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>version=</strong>(version)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2000,7 +2065,17 @@ inside the Extensions Manager dialog.</p>
 <span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='id identifier rubyid_extension'>extension</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns version - the Extension version</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2039,6 +2114,9 @@ inside the Extensions Manager dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2121,7 +2199,7 @@ inside the Extensions Manager dialog.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

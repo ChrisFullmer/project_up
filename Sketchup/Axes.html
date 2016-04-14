@@ -218,7 +218,7 @@ axes.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set-instance_method" title="#set (instance method)">#<strong>set</strong>(ruby_origin, ruby_xaxis, ruby_yaxis, ruby_zaxis)  &#x21d2; Object </a>
+      <a href="#set-instance_method" title="#set (instance method)">#<strong>set</strong>(origin, xaxis, yaxis, zaxis)  &#x21d2; Object </a>
     
 
     
@@ -538,7 +538,7 @@ axes.</p>
       <div class="method_details ">
   <h3 class="signature " id="set-instance_method">
   
-    #<strong>set</strong>(ruby_origin, ruby_xaxis, ruby_yaxis, ruby_zaxis)  &#x21d2; <tt>Object</tt> 
+    #<strong>set</strong>(origin, xaxis, yaxis, zaxis)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -564,7 +564,17 @@ orthogonal, otherwise an error is thrown.</p>
 <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_axes'>axes</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_xaxis'>xaxis</span><span class='comma'>,</span> <span class='id identifier rubyid_yaxis'>yaxis</span><span class='comma'>,</span> <span class='const'>Z_AXIS</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Axes - the axes object being set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -651,6 +661,9 @@ orthogonal, otherwise an error is thrown.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1079,7 +1092,7 @@ useful when creating tools that respect the model&#39;s drawing axes.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:57 2016 by
+  Generated on Tue Apr 12 20:17:13 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

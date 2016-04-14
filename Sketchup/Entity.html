@@ -191,7 +191,7 @@ Entity you&#39;re dealing with.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -240,7 +240,7 @@ AttributeDictionaries collection attached to the entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attribute_dictionary-instance_method" title="#attribute_dictionary (instance method)">#<strong>attribute_dictionary</strong>(*args)  &#x21d2; Object </a>
+      <a href="#attribute_dictionary-instance_method" title="#attribute_dictionary (instance method)">#<strong>attribute_dictionary</strong>(name, create)  &#x21d2; Object </a>
     
 
     
@@ -265,7 +265,7 @@ with a given name that is attached to an Entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_attribute-instance_method" title="#delete_attribute (instance method)">#<strong>delete_attribute</strong>(*args)  &#x21d2; Object </a>
+      <a href="#delete_attribute-instance_method" title="#delete_attribute (instance method)">#<strong>delete_attribute</strong>(dictionary_name)  &#x21d2; Object </a>
     
 
     
@@ -338,7 +338,7 @@ deleted by another script, for example.).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_attribute-instance_method" title="#get_attribute (instance method)">#<strong>get_attribute</strong>(*args)  &#x21d2; Object </a>
+      <a href="#get_attribute-instance_method" title="#get_attribute (instance method)">#<strong>get_attribute</strong>(dict_name, key, default_value = nil)  &#x21d2; Object </a>
     
 
     
@@ -436,7 +436,7 @@ entity.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -461,7 +461,7 @@ object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_attribute-instance_method" title="#set_attribute (instance method)">#<strong>set_attribute</strong>(*args)  &#x21d2; Object </a>
+      <a href="#set_attribute-instance_method" title="#set_attribute (instance method)">#<strong>set_attribute</strong>(dict_name, key, value)  &#x21d2; Object </a>
     
 
     
@@ -570,7 +570,7 @@ deleted by another script, for example.).</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -596,7 +596,17 @@ deleted by another script, for example.).</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -635,6 +645,9 @@ deleted by another script, for example.).</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -745,7 +758,7 @@ exception, not return 0.</p>
       <div class="method_details ">
   <h3 class="signature " id="attribute_dictionary-instance_method">
   
-    #<strong>attribute_dictionary</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>attribute_dictionary</strong>(name, create)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -786,7 +799,18 @@ with a given name that is attached to an Entity.</p>
 <span class='id identifier rubyid_attrdict'>attrdict</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_attribute_dictionary'>attribute_dictionary</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>testdictionary</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns attributedictionary - an AttributeDictionary object if successful,
+or nil if there is no attribute dictionary</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -843,6 +867,9 @@ if there is no attribute dictionary</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -866,7 +893,7 @@ if there is no attribute dictionary</p>
       <div class="method_details ">
   <h3 class="signature " id="delete_attribute-instance_method">
   
-    #<strong>delete_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>delete_attribute</strong>(dictionary_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -909,7 +936,17 @@ the given key from the given dictionary.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_delete_attribute'>delete_attribute</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>testdictionary</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -964,6 +1001,9 @@ the given key from the given dictionary.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1155,7 +1195,7 @@ deleted by another script, for example.)</p>
       <div class="method_details ">
   <h3 class="signature " id="get_attribute-instance_method">
   
-    #<strong>get_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_attribute</strong>(dict_name, key, default_value = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1202,7 +1242,17 @@ the given value. It does not create an attribute with that name though.</p>
 <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_get_attribute'>get_attribute</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>testdictoinary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the retrieved value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1245,6 +1295,8 @@ the given value. It does not create an attribute with that name though.</p>
         <span class='type'>(<tt>optional</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1273,6 +1325,9 @@ the given value. It does not create an attribute with that name though.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1543,7 +1598,7 @@ entity is contained within.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1570,7 +1625,17 @@ object.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1609,6 +1674,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1632,7 +1700,7 @@ object.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_attribute-instance_method">
   
-    #<strong>set_attribute</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_attribute</strong>(dict_name, key, value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1678,7 +1746,17 @@ strings, such as nil.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_set_attribute'>set_attribute</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>testdictionary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>115</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the newly set value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1749,6 +1827,9 @@ strings, such as nil.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2028,7 +2109,7 @@ deleted by another script, for example.)</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:55 2016 by
+  Generated on Tue Apr 12 20:17:10 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

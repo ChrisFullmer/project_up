@@ -176,7 +176,7 @@ as the user selected the entities.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -191,7 +191,7 @@ as the user selected the entities.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The at method is used to retrieve an Entity object from the selection by
+<p>The [] method is used to retrieve an Entity object from the selection by
 index.</p>
 </div></span>
   
@@ -201,7 +201,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(*args)  &#x21d2; Object </a>
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(ents_or_array)  &#x21d2; Object </a>
     
 
     
@@ -225,7 +225,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -249,7 +249,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#at-instance_method" title="#at (instance method)">#<strong>at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#at-instance_method" title="#at (instance method)">#<strong>at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -264,7 +264,7 @@ index.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The at method is used to retrieve an Entity object from the selection by
+<p>The [] method is used to retrieve an Entity object from the selection by
 index.</p>
 </div></span>
   
@@ -298,7 +298,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#contains%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#contains%3F-instance_method" title="#include? (instance method)">#<strong>include?</strong>(entity)  &#x21d2; Object </a>
     
 
     
@@ -346,7 +346,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|entity| ... } &#x21d2; Object </a>
     
 
     
@@ -419,7 +419,7 @@ selection.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#include%3F-instance_method" title="#include? (instance method)">#<strong>include?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#include%3F-instance_method" title="#include? (instance method)">#<strong>include?</strong>(entity)  &#x21d2; Object </a>
     
 
     
@@ -565,7 +565,7 @@ all of the faces that are part of a single curved surface.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove-instance_method" title="#remove (instance method)">#<strong>remove</strong>(*args)  &#x21d2; Object </a>
+      <a href="#remove-instance_method" title="#remove (instance method)">#<strong>remove</strong>(ents_or_array)  &#x21d2; Object </a>
     
 
     
@@ -589,7 +589,7 @@ all of the faces that are part of a single curved surface.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -688,7 +688,7 @@ single object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toggle-instance_method" title="#toggle (instance method)">#<strong>toggle</strong>(*args)  &#x21d2; Object </a>
+      <a href="#toggle-instance_method" title="#toggle (instance method)">#<strong>toggle</strong>(ents_or_array)  &#x21d2; Object </a>
     
 
     
@@ -723,7 +723,7 @@ selection.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -732,12 +732,12 @@ selection.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The at method is used to retrieve an Entity object from the selection by
-index.</p>
+<p>The [] method is used to retrieve an Entity object from the selection by
+index. Index 0 is the first entity in the selection.</p>
 
-<p>This method is not very efficient. It is equivalent to using selection[].
-In the case of this method, you have to start at index 0 to retrieve the
-first entity.</p>
+<p>This method is not very efficient. If you need to look at every entity in
+the selection, consider using Selection.each instead of using this method
+to manually grab each one.</p>
 
 
   </div>
@@ -748,11 +748,26 @@ first entity.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <pre class="example code"><code><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>100</span>
+<span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='int'>100</span>
+<span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span>
+<span class='id identifier rubyid_entities'>entities</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_active_entities'>active_entities</span>
+<span class='id identifier rubyid_pts'>pts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='comment'># Add the face to the entities in the model
+</span><span class='id identifier rubyid_face'>face</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_face'>add_face</span> <span class='id identifier rubyid_pts'>pts</span>
+<span class='id identifier rubyid_selection'>selection</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_selection'>selection</span>
+<span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_entity'>entity</span>
-<span class='comment'># looks like you have to retrieve from the selection set starting
-</span><span class='comment'># at zero.
-</span><span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span></code></pre>
+<span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_entity'>entity</span><span class='rparen'>)</span>
+  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_entity'>entity</span>
+<span class='kw'>else</span>
+  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failure</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -817,7 +832,7 @@ first entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="add-instance_method">
   
-    #<strong>add</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>add</strong>(ents_or_array)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -857,7 +872,17 @@ assumption about the currently selected state of a given entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_entity'>entity</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the number of Entity objects added</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -896,6 +921,9 @@ assumption about the currently selected state of a given entity.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -919,7 +947,7 @@ assumption about the currently selected state of a given entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -943,7 +971,17 @@ assumption about the currently selected state of a given entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -982,6 +1020,9 @@ assumption about the currently selected state of a given entity.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1005,7 +1046,7 @@ assumption about the currently selected state of a given entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="at-instance_method">
   
-    #<strong>at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1014,12 +1055,12 @@ assumption about the currently selected state of a given entity.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The at method is used to retrieve an Entity object from the selection by
-index.</p>
+<p>The [] method is used to retrieve an Entity object from the selection by
+index. Index 0 is the first entity in the selection.</p>
 
-<p>This method is not very efficient. It is equivalent to using selection[].
-In the case of this method, you have to start at index 0 to retrieve the
-first entity.</p>
+<p>This method is not very efficient. If you need to look at every entity in
+the selection, consider using Selection.each instead of using this method
+to manually grab each one.</p>
 
 
   </div>
@@ -1030,11 +1071,26 @@ first entity.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <pre class="example code"><code><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>100</span>
+<span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='int'>100</span>
+<span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span>
+<span class='id identifier rubyid_entities'>entities</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_active_entities'>active_entities</span>
+<span class='id identifier rubyid_pts'>pts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='comment'># Add the face to the entities in the model
+</span><span class='id identifier rubyid_face'>face</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_face'>add_face</span> <span class='id identifier rubyid_pts'>pts</span>
+<span class='id identifier rubyid_selection'>selection</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_selection'>selection</span>
+<span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_entity'>entity</span>
-<span class='comment'># looks like you have to retrieve from the selection set starting
-</span><span class='comment'># at zero.
-</span><span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span></code></pre>
+<span class='id identifier rubyid_entity'>entity</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_entity'>entity</span><span class='rparen'>)</span>
+  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_entity'>entity</span>
+<span class='kw'>else</span>
+  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failure</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1167,7 +1223,7 @@ first entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="contains?-instance_method">
   
-    #<strong>contains?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>include?</strong>(entity)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1191,7 +1247,18 @@ first entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_entity'>entity</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the Entity object is in the selection. False if
+the Entity object is not in the selection.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1229,6 +1296,13 @@ object is not in the selection.</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -1346,7 +1420,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|entity| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1372,15 +1446,14 @@ efficient than using [].</p>
       <pre class="example code"><code><span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entity'>entity</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span><span class='lparen'>(</span><span class='id identifier rubyid_entity'>entity</span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>entity</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>entity</tt>)</span>
       
       
       
@@ -1392,7 +1465,6 @@ efficient than using [].</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1581,7 +1653,7 @@ first selected entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="include?-instance_method">
   
-    #<strong>include?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>include?</strong>(entity)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1605,7 +1677,18 @@ first selected entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_entity'>entity</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the Entity object is in the selection. False if
+the Entity object is not in the selection.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1643,6 +1726,13 @@ object is not in the selection.</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -2038,7 +2128,7 @@ belong to a single curved surface.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove-instance_method">
   
-    #<strong>remove</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove</strong>(ents_or_array)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2076,7 +2166,17 @@ assumption about the currently selected state of a given entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_entity'>entity</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the number of Entity objects removed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2115,6 +2215,9 @@ assumption about the currently selected state of a given entity.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2138,7 +2241,7 @@ assumption about the currently selected state of a given entity.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2163,7 +2266,17 @@ object.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2202,6 +2315,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2442,7 +2558,7 @@ selection does not contain a single object.</p>
       <div class="method_details ">
   <h3 class="signature " id="toggle-instance_method">
   
-    #<strong>toggle</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>toggle</strong>(ents_or_array)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2482,7 +2598,17 @@ assumption about the currently selected state of a given entity.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_selection'>selection</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_entity'>entity</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the number of Entity objects changed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2521,6 +2647,9 @@ assumption about the currently selected state of a given entity.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2546,7 +2675,7 @@ assumption about the currently selected state of a given entity.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

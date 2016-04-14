@@ -210,7 +210,7 @@ on it.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#height%3D-instance_method" title="#height= (instance method)">#<strong>height=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#height%3D-instance_method" title="#height= (instance method)">#<strong>height=</strong>(height)  &#x21d2; Object </a>
     
 
     
@@ -284,7 +284,7 @@ of the image.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#origin%3D-instance_method" title="#origin= (instance method)">#<strong>origin=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#origin%3D-instance_method" title="#origin (instance method)">#<strong>origin</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -383,7 +383,7 @@ pixels.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size%3D-instance_method" title="#size= (instance method)">#<strong>size=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#size%3D-instance_method" title="#size= (instance method)">#<strong>size=</strong>(width, height)  &#x21d2; Object </a>
     
 
     
@@ -408,7 +408,7 @@ inches.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(transform)  &#x21d2; Object </a>
     
 
     
@@ -457,7 +457,7 @@ image.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transformation%3D-instance_method" title="#transformation= (instance method)">#<strong>transformation=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transformation%3D-instance_method" title="#transformation= (instance method)">#<strong>transformation=</strong>(transform)  &#x21d2; Object </a>
     
 
     
@@ -505,7 +505,7 @@ image.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#width%3D-instance_method" title="#width= (instance method)">#<strong>width=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#width%3D-instance_method" title="#width= (instance method)">#<strong>width=</strong>(width)  &#x21d2; Object </a>
     
 
     
@@ -738,7 +738,7 @@ to determine which new entities were created.</p>
       <div class="method_details ">
   <h3 class="signature " id="height=-instance_method">
   
-    #<strong>height=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>height=</strong>(height)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -774,7 +774,17 @@ to determine which new entities were created.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns height - the new height if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -813,6 +823,9 @@ to determine which new entities were created.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -988,7 +1001,7 @@ of the image.</p>
       <div class="method_details ">
   <h3 class="signature " id="origin=-instance_method">
   
-    #<strong>origin=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>origin</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1023,7 +1036,18 @@ of the image.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the Point3d object representing the newly established
+origin if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1063,6 +1087,9 @@ successful</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1314,7 +1341,7 @@ pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="size=-instance_method">
   
-    #<strong>size=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>size=</strong>(width, height)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1349,7 +1376,17 @@ inches.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns size - the new width and height of the image if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1404,6 +1441,9 @@ inches.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1427,7 +1467,7 @@ inches.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transform!</strong>(transform)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1463,7 +1503,17 @@ inches.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns image - the transformed Image object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1502,6 +1552,9 @@ inches.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1598,7 +1651,7 @@ image.</p>
       <div class="method_details ">
   <h3 class="signature " id="transformation=-instance_method">
   
-    #<strong>transformation=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transformation=</strong>(transform)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1629,7 +1682,17 @@ image.</p>
 <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_transformation'>transformation</span> <span class='op'>=</span> <span class='id identifier rubyid_new_transform'>new_transform</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns image - the newly transformed image</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1668,6 +1731,9 @@ image.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1769,7 +1835,7 @@ image.</p>
       <div class="method_details ">
   <h3 class="signature " id="width=-instance_method">
   
-    #<strong>width=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>width=</strong>(width)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1805,7 +1871,17 @@ image.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns width - the new width if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1844,6 +1920,9 @@ image.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1945,7 +2024,7 @@ about the normal vector from an arbitrary X axis.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:58 2016 by
+  Generated on Tue Apr 12 20:17:13 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

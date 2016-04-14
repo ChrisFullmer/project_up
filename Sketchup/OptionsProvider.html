@@ -188,7 +188,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -212,7 +212,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -260,7 +260,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|key, value| ... } &#x21d2; Object </a>
     
 
     
@@ -284,7 +284,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong>  &#x21d2; Object </a>
+      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong> {|key| ... } &#x21d2; Object </a>
     
 
     
@@ -308,7 +308,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_pair-instance_method" title="#each_pair (instance method)">#<strong>each_pair</strong>  &#x21d2; Object </a>
+      <a href="#each_pair-instance_method" title="#each_pair (instance method)">#<strong>each_pair</strong> {|key, value| ... } &#x21d2; Object </a>
     
 
     
@@ -332,7 +332,7 @@ name/value pairs.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_value-instance_method" title="#each_value (instance method)">#<strong>each_value</strong>  &#x21d2; Object </a>
+      <a href="#each_value-instance_method" title="#each_value (instance method)">#<strong>each_value</strong> {|value| ... } &#x21d2; Object </a>
     
 
     
@@ -357,7 +357,7 @@ values.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">#<strong>has_key?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#has_key%3F-instance_method" title="#key? (instance method)">#<strong>key?</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -382,7 +382,7 @@ key.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key%3F-instance_method" title="#key? (instance method)">#<strong>key?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#key%3F-instance_method" title="#key? (instance method)">#<strong>key?</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -481,7 +481,7 @@ options provider.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -541,7 +541,11 @@ options provider.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>[]</strong>(index)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]</strong>(name)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -568,7 +572,23 @@ options provider.</p>
 </span><span class='id identifier rubyid_option'>option</span> <span class='op'>=</span> <span class='id identifier rubyid_provider'>provider</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>[]</strong>(index)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -586,6 +606,45 @@ options provider.</p>
 </div>
       
     </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>value - the value if successful</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>[]</strong>(name)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -623,6 +682,12 @@ options provider.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -646,7 +711,7 @@ options provider.</p>
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]=</strong>(key, value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -671,7 +736,18 @@ options provider.</p>
       <pre class="example code"><code><span class='id identifier rubyid_option'>option</span> <span class='op'>=</span> <span class='id identifier rubyid_provider'>provider</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='op'>=</span><span class='int'>10</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value that was set if successful, or false if
+unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -726,6 +802,9 @@ options provider.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -749,7 +828,7 @@ options provider.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -772,7 +851,17 @@ options provider.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -811,6 +900,9 @@ options provider.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -917,7 +1009,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|key, value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -947,27 +1039,25 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
 </span><span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key,</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>, <tt>value</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>value    Variables that will hold each key and value as they are found.</p>
+<p>Variables that will hold each key and value as they are found.</p>
 </div>
       
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1009,7 +1099,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each_key-instance_method">
   
-    #<strong>each_key</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_key</strong> {|key| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1034,15 +1124,14 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <pre class="example code"><code><span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_key'>key</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>)</span>
       
       
       
@@ -1054,7 +1143,6 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1096,7 +1184,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each_pair-instance_method">
   
-    #<strong>each_pair</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_pair</strong> {|key, value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1126,27 +1214,25 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
 </span><span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key,</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>, <tt>value</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>value    Variables that will hold each key and value as they are found.</p>
+<p>Variables that will hold each key and value as they are found.</p>
 </div>
       
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1188,7 +1274,7 @@ an alias for <span class='object_link'><a href="#length-instance_method" title="
       <div class="method_details ">
   <h3 class="signature " id="each_value-instance_method">
   
-    #<strong>each_value</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_value</strong> {|value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1214,15 +1300,14 @@ values.</p>
       <pre class="example code"><code><span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_each_value'>each_value</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>value</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>value</tt>)</span>
       
       
       
@@ -1234,7 +1319,6 @@ values.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1276,7 +1360,7 @@ values.</p>
       <div class="method_details ">
   <h3 class="signature " id="has_key?-instance_method">
   
-    #<strong>has_key?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>key?</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1300,7 +1384,17 @@ key. This method is the same as has_key? See also OptionsManager.has_key</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the key exists, false if the key does not exist.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1337,6 +1431,13 @@ key. This method is the same as has_key? See also OptionsManager.has_key</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -1371,7 +1472,7 @@ key. This method is the same as has_key? See also OptionsManager.has_key</p>
       <div class="method_details ">
   <h3 class="signature " id="key?-instance_method">
   
-    #<strong>key?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>key?</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1395,7 +1496,17 @@ key. This method is the same as has_key? See also OptionsManager.has_key</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_provider'>provider</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the key exists, false if the key does not exist.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1432,6 +1543,13 @@ key. This method is the same as has_key? See also OptionsManager.has_key</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -1673,7 +1791,7 @@ options provider.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1697,7 +1815,17 @@ object.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1736,6 +1864,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1830,7 +1961,7 @@ options provider.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:20 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

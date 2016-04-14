@@ -287,7 +287,7 @@ in pixels.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size%3D-instance_method" title="#size= (instance method)">#<strong>size=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#size%3D-instance_method" title="#size= (instance method)">#<strong>size=</strong>(size)  &#x21d2; Object </a>
     
 
     
@@ -361,7 +361,7 @@ inches.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#write-instance_method" title="#write (instance method)">#<strong>write</strong>(*args)  &#x21d2; Object </a>
+      <a href="#write-instance_method" title="#write (instance method)">#<strong>write</strong>(filename, colorize = false)  &#x21d2; Object </a>
     
 
     
@@ -780,7 +780,7 @@ in pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="size=-instance_method">
   
-    #<strong>size=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>size=</strong>(size)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -819,7 +819,20 @@ image, in inches,</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns size - the size, in inches, of the texture. This number will apply
+to height and width to keep aspect ratio. If you have passed in an array of
+two numbers for width and height, the same array will be returned if
+successful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -864,6 +877,9 @@ successful.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1032,7 +1048,7 @@ inches.</p>
       <div class="method_details ">
   <h3 class="signature " id="write-instance_method">
   
-    #<strong>write</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>write</strong>(filename, colorize = false)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1059,7 +1075,17 @@ made by the material.</p>
 <span class='id identifier rubyid_material'>material</span><span class='period'>.</span><span class='id identifier rubyid_texture'>texture</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_filename'>filename</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Boolean - true if the method succeeded</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1086,11 +1112,12 @@ made by the material.</p>
         <span class='type'></span>
       
       
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
-<p>Boolean - (Optional) Allows for the texture to be exported with the color
-adjustments. Default is false.</p>
+<p>Boolean - Allows for the texture to be exported with the color adjustments.</p>
 </div>
       
     </li>
@@ -1115,6 +1142,9 @@ adjustments. Default is false.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1140,7 +1170,7 @@ adjustments. Default is false.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:00 2016 by
+  Generated on Tue Apr 12 20:17:16 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

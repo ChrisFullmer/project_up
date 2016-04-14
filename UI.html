@@ -152,7 +152,7 @@ from a SketchUp Ruby script.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_context_menu_handler-class_method" title="add_context_menu_handler (class method)">.<strong>add_context_menu_handler</strong>  &#x21d2; Object </a>
+      <a href="#add_context_menu_handler-class_method" title="add_context_menu_handler (class method)">.<strong>add_context_menu_handler</strong> {|menu| ... } &#x21d2; Object </a>
     
 
     
@@ -201,7 +201,7 @@ with SketchUp that will be called when a context menu is to be displayed.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_cursor-class_method" title="create_cursor (class method)">.<strong>create_cursor</strong>(*args)  &#x21d2; Object </a>
+      <a href="#create_cursor-class_method" title="create_cursor (class method)">.<strong>create_cursor</strong>(filename, hot_x, hot_y)  &#x21d2; Object </a>
     
 
     
@@ -226,7 +226,7 @@ the specified location.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inputbox-class_method" title="inputbox (class method)">.<strong>inputbox</strong>(*args)  &#x21d2; Object </a>
+      <a href="#inputbox-class_method" title="inputbox (class method)">.<strong>inputbox</strong>(prompts, defaults, title_or_list, title)  &#x21d2; Object </a>
     
 
     
@@ -275,7 +275,7 @@ inspectors.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#menu-class_method" title="menu (class method)">.<strong>menu</strong>(*args)  &#x21d2; Object </a>
+      <a href="#menu-class_method" title="menu (class method)">.<strong>menu</strong>(menuname = &quot;Extensions&quot;)  &#x21d2; Object </a>
     
 
     
@@ -349,7 +349,7 @@ available model info pages.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#openpanel-class_method" title="openpanel (class method)">.<strong>openpanel</strong>(*args)  &#x21d2; Object </a>
+      <a href="#openpanel-class_method" title="openpanel (class method)">.<strong>openpanel</strong>(title, directory, filename)  &#x21d2; Object </a>
     
 
     
@@ -373,7 +373,7 @@ available model info pages.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#openURL-class_method" title="openURL (class method)">.<strong>openURL</strong>(arg)  &#x21d2; Object </a>
+      <a href="#openURL-class_method" title="openURL (class method)">.<strong>openURL</strong>(URL)  &#x21d2; Object </a>
     
 
     
@@ -397,7 +397,7 @@ available model info pages.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#play_sound-class_method" title="play_sound (class method)">.<strong>play_sound</strong>(arg)  &#x21d2; Object </a>
+      <a href="#play_sound-class_method" title="play_sound (class method)">.<strong>play_sound</strong>(filename)  &#x21d2; Object </a>
     
 
     
@@ -471,7 +471,7 @@ the Outliner.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#savepanel-class_method" title="savepanel (class method)">.<strong>savepanel</strong>(*args)  &#x21d2; Object </a>
+      <a href="#savepanel-class_method" title="savepanel (class method)">.<strong>savepanel</strong>(title, directory, filename)  &#x21d2; Object </a>
     
 
     
@@ -495,7 +495,7 @@ the Outliner.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select_directory-class_method" title="select_directory (class method)">.<strong>select_directory</strong>(*args)  &#x21d2; Object </a>
+      <a href="#select_directory-class_method" title="select_directory (class method)">.<strong>select_directory</strong>(options)  &#x21d2; Object </a>
     
 
     
@@ -520,7 +520,7 @@ one or several directories from the file system.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_cursor-class_method" title="set_cursor (class method)">.<strong>set_cursor</strong>(arg)  &#x21d2; Object </a>
+      <a href="#set_cursor-class_method" title="set_cursor (class method)">.<strong>set_cursor</strong>(cursor_id)  &#x21d2; Object </a>
     
 
     
@@ -545,7 +545,7 @@ given cursor id.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_toolbar_visible-class_method" title="set_toolbar_visible (class method)">.<strong>set_toolbar_visible</strong>(vToolbar, vVisible)  &#x21d2; Object </a>
+      <a href="#set_toolbar_visible-class_method" title="set_toolbar_visible (class method)">.<strong>set_toolbar_visible</strong>(name, visible)  &#x21d2; Object </a>
     
 
     
@@ -570,7 +570,7 @@ visible.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show_inspector-class_method" title="show_inspector (class method)">.<strong>show_inspector</strong>(arg)  &#x21d2; Object </a>
+      <a href="#show_inspector-class_method" title="show_inspector (class method)">.<strong>show_inspector</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -595,7 +595,7 @@ name.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show_model_info-class_method" title="show_model_info (class method)">.<strong>show_model_info</strong>(*args)  &#x21d2; Object </a>
+      <a href="#show_model_info-class_method" title="show_model_info (class method)">.<strong>show_model_info</strong>(page_name)  &#x21d2; Object </a>
     
 
     
@@ -620,7 +620,7 @@ specific page.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show_preferences-class_method" title="show_preferences (class method)">.<strong>show_preferences</strong>(*args)  &#x21d2; Object </a>
+      <a href="#show_preferences-class_method" title="show_preferences (class method)">.<strong>show_preferences</strong>(page_name)  &#x21d2; Object </a>
     
 
     
@@ -645,7 +645,7 @@ dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start_timer-class_method" title="start_timer (class method)">.<strong>start_timer</strong>(*args)  &#x21d2; Object </a>
+      <a href="#start_timer-class_method" title="start_timer (class method)">.<strong>start_timer</strong>(seconds, repeat = false) {|procedure| ... } &#x21d2; Object </a>
     
 
     
@@ -669,7 +669,7 @@ dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stop_timer-class_method" title="stop_timer (class method)">.<strong>stop_timer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#stop_timer-class_method" title="stop_timer (class method)">.<strong>stop_timer</strong>(id)  &#x21d2; Object </a>
     
 
     
@@ -693,7 +693,7 @@ dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toolbar-class_method" title="toolbar (class method)">.<strong>toolbar</strong>(arg)  &#x21d2; Object </a>
+      <a href="#toolbar-class_method" title="toolbar (class method)">.<strong>toolbar</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -742,7 +742,7 @@ native toolbars (this differs between PC and Mac).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#toolbar_visible%3F-class_method" title="toolbar_visible? (class method)">.<strong>toolbar_visible?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#toolbar_visible%3F-class_method" title="toolbar_visible? (class method)">.<strong>toolbar_visible?</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -776,7 +776,7 @@ visible.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_context_menu_handler-class_method">
   
-    .<strong>add_context_menu_handler</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>add_context_menu_handler</strong> {|menu| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -814,15 +814,14 @@ example.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>menu</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="#menu-class_method" title="UI.menu (method)">menu</a></span></tt>)</span>
       
       
       
@@ -834,7 +833,6 @@ example.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -943,7 +941,7 @@ example.</p>
       <div class="method_details ">
   <h3 class="signature " id="create_cursor-class_method">
   
-    .<strong>create_cursor</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>create_cursor</strong>(filename, hot_x, hot_y)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -979,7 +977,17 @@ cursors. SVG format for Windows and PDF format for OS X.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns ID - ID associated with the cursor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1055,6 +1063,9 @@ image.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1078,7 +1089,7 @@ image.</p>
       <div class="method_details ">
   <h3 class="signature " id="inputbox-class_method">
   
-    .<strong>inputbox</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>inputbox</strong>(prompts, defaults, title_or_list, title)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1117,7 +1128,19 @@ passing an optional param.</p>
 <span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_inputbox'>inputbox</span><span class='lparen'>(</span><span class='id identifier rubyid_prompts'>prompts</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='comma'>,</span> <span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tell me about yourself.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns results - An array of returned values if the user did not cancel
+the dialog.  If the user canceled the dialog, false is returned.  The
+returned values in the array will be in the same order as the input fields.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1209,6 +1232,9 @@ values in the array will be in the same order as the input fields.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1300,7 +1326,7 @@ window.</p>
       <div class="method_details ">
   <h3 class="signature " id="menu-class_method">
   
-    .<strong>menu</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>menu</strong>(menuname = &quot;Extensions&quot;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1334,7 +1360,17 @@ For backward compatibility “Plugins” still works.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns menu - a menu object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1344,6 +1380,8 @@ For backward compatibility “Plugins” still works.</p>
       
         <span class='type'></span>
       
+      
+        <em class="default">(defaults to: <tt>&quot;Extensions&quot;</tt>)</em>
       
       
         &mdash;
@@ -1373,6 +1411,9 @@ For backward compatibility “Plugins” still works.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1622,7 +1663,7 @@ Credits, and Units.</p>
       <div class="method_details ">
   <h3 class="signature " id="openpanel-class_method">
   
-    .<strong>openpanel</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>openpanel</strong>(title, directory, filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1657,7 +1698,18 @@ wildcard filter string has been changed.</p>
 <span class='id identifier rubyid_chosen_image'>chosen_image</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_openpanel'>openpanel</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Open CAD File</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c:/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DXF|*.dxf|DWG|*.dwg||</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns string - the full path and name of the file selected, or nil if the
+dialog was canceled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1735,6 +1787,9 @@ was canceled.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1758,7 +1813,7 @@ was canceled.</p>
       <div class="method_details ">
   <h3 class="signature " id="openURL-class_method">
   
-    .<strong>openURL</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>openURL</strong>(URL)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1781,7 +1836,17 @@ was canceled.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_openURL'>openURL</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://www.sketchup.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1820,6 +1885,9 @@ was canceled.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1843,7 +1911,7 @@ was canceled.</p>
       <div class="method_details ">
   <h3 class="signature " id="play_sound-class_method">
   
-    .<strong>play_sound</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>play_sound</strong>(filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1867,7 +1935,17 @@ include .wav and .mp3 files on the Mac and .wav files on the PC.</p>
       <pre class="example code"><code><span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_play_sound'>play_sound</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Plugins/mediadiscussion.wav</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1908,6 +1986,9 @@ search for a specific file.)</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2066,7 +2147,7 @@ such as when model.start_operation has disabled UI updates.</p>
       <div class="method_details ">
   <h3 class="signature " id="savepanel-class_method">
   
-    .<strong>savepanel</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>savepanel</strong>(title, directory, filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2097,7 +2178,18 @@ type dropdown. The filter string would be shown in the file name field with
       <pre class="example code"><code><span class='id identifier rubyid_path_to_save_to'>path_to_save_to</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_savepanel'>savepanel</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save Image File</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c:\\</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shapes.jpg</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns string - the full path and name of the file selected or nil if the
+dialog was canceled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2173,6 +2265,9 @@ was canceled.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2196,7 +2291,7 @@ was canceled.</p>
       <div class="method_details ">
   <h3 class="signature " id="select_directory-class_method">
   
-    .<strong>select_directory</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>select_directory</strong>(options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2251,7 +2346,19 @@ one or several directories from the file system.</p>
 <span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns string or array - A string with the full path of the directory
+selected when :select_multiple option is set to false otherwise an array of
+strings or nil if the user cancelled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2293,6 +2400,9 @@ or nil if the user cancelled.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2316,7 +2426,7 @@ or nil if the user cancelled.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_cursor-class_method">
   
-    .<strong>set_cursor</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>set_cursor</strong>(cursor_id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2347,7 +2457,17 @@ to indicate SketchUp&#39;s state.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2386,6 +2506,9 @@ to indicate SketchUp&#39;s state.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2409,7 +2532,7 @@ to indicate SketchUp&#39;s state.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_toolbar_visible-class_method">
   
-    .<strong>set_toolbar_visible</strong>(vToolbar, vVisible)  &#x21d2; <tt>Object</tt> 
+    .<strong>set_toolbar_visible</strong>(name, visible)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2435,7 +2558,17 @@ cross-platform script.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_set_toolbar_visible'>set_toolbar_visible</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Camera</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns result - true if successful, false if not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2490,6 +2623,9 @@ cross-platform script.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2513,7 +2649,7 @@ cross-platform script.</p>
       <div class="method_details ">
   <h3 class="signature " id="show_inspector-class_method">
   
-    .<strong>show_inspector</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>show_inspector</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2537,7 +2673,17 @@ name. You can get the list of valid inspectors with UI.inspector_names.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_show_inspector'>show_inspector</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Components</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2576,6 +2722,9 @@ name. You can get the list of valid inspectors with UI.inspector_names.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2599,7 +2748,7 @@ name. You can get the list of valid inspectors with UI.inspector_names.</p>
       <div class="method_details ">
   <h3 class="signature " id="show_model_info-class_method">
   
-    .<strong>show_model_info</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>show_model_info</strong>(page_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2624,7 +2773,17 @@ UI.model_info_pages.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_show_model_info'>show_model_info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Credits</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2663,6 +2822,9 @@ UI.model_info_pages.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2686,7 +2848,7 @@ UI.model_info_pages.</p>
       <div class="method_details ">
   <h3 class="signature " id="show_preferences-class_method">
   
-    .<strong>show_preferences</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>show_preferences</strong>(page_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2712,7 +2874,17 @@ dialog. You can get the list of valid dialogs with UI.preferences_pages.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_show_preferences'>show_preferences</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GraphicsCard</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2751,6 +2923,9 @@ dialog. You can get the list of valid dialogs with UI.preferences_pages.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2774,7 +2949,7 @@ dialog. You can get the list of valid dialogs with UI.preferences_pages.</p>
       <div class="method_details ">
   <h3 class="signature " id="start_timer-class_method">
   
-    .<strong>start_timer</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>start_timer</strong>(seconds, repeat = false) {|procedure| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2806,7 +2981,17 @@ timer the timer will repeat until the window is closed.</p>
 </span><span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_start_timer'>start_timer</span><span class='lparen'>(</span><span class='int'>10</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_beep'>beep</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns timer - a timer ID</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2833,6 +3018,8 @@ timer the timer will repeat until the window is closed.</p>
         <span class='type'>(<tt>optional</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -2842,12 +3029,15 @@ to repeat.</p>
       
     </li>
   
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
     <li>
       
-        <span class='name'>procedure</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>procedure</tt>)</span>
       
       
       
@@ -2859,7 +3049,6 @@ to repeat.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2878,6 +3067,9 @@ to repeat.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2901,7 +3093,7 @@ to repeat.</p>
       <div class="method_details ">
   <h3 class="signature " id="stop_timer-class_method">
   
-    .<strong>stop_timer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>stop_timer</strong>(id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2926,7 +3118,17 @@ to repeat.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_stop_timer'>stop_timer</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2965,6 +3167,9 @@ to repeat.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2988,7 +3193,7 @@ to repeat.</p>
       <div class="method_details ">
   <h3 class="signature " id="toolbar-class_method">
   
-    .<strong>toolbar</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>toolbar</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3012,7 +3217,17 @@ doesn&#39;t exist a new one will be created.</p>
       <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_toolbar'>toolbar</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns toolbar - a Toolbar object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3051,6 +3266,9 @@ doesn&#39;t exist a new one will be created.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3141,7 +3359,7 @@ not include Ruby toolbars.</p>
       <div class="method_details ">
   <h3 class="signature " id="toolbar_visible?-class_method">
   
-    .<strong>toolbar_visible?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>toolbar_visible?</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3167,7 +3385,17 @@ cross-platform script.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_toolbar_visible?'>toolbar_visible?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Camera</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3205,6 +3433,13 @@ cross-platform script.</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -3240,7 +3475,7 @@ cross-platform script.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:55 2016 by
+  Generated on Tue Apr 12 20:17:10 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

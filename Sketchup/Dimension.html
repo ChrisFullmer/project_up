@@ -188,7 +188,7 @@ and DimensionRadial. It&#39;s not instantiable.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -237,7 +237,7 @@ dimension.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#arrow_type%3D-instance_method" title="#arrow_type= (instance method)">#<strong>arrow_type=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#arrow_type%3D-instance_method" title="#arrow_type (instance method)">#<strong>arrow_type</strong>(type)  &#x21d2; Object </a>
     
 
     
@@ -261,7 +261,7 @@ dimension.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#has_aligned_text%3D-instance_method" title="#has_aligned_text= (instance method)">#<strong>has_aligned_text=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#has_aligned_text%3D-instance_method" title="#had_aligned_text= (instance method)">#<strong>had_aligned_text=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -335,7 +335,7 @@ dimension&#39;s text is aligned to the dimension or to the screen.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -384,7 +384,7 @@ dimension.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#text%3D-instance_method" title="#text= (instance method)">#<strong>text=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#text%3D-instance_method" title="#text= (instance method)">#<strong>text=</strong>(text)  &#x21d2; Object </a>
     
 
     
@@ -439,7 +439,7 @@ dimension.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -476,7 +476,17 @@ dimension.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -515,6 +525,9 @@ dimension.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -618,7 +631,7 @@ Valid arrow types are class constants:</p>
       <div class="method_details ">
   <h3 class="signature " id="arrow_type=-instance_method">
   
-    #<strong>arrow_type=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>arrow_type</strong>(type)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -653,7 +666,17 @@ types are class constants:</p>
       <pre class="example code"><code><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_arrow_type'>arrow_type</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Dimension</span><span class='op'>::</span><span class='const'>ARROW_CLOSED</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the arrow type that was set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -692,6 +715,9 @@ types are class constants:</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -715,7 +741,7 @@ types are class constants:</p>
       <div class="method_details ">
   <h3 class="signature " id="has_aligned_text=-instance_method">
   
-    #<strong>has_aligned_text=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>had_aligned_text=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -740,6 +766,31 @@ dimension&#39;s text is aligned to the dimension or to the screen.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the alignment flag that was set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -758,6 +809,9 @@ dimension&#39;s text is aligned to the dimension or to the screen.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -923,7 +977,7 @@ the Geom module for information on how planes are represented.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -953,7 +1007,17 @@ the base Entity.remove_observer will be called.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -992,6 +1056,9 @@ the base Entity.remove_observer will be called.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1080,7 +1147,7 @@ the base Entity.remove_observer will be called.</p>
       <div class="method_details ">
   <h3 class="signature " id="text=-instance_method">
   
-    #<strong>text=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>text=</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1104,6 +1171,31 @@ the base Entity.remove_observer will be called.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the newly set text override</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1122,6 +1214,9 @@ the base Entity.remove_observer will be called.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1147,7 +1242,7 @@ the base Entity.remove_observer will be called.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

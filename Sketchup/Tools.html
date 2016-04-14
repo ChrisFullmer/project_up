@@ -214,7 +214,7 @@ tools. You access this collection by calling the Model.tools method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -287,7 +287,7 @@ object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#push_tool-instance_method" title="#push_tool (instance method)">#<strong>push_tool</strong>(arg)  &#x21d2; Object </a>
+      <a href="#push_tool-instance_method" title="#push_tool (instance method)">#<strong>push_tool</strong>(tool)  &#x21d2; Object </a>
     
 
     
@@ -311,7 +311,7 @@ object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -481,7 +481,7 @@ object.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -506,7 +506,17 @@ object.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_tools'>tools</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -545,6 +555,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -702,7 +715,7 @@ active, selects the default native tool and returns nil.</p>
       <div class="method_details ">
   <h3 class="signature " id="push_tool-instance_method">
   
-    #<strong>push_tool</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>push_tool</strong>(tool)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -727,7 +740,17 @@ See the Tool interface for details on creating your own SketchUp tool.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_tools'>tools</span><span class='period'>.</span><span class='id identifier rubyid_push_tool'>push_tool</span> <span class='id identifier rubyid_tool'>tool</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -766,6 +789,9 @@ See the Tool interface for details on creating your own SketchUp tool.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -789,7 +815,7 @@ See the Tool interface for details on creating your own SketchUp tool.</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -816,7 +842,17 @@ object.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_tools'>tools</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -855,6 +891,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -880,7 +919,7 @@ object.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:59 2016 by
+  Generated on Tue Apr 12 20:17:15 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

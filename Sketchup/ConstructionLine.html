@@ -188,7 +188,7 @@ construction line.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#direction%3D-instance_method" title="#direction= (instance method)">#<strong>direction=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#direction%3D-instance_method" title="#direction= (instance method)">#<strong>direction=</strong>(vector)  &#x21d2; Object </a>
     
 
     
@@ -287,7 +287,7 @@ construction line on an infinite construction line.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#position%3D-instance_method" title="#position= (instance method)">#<strong>position=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#position%3D-instance_method" title="#position= (instance method)">#<strong>position=</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -412,7 +412,7 @@ the construction line.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stipple%3D-instance_method" title="#stipple= (instance method)">#<strong>stipple=</strong>(arg1)  &#x21d2; Object </a>
+      <a href="#stipple%3D-instance_method" title="#stipple (instance method)">#<strong>stipple</strong>(pattern)  &#x21d2; Object </a>
     
 
     
@@ -544,7 +544,7 @@ construction line.</p>
       <div class="method_details ">
   <h3 class="signature " id="direction=-instance_method">
   
-    #<strong>direction=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>direction=</strong>(vector)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -575,7 +575,17 @@ to a 3D vector.</p>
 <span class='id identifier rubyid_constline'>constline</span><span class='period'>.</span><span class='id identifier rubyid_direction'>direction</span> <span class='op'>=</span> <span class='id identifier rubyid_new_direction'>new_direction</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vector - the new Vector3d object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -615,6 +625,9 @@ construction line.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -711,7 +724,11 @@ of a 3D point.</p>
       <div class="method_details ">
   <h3 class="signature " id="end=-instance_method">
   
-    #<strong>end=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>end=</strong>(point)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>end=</strong>(nil)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -744,7 +761,23 @@ method will make the length finite at the end.</p>
 <span class='comment'># Will display point2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>end=</strong>(point)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object if successful or nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -752,7 +785,7 @@ method will make the length finite at the end.</p>
         <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
@@ -763,12 +796,51 @@ method will make the length finite at the end.</p>
       
     </li>
   
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>point - a Point3d object if successful or nil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>end=</strong>(nil)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object if successful or nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
     <li>
       
         <span class='name'>nil</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>nil</tt>)</span>
       
       
       
@@ -793,12 +865,18 @@ method will make the length finite at the end.</p>
       
         
         <div class='inline'>
-<p>status - 3D point if finite or nil if not.</p>
+<p>point - a Point3d object if successful or nil</p>
 </div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -894,7 +972,7 @@ construction line on an infinite construction line.</p>
       <div class="method_details ">
   <h3 class="signature " id="position=-instance_method">
   
-    #<strong>position=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>position=</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -924,7 +1002,18 @@ through</p>
 <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='id identifier rubyid_constline'>constline</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='id identifier rubyid_point3'>point3</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the new Point3d object that the construction line will pass
+through (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -964,6 +1053,9 @@ through</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1132,7 +1224,11 @@ construction line (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="start=-instance_method">
   
-    #<strong>start=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>start=</strong>(point)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>start=</strong>(nil)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -1165,7 +1261,23 @@ start.</p>
 <span class='id identifier rubyid_startofline'>startofline</span> <span class='op'>=</span> <span class='id identifier rubyid_constline'>constline</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='id identifier rubyid_point3'>point3</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>start=</strong>(point)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object if successful or nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1173,29 +1285,13 @@ start.</p>
         <span class='name'>point</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>The Point3d object to set for the end point of the construction line.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>nil</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Sets the end point to infinite.</p>
+<p>The Point3d object to set for the start point of the construction line.</p>
 </div>
       
     </li>
@@ -1220,6 +1316,67 @@ start.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>start=</strong>(nil)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object if successful or nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>nil</span>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Sets the start point to infinite.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>point - a Point3d object if successful or nil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1314,7 +1471,7 @@ the construction line.</p>
       <div class="method_details ">
   <h3 class="signature " id="stipple=-instance_method">
   
-    #<strong>stipple=</strong>(arg1)  &#x21d2; <tt>Object</tt> 
+    #<strong>stipple</strong>(pattern)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1327,13 +1484,13 @@ the construction line.</p>
 construction line. The stipple pattern is given as a string. Valid strings
 are:</p>
 <ul><li>
-<p><tt>“.”</tt> (Dotted Line),</p>
+<p><code>&quot;.&quot;</code> (Dotted Line),</p>
 </li><li>
-<p><tt>“-”</tt> (Short Dashes Line),</p>
+<p><code>&quot;-&quot;</code> (Short Dashes Line),</p>
 </li><li>
-<p><tt>“_”</tt> (Long Dashes Line),</p>
+<p><code>&quot;_&quot;</code> (Long Dashes Line),</p>
 </li><li>
-<p><tt>“-.-”</tt> (Dash Dot Dash Line).</p>
+<p><code>&quot;-.-&quot;</code> (Dash Dot Dash Line).</p>
 </li></ul>
 
 
@@ -1353,7 +1510,15 @@ are:</p>
 <span class='id identifier rubyid_constline'>constline</span><span class='period'>.</span><span class='id identifier rubyid_stipple'>stipple</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-.-</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1374,6 +1539,9 @@ are:</p>
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -1400,7 +1568,7 @@ are:</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:04 2016 by
+  Generated on Tue Apr 12 20:17:21 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -201,7 +201,7 @@ model.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#aspect_ratio%3D-instance_method" title="#aspect_ratio= (instance method)">#<strong>aspect_ratio=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#aspect_ratio%3D-instance_method" title="#aspect_ratio= (instance method)">#<strong>aspect_ratio=</strong>(ratio)  &#x21d2; Object </a>
     
 
     
@@ -275,7 +275,7 @@ object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description%3D-instance_method" title="#description= (instance method)">#<strong>description=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#description%3D-instance_method" title="#description= (instance method)">#<strong>description=</strong>(description)  &#x21d2; Object </a>
     
 
     
@@ -348,7 +348,7 @@ that the Camera is pointing.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#focal_length-instance_method" title="#focal_length (instance method)">#<strong>focal_length</strong>  &#x21d2; Object </a>
+      <a href="#focal_length-instance_method" title="#focal_length (instance method)">#<strong>focal_length</strong>(length)  &#x21d2; Object </a>
     
 
     
@@ -373,7 +373,7 @@ perspective Camera.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#focal_length%3D-instance_method" title="#focal_length= (instance method)">#<strong>focal_length=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#focal_length%3D-instance_method" title="#focal_length= (instance method)">#<strong>focal_length=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -422,7 +422,7 @@ millimeters) of a perspective camera.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fov%3D-instance_method" title="#fov= (instance method)">#<strong>fov=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#fov%3D-instance_method" title="#fov= (instance method)">#<strong>fov=</strong>(fov)  &#x21d2; Object </a>
     
 
     
@@ -495,7 +495,7 @@ or vertical.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#height%3D-instance_method" title="#height= (instance method)">#<strong>height=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#height%3D-instance_method" title="#height= (instance method)">#<strong>height=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -544,7 +544,7 @@ of the Camera.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#image_width%3D-instance_method" title="#image_width= (instance method)">#<strong>image_width=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#image_width%3D-instance_method" title="#image_width= (instance method)">#<strong>image_width=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -569,7 +569,7 @@ for a perspective camera.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(eye, target, up, perspective = true, fov = 30.0)  &#x21d2; Object </a>
     
 
     
@@ -622,7 +622,7 @@ in degrees of type Float.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#perspective%3D-instance_method" title="#perspective= (instance method)">#<strong>perspective=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#perspective%3D-instance_method" title="#perspective (instance method)">#<strong>perspective</strong>(perspective)  &#x21d2; Object </a>
     
 
     
@@ -697,7 +697,7 @@ cameras.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set-instance_method" title="#set (instance method)">#<strong>set</strong>(*args)  &#x21d2; Object </a>
+      <a href="#set-instance_method" title="#set (instance method)">#<strong>set</strong>(eye, target, up)  &#x21d2; Object </a>
     
 
     
@@ -850,7 +850,7 @@ defined by the camera&#39;s direction and up vector.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(eye, target, up, perspective = true, fov = 30.0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -881,7 +881,17 @@ in degrees of type Float.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns camera - a new Camera object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -895,7 +905,7 @@ in degrees of type Float.</p>
       
         &mdash;
         <div class='inline'>
-<p>See Camera.eye.</p>
+<p>See <span class='object_link'><a href="#eye-instance_method" title="Sketchup::Camera#eye (method)">#eye</a></span>.</p>
 </div>
       
     </li>
@@ -911,7 +921,7 @@ in degrees of type Float.</p>
       
         &mdash;
         <div class='inline'>
-<p>See Camera.target.</p>
+<p>See <span class='object_link'><a href="#target-instance_method" title="Sketchup::Camera#target (method)">#target</a></span>.</p>
 </div>
       
     </li>
@@ -927,7 +937,7 @@ in degrees of type Float.</p>
       
         &mdash;
         <div class='inline'>
-<p>See Camera.up.</p>
+<p>See <span class='object_link'><a href="#up-instance_method" title="Sketchup::Camera#up (method)">#up</a></span>.</p>
 </div>
       
     </li>
@@ -937,13 +947,15 @@ in degrees of type Float.</p>
         <span class='name'>perspective</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'></span>
       
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
       
       
         &mdash;
         <div class='inline'>
-<p>see Camera.perspective. Defaults to true.</p>
+<p>see <span class='object_link'><a href="#perspective%3F-instance_method" title="Sketchup::Camera#perspective? (method)">#perspective?</a></span>.</p>
 </div>
       
     </li>
@@ -953,18 +965,23 @@ in degrees of type Float.</p>
         <span class='name'>fov</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'></span>
       
+      
+        <em class="default">(defaults to: <tt>30.0</tt>)</em>
       
       
         &mdash;
         <div class='inline'>
-<p>see Camera.fov. Defaults to 30.0.</p>
+<p>see <span class='object_link'><a href="#fov-instance_method" title="Sketchup::Camera#fov (method)">#fov</a></span>.</p>
 </div>
       
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -1067,7 +1084,7 @@ in degrees of type Float.</p>
       <div class="method_details ">
   <h3 class="signature " id="aspect_ratio=-instance_method">
   
-    #<strong>aspect_ratio=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>aspect_ratio=</strong>(ratio)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1102,6 +1119,31 @@ the aspect ratio of its View.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns aspectratio - an aspect ratio, such as 1.85, if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ratio</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1120,6 +1162,9 @@ the aspect ratio of its View.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1286,7 +1331,7 @@ object.</p>
       <div class="method_details ">
   <h3 class="signature " id="description=-instance_method">
   
-    #<strong>description=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>description=</strong>(description)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1311,6 +1356,31 @@ object.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns description - a string description for the camera if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1329,6 +1399,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1498,7 +1571,7 @@ pointing if successful</p>
       <div class="method_details ">
   <h3 class="signature " id="focal_length-instance_method">
   
-    #<strong>focal_length</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>focal_length</strong>(length)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1531,7 +1604,17 @@ the image width (see image_width).</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1570,6 +1653,9 @@ the image width (see image_width).</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1593,7 +1679,7 @@ the image width (see image_width).</p>
       <div class="method_details ">
   <h3 class="signature " id="focal_length=-instance_method">
   
-    #<strong>focal_length=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>focal_length=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1625,6 +1711,31 @@ inclusive. This is an alternate way of setting the field of view.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns length - the new focal length for the camera if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1643,6 +1754,9 @@ inclusive. This is an alternate way of setting the field of view.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1739,7 +1853,7 @@ inclusive. This is an alternate way of setting the field of view.</p>
       <div class="method_details ">
   <h3 class="signature " id="fov=-instance_method">
   
-    #<strong>fov=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>fov=</strong>(fov)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1771,7 +1885,17 @@ must be between 1 and 120, inclusive.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns fov - the new field of view if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1810,6 +1934,9 @@ must be between 1 and 120, inclusive.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1989,7 +2116,7 @@ or vertical.</p>
       <div class="method_details ">
   <h3 class="signature " id="height=-instance_method">
   
-    #<strong>height=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>height=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2022,6 +2149,31 @@ or vertical.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns height - height in current units if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2040,6 +2192,9 @@ or vertical.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2140,7 +2295,7 @@ in millimeters rather than in inches.</p>
       <div class="method_details ">
   <h3 class="signature " id="image_width=-instance_method">
   
-    #<strong>image_width=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>image_width=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2174,6 +2329,31 @@ field of view and focal length.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns width - the width of the camera if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2192,6 +2372,9 @@ field of view and focal length.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2290,7 +2473,7 @@ perspective mode and PhotoMatch mode are 2d cameras.</p>
       <div class="method_details ">
   <h3 class="signature " id="perspective=-instance_method">
   
-    #<strong>perspective=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>perspective</strong>(perspective)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2320,7 +2503,17 @@ camera or an orthographic camera.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if perspective, false if orthographic</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2359,6 +2552,9 @@ camera or an orthographic camera.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2533,7 +2729,7 @@ than 1.0.</p>
       <div class="method_details ">
   <h3 class="signature " id="set-instance_method">
   
-    #<strong>set</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>set</strong>(eye, target, up)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2568,7 +2764,17 @@ valid camera definition.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns camera - the modified camera</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2639,6 +2845,9 @@ valid camera definition.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2682,14 +2891,14 @@ valid camera definition.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_camera'>camera</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Camera</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-<span class='comment'># Target point is 0,0,0
-</span><span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='id identifier rubyid_camera'>camera</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span>
-<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
-  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
-<span class='kw'>else</span>
-  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failure</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></code></pre>
+      <pre class="example code"><code>camera = Sketchup::Camera.new
+# Target point is 0,0,0
+t = camera.target
+if (t)
+  UI.messagebox t.to_s
+else
+  UI.messagebox &quot;Failure&quot;.
+end</code></pre>
     
   </div>
 
@@ -3037,7 +3246,7 @@ defined by the camera&#39;s direction and up vector.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:59 2016 by
+  Generated on Tue Apr 12 20:17:15 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

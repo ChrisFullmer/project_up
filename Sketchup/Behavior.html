@@ -176,7 +176,7 @@ created with a Behavior.new call.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#always_face_camera%3D-instance_method" title="#always_face_camera= (instance method)">#<strong>always_face_camera=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#always_face_camera%3D-instance_method" title="#always_face_camera= (instance method)">#<strong>always_face_camera=</strong>(setting)  &#x21d2; Object </a>
     
 
     
@@ -226,7 +226,7 @@ behavior for a component.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#cuts_opening%3D-instance_method" title="#cuts_opening= (instance method)">#<strong>cuts_opening=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#cuts_opening%3D-instance_method" title="#cuts_opening= (instance method)">#<strong>cuts_opening=</strong>(setting)  &#x21d2; Object </a>
     
 
     
@@ -276,7 +276,7 @@ opening behavior.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is2d%3D-instance_method" title="#is2d= (instance method)">#<strong>is2d=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#is2d%3D-instance_method" title="#is2d= (instance method)">#<strong>is2d=</strong>(setting)  &#x21d2; Object </a>
     
 
     
@@ -326,7 +326,7 @@ can be glued or aligned to a face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#no_scale_mask%3D-instance_method" title="#no_scale_mask= (instance method)">#<strong>no_scale_mask=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#no_scale_mask%3D-instance_method" title="#no_scale_mask= (instance method)">#<strong>no_scale_mask=</strong>(scale_mask)  &#x21d2; Object </a>
     
 
     
@@ -377,7 +377,7 @@ this single component with the scale tool.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shadows_face_sun%3D-instance_method" title="#shadows_face_sun= (instance method)">#<strong>shadows_face_sun=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#shadows_face_sun%3D-instance_method" title="#shadows_face_sun= (instance method)">#<strong>shadows_face_sun=</strong>(status)  &#x21d2; Object </a>
     
 
     
@@ -454,7 +454,7 @@ to” behavior.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snapto%3D-instance_method" title="#snapto= (instance method)">#<strong>snapto=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#snapto%3D-instance_method" title="#snapto= (instance method)">#<strong>snapto=</strong>(snapto)  &#x21d2; Object </a>
     
 
     
@@ -498,7 +498,7 @@ to” behavior.</p>
       <div class="method_details first">
   <h3 class="signature first" id="always_face_camera=-instance_method">
   
-    #<strong>always_face_camera=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>always_face_camera=</strong>(setting)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -527,7 +527,17 @@ orient itself so that the Y axis of the component is facing the camera.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_behavior'>behavior</span><span class='period'>.</span><span class='id identifier rubyid_always_face_camera'>always_face_camera</span> <span class='op'>=</span> <span class='kw'>false</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the status of the always_face_camera behavior.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -566,6 +576,9 @@ orient itself so that the Y axis of the component is facing the camera.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -694,7 +707,7 @@ the component is not set to always face camera.</p>
       <div class="method_details ">
   <h3 class="signature " id="cuts_opening=-instance_method">
   
-    #<strong>cuts_opening=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>cuts_opening=</strong>(setting)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -726,7 +739,18 @@ component.</p>
 </span><span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the status of the cuts_opening behavior (either true or
+false)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -765,6 +789,9 @@ component.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -870,7 +897,7 @@ opening behavior.</p>
       <div class="method_details ">
   <h3 class="signature " id="is2d=-instance_method">
   
-    #<strong>is2d=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>is2d=</strong>(setting)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -902,7 +929,17 @@ can be glued or aligned to a face.</p>
 </span><span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the new setting</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -941,6 +978,9 @@ can be glued or aligned to a face.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1046,7 +1086,7 @@ can be glued or aligned to a face.</p>
       <div class="method_details ">
   <h3 class="signature " id="no_scale_mask=-instance_method">
   
-    #<strong>no_scale_mask=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>no_scale_mask=</strong>(scale_mask)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1098,7 +1138,17 @@ take effect.</p>
 <span class='id identifier rubyid_behavior'>behavior</span><span class='period'>.</span><span class='id identifier rubyid_no_scale_mask'>no_scale_mask</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns behavior - the Behavior object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1137,6 +1187,9 @@ take effect.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1239,7 +1292,7 @@ for details on the bit encodings used.</p>
       <div class="method_details ">
   <h3 class="signature " id="shadows_face_sun=-instance_method">
   
-    #<strong>shadows_face_sun=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>shadows_face_sun=</strong>(status)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1268,7 +1321,17 @@ feature.</p>
 <span class='id identifier rubyid_behavior'>behavior</span> <span class='op'>=</span> <span class='id identifier rubyid_behavior'>behavior</span><span class='period'>.</span><span class='id identifier rubyid_shadows_face_sun'>shadows_face_sun</span> <span class='op'>=</span> <span class='kw'>true</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns behavior - the Behavior object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1309,6 +1372,9 @@ shadow to be cast from the component&#39;s current position.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1507,7 +1573,7 @@ component instance will be snapped against a face. Possible values are:</p>
       <div class="method_details ">
   <h3 class="signature " id="snapto=-instance_method">
   
-    #<strong>snapto=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>snapto=</strong>(snapto)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1544,7 +1610,17 @@ snapped against a face. Possible constant values are:</p>
 <span class='id identifier rubyid_behavior'>behavior</span><span class='period'>.</span><span class='id identifier rubyid_snapto'>snapto</span> <span class='op'>=</span> <span class='const'>SnapTo_Horizontal</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns behavior - the Behavior object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1583,6 +1659,9 @@ snapped against a face. Possible constant values are:</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1608,7 +1687,7 @@ snapped against a face. Possible constant values are:</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:04 2016 by
+  Generated on Tue Apr 12 20:17:21 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

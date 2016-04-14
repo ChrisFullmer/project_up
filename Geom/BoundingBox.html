@@ -115,6 +115,17 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>that the bounding box returned for face-me components is the center of its
+entire range of motion. This behavior changed in SketchUp 7.1. In 7.0 and
+earlier, the .bounds method would return the bounds around the face-me
+component&#39;s current, visible center.</p>
+</div>
+  </div>
+
+
 <p>Bounding boxes are three-dimensional boxes (eight corners), aligned with
 the global axes, that surround entities within your model. There is a
 default bounding box for any new model that will surround all entities,
@@ -122,11 +133,6 @@ including all groups and components. Additionally, there are bounding boxes
 for Drawingelement objects, including components and groups. Bounding boxes
 are only large enough to exactly bound the entities within your model,
 group, or component.</p>
-
-<p>Note that the bounding box returned for face-me components is the center of
-its entire range of motion. This behavior changed in SketchUp 7.1. In 7.0
-and earlier, the .bounds method would return the bounds around the face-me
-component&#39;s current, visible center.</p>
 
 <p>You can also create arbitrary BoundingBox objects by calling
 BoundingBox.new.</p>
@@ -262,7 +268,7 @@ the bounding box.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#contains%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#contains%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(point_or_bb)  &#x21d2; Object </a>
     
 
     
@@ -287,7 +293,7 @@ Point3d or BoundingBox object.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#corner-instance_method" title="#corner (instance method)">#<strong>corner</strong>(arg)  &#x21d2; Object </a>
+      <a href="#corner-instance_method" title="#corner (instance method)">#<strong>corner</strong>(corner_index)  &#x21d2; Object </a>
     
 
     
@@ -437,7 +443,7 @@ method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersect-instance_method" title="#intersect (instance method)">#<strong>intersect</strong>(arg)  &#x21d2; Object </a>
+      <a href="#intersect-instance_method" title="#intersect (instance method)">#<strong>intersect</strong>(boundingbox)  &#x21d2; Object </a>
     
 
     
@@ -621,7 +627,11 @@ points).</p>
       <div class="method_details first">
   <h3 class="signature first" id="add-instance_method">
   
-    #<strong>add</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>add</strong>(point_or_bb)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>add</strong>(points_or_bb)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -654,7 +664,51 @@ BoundingBox.diagonal will return a size greater than zero.</p>
 <span class='id identifier rubyid_boundingbox'>boundingbox</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_point1'>point1</span><span class='comma'>,</span> <span class='id identifier rubyid_point2'>point2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>add</strong>(point_or_bb)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point_or_bb</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>, <tt><span class='object_link'><a href="" title="Geom::BoundingBox (class)">Geom::BoundingBox</a></span></tt>, <tt><span class='object_link'><a href="../Sketchup/Vertex.html" title="Sketchup::Vertex (class)">Sketchup::Vertex</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>add</strong>(points_or_bb)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -662,18 +716,19 @@ BoundingBox.diagonal will return a size greater than zero.</p>
         <span class='name'>points_or_bb</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span>, <span class='object_link'><a href="" title="Geom::BoundingBox (class)">Geom::BoundingBox</a></span>, <span class='object_link'><a href="../Sketchup/Vertex.html" title="Sketchup::Vertex (class)">Sketchup::Vertex</a></span>&gt;</tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A list or single instance or Point3d, Vertex, or BoundingBox objects</p>
-</div>
       
     </li>
   
 </ul>
+
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -861,7 +916,7 @@ at least two points or another bounding box.</p>
       <div class="method_details ">
   <h3 class="signature " id="contains?-instance_method">
   
-    #<strong>contains?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>contains?</strong>(point_or_bb)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -890,38 +945,28 @@ Point3d or BoundingBox object.</p>
 </span><span class='id identifier rubyid_boundingbox'>boundingbox</span><span class='period'>.</span><span class='id identifier rubyid_contains?'>contains?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>150</span><span class='comma'>,</span> <span class='int'>300</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>200</span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful (bounding box contains a Point3d or
+BoundingBox object), or false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>point</span>
+        <span class='name'>point_or_bb</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>, <tt><span class='object_link'><a href="" title="Geom::BoundingBox (class)">Geom::BoundingBox</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d object.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>boundbox</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A BoundingBox object.</p>
-</div>
       
     </li>
   
@@ -944,6 +989,13 @@ object), or false if unsuccessful.</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -978,7 +1030,7 @@ object), or false if unsuccessful.</p>
       <div class="method_details ">
   <h3 class="signature " id="corner-instance_method">
   
-    #<strong>corner</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>corner</strong>(corner_index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1020,12 +1072,22 @@ These are which index refers to which corner:</p>
 </span><span class='id identifier rubyid_boundingbox'>boundingbox</span><span class='period'>.</span><span class='id identifier rubyid_corner'>corner</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>corner</span>
+        <span class='name'>corner_index</span>
       
       
         <span class='type'></span>
@@ -1060,6 +1122,9 @@ retrieve.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1373,7 +1438,7 @@ method.</p>
       <div class="method_details ">
   <h3 class="signature " id="intersect-instance_method">
   
-    #<strong>intersect</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>intersect</strong>(boundingbox)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1382,13 +1447,19 @@ method.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The intersect method is used to retrieve a bounding box that is the result
-of intersecting one bounding box with another.</p>
-
-<p>Note: Prior to SU2015 this method would return incorrect result in some
-cases. For correct result in these versions you must first check if the
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Prior to SU2015 this method would return incorrect result in some cases.
+For correct result in these versions you must first check if the
 boundingboxes actually overlap - then call this to get the resulting
 boundingbox.</p>
+</div>
+  </div>
+
+
+<p>The intersect method is used to retrieve a bounding box that is the result
+of intersecting one bounding box with another.</p>
 
 
   </div>
@@ -1407,12 +1478,23 @@ boundingbox.</p>
 </span><span class='id identifier rubyid_boundingbox'>boundingbox</span> <span class='op'>=</span> <span class='id identifier rubyid_boundingbox1'>boundingbox1</span><span class='period'>.</span><span class='id identifier rubyid_intersect'>intersect</span><span class='lparen'>(</span><span class='id identifier rubyid_boundingbox2'>boundingbox2</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns boundingbox - the resulting BoundingBox object if successful, an
+empty BoundingBox object if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>boundingbox2</span>
+        <span class='name'>boundingbox</span>
       
       
         <span class='type'></span>
@@ -1447,6 +1529,9 @@ BoundingBox object if unsuccessful.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1764,7 +1849,7 @@ valid (empty)</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

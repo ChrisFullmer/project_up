@@ -159,7 +159,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#common_edge-instance_method" title="#common_edge (instance method)">#<strong>common_edge</strong>(arg)  &#x21d2; Object </a>
+      <a href="#common_edge-instance_method" title="#common_edge (instance method)">#<strong>common_edge</strong>(vertex2)  &#x21d2; Object </a>
     
 
     
@@ -305,7 +305,7 @@ interior of a Curve.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#used_by%3F-instance_method" title="#used_by? (instance method)">#<strong>used_by?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#used_by%3F-instance_method" title="#used_by? (instance method)">#<strong>used_by?</strong>(face_or_edge)  &#x21d2; Object </a>
     
 
     
@@ -350,7 +350,7 @@ Edge or Face.</p>
       <div class="method_details first">
   <h3 class="signature first" id="common_edge-instance_method">
   
-    #<strong>common_edge</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>common_edge</strong>(vertex2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -384,7 +384,18 @@ this vertex and another vertex</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns edge - an Edge object common to both vertices if successful.
+Returns nil if there is no edge between the two vertices.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -424,6 +435,9 @@ there is no edge between the two vertices.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -810,7 +824,7 @@ successful</p>
       <div class="method_details ">
   <h3 class="signature " id="used_by?-instance_method">
   
-    #<strong>used_by?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>used_by?</strong>(face_or_edge)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -834,7 +848,17 @@ Edge or Face.</p>
       <pre class="example code"><code><span class='id identifier rubyid_used'>used</span> <span class='op'>=</span> <span class='id identifier rubyid_vertex1'>vertex1</span><span class='period'>.</span><span class='id identifier rubyid_used_by?'>used_by?</span> <span class='id identifier rubyid_my_face'>my_face</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns used - true if the Vertex is used in the given entity.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -872,6 +896,13 @@ Edge or Face.</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -907,7 +938,7 @@ Edge or Face.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:59 2016 by
+  Generated on Tue Apr 12 20:17:15 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

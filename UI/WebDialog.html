@@ -185,7 +185,7 @@ The link would be:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_action_callback-instance_method" title="#add_action_callback (instance method)">#<strong>add_action_callback</strong>(rActionName)  &#x21d2; Object </a>
+      <a href="#add_action_callback-instance_method" title="#add_action_callback (instance method)">#<strong>add_action_callback</strong>(callback_name) {|dialog, params| ... } &#x21d2; Object </a>
     
 
     
@@ -210,7 +210,7 @@ web dialog can call to perform some function.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#allow_actions_from_host-instance_method" title="#allow_actions_from_host (instance method)">#<strong>allow_actions_from_host</strong>(rHost)  &#x21d2; Object </a>
+      <a href="#allow_actions_from_host-instance_method" title="#allow_actions_from_host (instance method)">#<strong>allow_actions_from_host</strong>(hostname)  &#x21d2; Object </a>
     
 
     
@@ -284,7 +284,7 @@ all the windows on the desktop.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#execute_script-instance_method" title="#execute_script (instance method)">#<strong>execute_script</strong>(arg)  &#x21d2; Object </a>
+      <a href="#execute_script-instance_method" title="#execute_script (instance method)">#<strong>execute_script</strong>(script)  &#x21d2; Object </a>
     
 
     
@@ -334,7 +334,7 @@ for the web dialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_element_value-instance_method" title="#get_element_value (instance method)">#<strong>get_element_value</strong>(rElementID)  &#x21d2; Object </a>
+      <a href="#get_element_value-instance_method" title="#get_element_value (instance method)">#<strong>get_element_value</strong>(element_id)  &#x21d2; Object </a>
     
 
     
@@ -359,7 +359,7 @@ element_id, from the web dialog&#39;s DOM.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(dialog_title, scrollable, pref_key, width, height, left, top, resizable)  &#x21d2; Object </a>
     
 
     
@@ -410,7 +410,7 @@ allowed to resize the dialog to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max_height%3D-instance_method" title="#max_height= (instance method)">#<strong>max_height=</strong>(rHeight)  &#x21d2; Object </a>
+      <a href="#max_height%3D-instance_method" title="#max_height= (instance method)">#<strong>max_height=</strong>(height)  &#x21d2; Object </a>
     
 
     
@@ -460,7 +460,7 @@ allowed to resize the dialog to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max_width%3D-instance_method" title="#max_width= (instance method)">#<strong>max_width=</strong>(rWidth)  &#x21d2; Object </a>
+      <a href="#max_width%3D-instance_method" title="#max_width= (instance method)">#<strong>max_width=</strong>(width)  &#x21d2; Object </a>
     
 
     
@@ -510,7 +510,7 @@ allowed to resize the dialog to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#min_height%3D-instance_method" title="#min_height= (instance method)">#<strong>min_height=</strong>(rHeight)  &#x21d2; Object </a>
+      <a href="#min_height%3D-instance_method" title="#min_height (instance method)">#<strong>min_height</strong>(height)  &#x21d2; Object </a>
     
 
     
@@ -560,7 +560,7 @@ allowed to resize the dialog to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#min_width%3D-instance_method" title="#min_width= (instance method)">#<strong>min_width=</strong>(rWidth)  &#x21d2; Object </a>
+      <a href="#min_width%3D-instance_method" title="#min_width= (instance method)">#<strong>min_width=</strong>(width)  &#x21d2; Object </a>
     
 
     
@@ -585,7 +585,7 @@ allowed to resize the dialog to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#navigation_buttons_enabled%3D-instance_method" title="#navigation_buttons_enabled= (instance method)">#<strong>navigation_buttons_enabled=</strong>(r_enabled)  &#x21d2; Object </a>
+      <a href="#navigation_buttons_enabled%3D-instance_method" title="#navigation_buttons_enabled= (instance method)">#<strong>navigation_buttons_enabled=</strong>(nav_buttons)  &#x21d2; Object </a>
     
 
     
@@ -635,7 +635,7 @@ next, and back buttons are visible at the top of the WebDialog on the mac.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#post_url-instance_method" title="#post_url (instance method)">#<strong>post_url</strong>(rURL, rPostData)  &#x21d2; Object </a>
+      <a href="#post_url-instance_method" title="#post_url (instance method)">#<strong>post_url</strong>(url, data)  &#x21d2; Object </a>
     
 
     
@@ -686,7 +686,7 @@ WebDialog is currently in.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_background_color-instance_method" title="#set_background_color (instance method)">#<strong>set_background_color</strong>(rColorString)  &#x21d2; Object </a>
+      <a href="#set_background_color-instance_method" title="#set_background_color (instance method)">#<strong>set_background_color</strong>(color)  &#x21d2; Object </a>
     
 
     
@@ -711,7 +711,7 @@ webdialog.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_file-instance_method" title="#set_file (instance method)">#<strong>set_file</strong>(*args)  &#x21d2; Object </a>
+      <a href="#set_file-instance_method" title="#set_file (instance method)">#<strong>set_file</strong>(filename, path)  &#x21d2; Object </a>
     
 
     
@@ -762,7 +762,7 @@ inside the browser.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_html-instance_method" title="#set_html (instance method)">#<strong>set_html</strong>(rHTML)  &#x21d2; Object </a>
+      <a href="#set_html-instance_method" title="#set_html (instance method)">#<strong>set_html</strong>(html_string)  &#x21d2; Object </a>
     
 
     
@@ -787,7 +787,7 @@ HTML.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_on_close-instance_method" title="#set_on_close (instance method)">#<strong>set_on_close</strong>  &#x21d2; Object </a>
+      <a href="#set_on_close-instance_method" title="#set_on_close (instance method)">#<strong>set_on_close</strong> { ... } &#x21d2; Object </a>
     
 
     
@@ -813,7 +813,7 @@ dialog).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_position-instance_method" title="#set_position (instance method)">#<strong>set_position</strong>(rXPos, rYPos)  &#x21d2; Object </a>
+      <a href="#set_position-instance_method" title="#set_position (instance method)">#<strong>set_position</strong>(left, top)  &#x21d2; Object </a>
     
 
     
@@ -838,7 +838,7 @@ relative to the screen, in pixels.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_size-instance_method" title="#set_size (instance method)">#<strong>set_size</strong>(rWidth, rHeight)  &#x21d2; Object </a>
+      <a href="#set_size-instance_method" title="#set_size (instance method)">#<strong>set_size</strong>(w, h)  &#x21d2; Object </a>
     
 
     
@@ -862,7 +862,7 @@ relative to the screen, in pixels.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_url-instance_method" title="#set_url (instance method)">#<strong>set_url</strong>(rURL)  &#x21d2; Object </a>
+      <a href="#set_url-instance_method" title="#set_url (instance method)">#<strong>set_url</strong>(url)  &#x21d2; Object </a>
     
 
     
@@ -887,7 +887,7 @@ specific URL.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>  &#x21d2; Object </a>
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong> {|dialog| ... } &#x21d2; Object </a>
     
 
     
@@ -911,7 +911,7 @@ specific URL.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show_modal-instance_method" title="#show_modal (instance method)">#<strong>show_modal</strong>  &#x21d2; Object </a>
+      <a href="#show_modal-instance_method" title="#show_modal (instance method)">#<strong>show_modal</strong> {|dialog| ... } &#x21d2; Object </a>
     
 
     
@@ -959,7 +959,7 @@ specific URL.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#write_image-instance_method" title="#write_image (instance method)">#<strong>write_image</strong>(*args)  &#x21d2; Object </a>
+      <a href="#write_image-instance_method" title="#write_image (instance method)">#<strong>write_image</strong>(image_path, option, top_left_x, top_left_y, bottom_right_x, bottom_right_y)  &#x21d2; Object </a>
     
 
     
@@ -990,7 +990,7 @@ and save the image to the given file path.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(dialog_title, scrollable, pref_key, width, height, left, top, resizable)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1023,7 +1023,17 @@ of Internet Explorer is installed will be embedded.</p>
 <span class='id identifier rubyid_dlg'>dlg</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns dialog - the newly created WebDialog object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1159,6 +1169,9 @@ stored.</p>
   
 </ul>
 
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1189,7 +1202,7 @@ stored.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_action_callback-instance_method">
   
-    #<strong>add_action_callback</strong>(rActionName)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_action_callback</strong>(callback_name) {|dialog, params| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1229,7 +1242,17 @@ to pull in a longer string from a hidden input field in the HTML.</p>
 </span><span class='comment'># window.location = &#39;skp:ruby_messagebox@Hello World&#39;;</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1247,6 +1270,24 @@ to pull in a longer string from a hidden input field in the HTML.</p>
 </div>
       
     </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>dialog</tt>, <tt>params</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
   
     <li>
       
@@ -1282,7 +1323,6 @@ string.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1301,6 +1341,9 @@ string.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1324,7 +1367,7 @@ string.</p>
       <div class="method_details ">
   <h3 class="signature " id="allow_actions_from_host-instance_method">
   
-    #<strong>allow_actions_from_host</strong>(rHost)  &#x21d2; <tt>Object</tt> 
+    #<strong>allow_actions_from_host</strong>(hostname)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1351,7 +1394,17 @@ this method.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_allow_actions_from_host'>allow_actions_from_host</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sketchup.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1390,6 +1443,9 @@ this method.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1545,7 +1601,7 @@ WedDialogs are on top.</p>
       <div class="method_details ">
   <h3 class="signature " id="execute_script-instance_method">
   
-    #<strong>execute_script</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>execute_script</strong>(script)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1570,7 +1626,17 @@ dialog.</p>
 <span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_execute_script'>execute_script</span><span class='lparen'>(</span><span class='id identifier rubyid_js_command'>js_command</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1609,6 +1675,9 @@ dialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1699,7 +1768,7 @@ for the web dialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_element_value-instance_method">
   
-    #<strong>get_element_value</strong>(rElementID)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_element_value</strong>(element_id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1727,7 +1796,17 @@ dialog.get_element_value(&quot;myTextInput&quot;)
 &lt;input type=&quot;text&quot; id=&quot;myTextInput&quot; value=&quot;hello&quot;&gt;</code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns String containing the retrieved value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1766,6 +1845,9 @@ dialog.get_element_value(&quot;myTextInput&quot;)
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1855,7 +1937,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_height=-instance_method">
   
-    #<strong>max_height=</strong>(rHeight)  &#x21d2; <tt>Object</tt> 
+    #<strong>max_height=</strong>(height)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1879,12 +1961,22 @@ allowed to resize the dialog to.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_max_height'>max_height</span> <span class='op'>=</span> <span class='int'>400</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>width</span>
+        <span class='name'>height</span>
       
       
         <span class='type'></span>
@@ -1918,6 +2010,9 @@ allowed to resize the dialog to.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2007,7 +2102,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_width=-instance_method">
   
-    #<strong>max_width=</strong>(rWidth)  &#x21d2; <tt>Object</tt> 
+    #<strong>max_width=</strong>(width)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2031,7 +2126,17 @@ allowed to resize the dialog to.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_max_width'>max_width</span> <span class='op'>=</span> <span class='int'>500</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2070,6 +2175,9 @@ allowed to resize the dialog to.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2159,7 +2267,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_height=-instance_method">
   
-    #<strong>min_height=</strong>(rHeight)  &#x21d2; <tt>Object</tt> 
+    #<strong>min_height</strong>(height)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2183,12 +2291,22 @@ allowed to resize the dialog to.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_min_height'>min_height</span> <span class='op'>=</span> <span class='int'>100</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>width</span>
+        <span class='name'>height</span>
       
       
         <span class='type'></span>
@@ -2222,6 +2340,9 @@ allowed to resize the dialog to.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2311,7 +2432,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_width=-instance_method">
   
-    #<strong>min_width=</strong>(rWidth)  &#x21d2; <tt>Object</tt> 
+    #<strong>min_width=</strong>(width)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2335,7 +2456,17 @@ allowed to resize the dialog to.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_min_width'>min_width</span> <span class='op'>=</span> <span class='int'>200</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2374,6 +2505,9 @@ allowed to resize the dialog to.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2397,7 +2531,7 @@ allowed to resize the dialog to.</p>
       <div class="method_details ">
   <h3 class="signature " id="navigation_buttons_enabled=-instance_method">
   
-    #<strong>navigation_buttons_enabled=</strong>(r_enabled)  &#x21d2; <tt>Object</tt> 
+    #<strong>navigation_buttons_enabled=</strong>(nav_buttons)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2422,7 +2556,17 @@ This method has no use on the PC, as these buttons are never displayed.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_navigation_buttons_enabled'>navigation_buttons_enabled</span> <span class='op'>=</span> <span class='kw'>false</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns dialog - the updated WebDialog</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2461,6 +2605,9 @@ This method has no use on the PC, as these buttons are never displayed.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2562,7 +2709,7 @@ This method has no use on the PC, as these buttons are never displayed.</p>
       <div class="method_details ">
   <h3 class="signature " id="post_url-instance_method">
   
-    #<strong>post_url</strong>(rURL, rPostData)  &#x21d2; <tt>Object</tt> 
+    #<strong>post_url</strong>(url, data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2586,7 +2733,17 @@ method.</p>
       <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_post_url'>post_url</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://www.mydomain.com/formchecker.cgi</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2641,6 +2798,9 @@ method.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2732,7 +2892,7 @@ greater than 1.0.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_background_color-instance_method">
   
-    #<strong>set_background_color</strong>(rColorString)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_background_color</strong>(color)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2756,7 +2916,17 @@ webdialog.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dlg'>dlg</span><span class='period'>.</span><span class='id identifier rubyid_set_background_color'>set_background_color</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>f3f0f0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2795,6 +2965,9 @@ webdialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2818,7 +2991,7 @@ webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_file-instance_method">
   
-    #<strong>set_file</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_file</strong>(filename, path)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2842,7 +3015,17 @@ webdialog.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_file'>set_file</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c:\\mypage.html</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2897,6 +3080,9 @@ webdialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2987,7 +3173,7 @@ inside the browser. This defaults to false when a new WebDialog is created.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_html-instance_method">
   
-    #<strong>set_html</strong>(rHTML)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_html</strong>(html_string)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3012,7 +3198,17 @@ HTML.</p>
 <span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_html'>set_html</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3051,6 +3247,9 @@ HTML.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3074,7 +3273,7 @@ HTML.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_on_close-instance_method">
   
-    #<strong>set_on_close</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>set_on_close</strong> { ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3099,19 +3298,18 @@ dialog).</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_on_close'>set_on_close</span><span class='lbrace'>{</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Closing the webDialog</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
-      
-        <span class='name'>block</span>
       
       
         <span class='type'></span>
       
       
       
-        &mdash;
+        
         <div class='inline'>
 <p>Ruby block to perform when the dialog closes.</p>
 </div>
@@ -3119,7 +3317,6 @@ dialog).</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -3161,7 +3358,7 @@ dialog).</p>
       <div class="method_details ">
   <h3 class="signature " id="set_position-instance_method">
   
-    #<strong>set_position</strong>(rXPos, rYPos)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_position</strong>(left, top)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3185,7 +3382,17 @@ relative to the screen, in pixels.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_position'>set_position</span><span class='lparen'>(</span><span class='int'>100</span><span class='comma'>,</span><span class='int'>50</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3240,6 +3447,9 @@ relative to the screen, in pixels.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3263,7 +3473,7 @@ relative to the screen, in pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_size-instance_method">
   
-    #<strong>set_size</strong>(rWidth, rHeight)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_size</strong>(w, h)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3286,7 +3496,17 @@ relative to the screen, in pixels.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_size'>set_size</span><span class='lparen'>(</span><span class='int'>320</span><span class='comma'>,</span><span class='int'>240</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3341,6 +3561,9 @@ relative to the screen, in pixels.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3364,7 +3587,7 @@ relative to the screen, in pixels.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_url-instance_method">
   
-    #<strong>set_url</strong>(rURL)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_url</strong>(url)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3388,7 +3611,17 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_set_url'>set_url</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://www.sketchup.com</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3427,6 +3660,9 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3450,7 +3686,7 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="show-instance_method">
   
-    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>show</strong> {|dialog| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3475,27 +3711,25 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>block</span>
       
-      
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'>(<tt>dialog</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Ruby code to perform when the dialog is first displayed.</p>
+<p>(optional) Ruby code to perform when the dialog is first displayed.</p>
 </div>
       
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -3537,7 +3771,7 @@ specific URL. This method allows you to load web sites in a webdialog.</p>
       <div class="method_details ">
   <h3 class="signature " id="show_modal-instance_method">
   
-    #<strong>show_modal</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>show_modal</strong> {|dialog| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3566,27 +3800,25 @@ behave this way, but instead are “always on top” of other windows.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>block</span>
       
-      
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'>(<tt>dialog</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Ruby code to perform when the dialog is first displayed.</p>
+<p>(optional) Ruby code to perform when the dialog is first displayed.</p>
 </div>
       
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -3702,7 +3934,7 @@ behave this way, but instead are “always on top” of other windows.</p>
       <div class="method_details ">
   <h3 class="signature " id="write_image-instance_method">
   
-    #<strong>write_image</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>write_image</strong>(image_path, option, top_left_x, top_left_y, bottom_right_x, bottom_right_y)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3727,7 +3959,15 @@ and save the image to the given file path.</p>
 <span class='id identifier rubyid_dialog'>dialog</span><span class='period'>.</span><span class='id identifier rubyid_write_image'>write_image</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>c:/grab.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>100</span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3831,6 +4071,9 @@ images this specifies the compression algorithm: &lt;4 (best speed), 4-8
   
 </ul>
 
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3856,7 +4099,7 @@ images this specifies the compression algorithm: &lt;4 (best speed), 4-8
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -191,7 +191,7 @@ element.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#casts_shadows%3D-instance_method" title="#casts_shadows= (instance method)">#<strong>casts_shadows=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#casts_shadows%3D-instance_method" title="#casts_shadows= (instance method)">#<strong>casts_shadows=</strong>(casts)  &#x21d2; Object </a>
     
 
     
@@ -265,7 +265,7 @@ casting shadows.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#hidden%3D-instance_method" title="#hidden= (instance method)">#<strong>hidden=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#hidden%3D-instance_method" title="#hidden= (instance method)">#<strong>hidden=</strong>(hidden)  &#x21d2; Object </a>
     
 
     
@@ -338,7 +338,7 @@ element.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#layer%3D-instance_method" title="#layer= (instance method)">#<strong>layer=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#layer%3D-instance_method" title="#layer= (instance method)">#<strong>layer=</strong>(layer)  &#x21d2; Object </a>
     
 
     
@@ -387,7 +387,7 @@ element.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#material%3D-instance_method" title="#material= (instance method)">#<strong>material=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#material%3D-instance_method" title="#material= (instance method)">#<strong>material=</strong>(material)  &#x21d2; Object </a>
     
 
     
@@ -411,7 +411,7 @@ element.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#receives_shadows%3D-instance_method" title="#receives_shadows= (instance method)">#<strong>receives_shadows=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#receives_shadows%3D-instance_method" title="#receive_shadows= (instance method)">#<strong>receive_shadows=</strong>(receive)  &#x21d2; Object </a>
     
 
     
@@ -461,7 +461,7 @@ receiving shadows.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#visible%3D-instance_method" title="#visible= (instance method)">#<strong>visible=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#visible%3D-instance_method" title="#visible= (instance method)">#<strong>visible=</strong>(visibility)  &#x21d2; Object </a>
     
 
     
@@ -609,7 +609,7 @@ element.</p>
       <div class="method_details ">
   <h3 class="signature " id="casts_shadows=-instance_method">
   
-    #<strong>casts_shadows=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>casts_shadows=</strong>(casts)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -647,7 +647,17 @@ shadows.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -687,6 +697,9 @@ not want the Drawingelement object to cast shadows.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -876,7 +889,7 @@ unsuccessful.</p>
       <div class="method_details ">
   <h3 class="signature " id="hidden=-instance_method">
   
-    #<strong>hidden=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>hidden=</strong>(hidden)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -911,7 +924,18 @@ unsuccessful.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_hidden'>hidden</span> <span class='op'>=</span> <span class='kw'>true</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the element has been hidden, false if the element
+has not been hidden.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -952,6 +976,9 @@ been hidden.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1140,7 +1167,7 @@ element.</p>
       <div class="method_details ">
   <h3 class="signature " id="layer=-instance_method">
   
-    #<strong>layer=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>layer=</strong>(layer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1180,7 +1207,17 @@ layer name.</p>
 </span><span class='id identifier rubyid_newlayer'>newlayer</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_layer'>layer</span> <span class='op'>=</span> <span class='id identifier rubyid_layer'>layer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns layer - the new Layer object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1188,29 +1225,13 @@ layer name.</p>
         <span class='name'>layer</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="Layer.html" title="Sketchup::Layer (class)">Sketchup::Layer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>A layer number.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>layername</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A layer name.</p>
+<p>A layer or layer name.</p>
 </div>
       
     </li>
@@ -1235,6 +1256,9 @@ layer name.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1335,7 +1359,7 @@ element.</p>
       <div class="method_details ">
   <h3 class="signature " id="material=-instance_method">
   
-    #<strong>material=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>material=</strong>(material)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1378,7 +1402,17 @@ element.</p>
 </span><span class='id identifier rubyid_material'>material</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_material'>material</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns material - the new Material object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1417,6 +1451,9 @@ element.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1440,7 +1477,7 @@ element.</p>
       <div class="method_details ">
   <h3 class="signature " id="receives_shadows=-instance_method">
   
-    #<strong>receives_shadows=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>receive_shadows=</strong>(receive)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1478,7 +1515,17 @@ shadows.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1518,6 +1565,9 @@ not.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1629,7 +1679,7 @@ unsuccessful.</p>
       <div class="method_details ">
   <h3 class="signature " id="visible=-instance_method">
   
-    #<strong>visible=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>visible=</strong>(visibility)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1665,7 +1715,18 @@ method performs an opposite function to the hidden= method.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>false</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the element has been hidden, false if the element
+has not been hidden.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1705,6 +1766,9 @@ been hidden.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1817,7 +1881,7 @@ been hidden.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:55 2016 by
+  Generated on Tue Apr 12 20:17:10 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

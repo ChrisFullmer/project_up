@@ -262,7 +262,7 @@ back side of the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#back_material%3D-instance_method" title="#back_material= (instance method)">#<strong>back_material=</strong>(rbMaterial)  &#x21d2; Object </a>
+      <a href="#back_material%3D-instance_method" title="#back_material= (instance method)">#<strong>back_material=</strong>(material)  &#x21d2; Object </a>
     
 
     
@@ -287,7 +287,7 @@ side of the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#classify_point-instance_method" title="#classify_point (instance method)">#<strong>classify_point</strong>(arg)  &#x21d2; Object </a>
+      <a href="#classify_point-instance_method" title="#classify_point (instance method)">#<strong>classify_point</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -336,7 +336,7 @@ referenced Face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#followme-instance_method" title="#followme (instance method)">#<strong>followme</strong>(*args)  &#x21d2; Object </a>
+      <a href="#followme-instance_method" title="#follow_me (instance method)">#<strong>follow_me</strong>(edge)  &#x21d2; Object </a>
     
 
     
@@ -386,7 +386,7 @@ are glued to the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_texture_projection-instance_method" title="#get_texture_projection (instance method)">#<strong>get_texture_projection</strong>(arg_frontside)  &#x21d2; Object </a>
+      <a href="#get_texture_projection-instance_method" title="#get_texture_projection (instance method)">#<strong>get_texture_projection</strong>(frontside)  &#x21d2; Object </a>
     
 
     
@@ -411,7 +411,7 @@ projection for either the front or back side of the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_UVHelper-instance_method" title="#get_UVHelper (instance method)">#<strong>get_UVHelper</strong>(*args)  &#x21d2; Object </a>
+      <a href="#get_UVHelper-instance_method" title="#get_UVHelper (instance method)">#<strong>get_UVHelper</strong>(front, back, texturewriter)  &#x21d2; Object </a>
     
 
     
@@ -486,7 +486,7 @@ of the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#material%3D-instance_method" title="#material= (instance method)">#<strong>material=</strong>  &#x21d2; Object </a>
+      <a href="#material%3D-instance_method" title="#material= (instance method)">#<strong>material=</strong>(material)  &#x21d2; Object </a>
     
 
     
@@ -511,7 +511,7 @@ of the face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#mesh-instance_method" title="#mesh (instance method)">#<strong>mesh</strong>(*args)  &#x21d2; Object </a>
+      <a href="#mesh-instance_method" title="#mesh (instance method)">#<strong>mesh</strong>(flags = 0)  &#x21d2; Object </a>
     
 
     
@@ -608,7 +608,7 @@ the front direction.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#position_material-instance_method" title="#position_material (instance method)">#<strong>position_material</strong>(arg1, arg2, arg3)  &#x21d2; Object </a>
+      <a href="#position_material-instance_method" title="#position_material (instance method)">#<strong>position_material</strong>(material, pt_array, o_front)  &#x21d2; Object </a>
     
 
     
@@ -632,7 +632,7 @@ the front direction.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pushpull-instance_method" title="#pushpull (instance method)">#<strong>pushpull</strong>(*args)  &#x21d2; Object </a>
+      <a href="#pushpull-instance_method" title="#pushpull (instance method)">#<strong>pushpull</strong>(distance, copy)  &#x21d2; Object </a>
     
 
     
@@ -681,7 +681,7 @@ the front becomes the back.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_texture_projection-instance_method" title="#set_texture_projection (instance method)">#<strong>set_texture_projection</strong>(arg_vector, arg_frontside)  &#x21d2; Object </a>
+      <a href="#set_texture_projection-instance_method" title="#set_texture_projection (instance method)">#<strong>set_texture_projection</strong>(vector, frontside)  &#x21d2; Object </a>
     
 
     
@@ -839,7 +839,11 @@ bound the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="area-instance_method">
   
-    #<strong>area</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>area</strong>  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>area</strong>(transform)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -880,15 +884,66 @@ transformation object to this method, you can account for that to get the
 <span class='id identifier rubyid_area'>area</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_area'>area</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>area</strong>  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns area - the area of the face in current units (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>area - the area of the face in current units (if successful)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>area</strong>(transform)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns area - the area of the face in current units (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>tranform</span>
+        <span class='name'>transform</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -920,6 +975,12 @@ Transformation object.</p>
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1025,7 +1086,7 @@ face (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="back_material=-instance_method">
   
-    #<strong>back_material=</strong>(rbMaterial)  &#x21d2; <tt>Object</tt> 
+    #<strong>back_material=</strong>(material)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1060,7 +1121,18 @@ side of the face.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_back_material'>back_material</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>red</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns material - the name of the valid material or the new Material
+object (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1100,6 +1172,9 @@ successful)</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1123,7 +1198,7 @@ successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="classify_point-instance_method">
   
-    #<strong>classify_point</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>classify_point</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1197,7 +1272,18 @@ release to the next.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns result - an integer describing where a Point3d is in relation to
+the referenced Face.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1237,6 +1323,9 @@ referenced Face.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1336,7 +1425,7 @@ referenced Face.</p>
       <div class="method_details ">
   <h3 class="signature " id="followme-instance_method">
   
-    #<strong>followme</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>follow_me</strong>(edge)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1377,7 +1466,17 @@ along an array of edges.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_followme'>followme</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if successful, false if unsuccessful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1416,6 +1515,9 @@ along an array of edges.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1474,37 +1576,6 @@ are glued to the face.</p>
 <span class='id identifier rubyid_glued_array'>glued_array</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_get_glued_instances'>get_glued_instances</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>materials</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A Materials object.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>instances</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -1548,7 +1619,7 @@ to the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_texture_projection-instance_method">
   
-    #<strong>get_texture_projection</strong>(arg_frontside)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_texture_projection</strong>(frontside)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1599,7 +1670,17 @@ projection for either the front or back side of the face.</p>
 </span><span class='id identifier rubyid_vector'>vector</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_get_texture_projection'>get_texture_projection</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vector - a vector on success, nil on failure.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1638,6 +1719,9 @@ projection for either the front or back side of the face.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1661,7 +1745,7 @@ projection for either the front or back side of the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_UVHelper-instance_method">
   
-    #<strong>get_UVHelper</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_UVHelper</strong>(front, back, texturewriter)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1696,7 +1780,17 @@ texture manipulation on a face.</p>
 <span class='id identifier rubyid_uvHelp'>uvHelp</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_get_UVHelper'>get_UVHelper</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_tw'>tw</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns uvhelper - a UVHelper object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1769,6 +1863,9 @@ Defaults to true.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1953,7 +2050,7 @@ face (if successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="material=-instance_method">
   
-    #<strong>material=</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>material=</strong>(material)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1989,7 +2086,18 @@ class.)</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_material'>material</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>red</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns material - the name of the valid material or the new Material
+object (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2029,6 +2137,9 @@ successful)</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2052,7 +2163,7 @@ successful)</p>
       <div class="method_details ">
   <h3 class="signature " id="mesh-instance_method">
   
-    #<strong>mesh</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>mesh</strong>(flags = 0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2098,7 +2209,17 @@ flags, for example.</p>
 <span class='id identifier rubyid_mesh'>mesh</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_mesh'>mesh</span><span class='lparen'>(</span><span class='int'>7</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns mesh - a PolygonMesh object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2108,6 +2229,8 @@ flags, for example.</p>
       
         <span class='type'></span>
       
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
       
       
         &mdash;
@@ -2137,6 +2260,9 @@ flags, for example.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2392,7 +2518,7 @@ class for information on how planes are stored.</p>
       <div class="method_details ">
   <h3 class="signature " id="position_material-instance_method">
   
-    #<strong>position_material</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
+    #<strong>position_material</strong>(material, pt_array, o_front)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2449,7 +2575,17 @@ point.</p>
 <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_position_material'>position_material</span><span class='lparen'>(</span><span class='id identifier rubyid_material'>material</span><span class='comma'>,</span> <span class='id identifier rubyid_pt_array'>pt_array</span><span class='comma'>,</span> <span class='id identifier rubyid_on_front'>on_front</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the face upon success, false upon failure.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2521,6 +2657,9 @@ it on the back of the Face.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2544,7 +2683,7 @@ it on the back of the Face.</p>
       <div class="method_details ">
   <h3 class="signature " id="pushpull-instance_method">
   
-    #<strong>pushpull</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>pushpull</strong>(distance, copy)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2580,7 +2719,17 @@ it on the back of the Face.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_pushpull'>pushpull</span><span class='lparen'>(</span><span class='int'>100</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2636,6 +2785,9 @@ while in SketchUp), do not create a push/pull starting face if false.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2736,7 +2888,7 @@ the front becomes the back.</p>
       <div class="method_details ">
   <h3 class="signature " id="set_texture_projection-instance_method">
   
-    #<strong>set_texture_projection</strong>(arg_vector, arg_frontside)  &#x21d2; <tt>Object</tt> 
+    #<strong>set_texture_projection</strong>(vector, frontside)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2784,7 +2936,17 @@ direction.</p>
 </span><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_set_texture_projection'>set_texture_projection</span><span class='lparen'>(</span><span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_normal'>normal</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns boolean - true on success</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2840,6 +3002,9 @@ projection.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2943,7 +3108,7 @@ bound the face.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:57 2016 by
+  Generated on Tue Apr 12 20:17:12 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

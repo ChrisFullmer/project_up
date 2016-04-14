@@ -219,7 +219,7 @@ with aligned text (i.e. has_aligned_text? returns true).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#aligned_text_position%3D-instance_method" title="#aligned_text_position= (instance method)">#<strong>aligned_text_position=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#aligned_text_position%3D-instance_method" title="#aligned_text_position (instance method)">#<strong>aligned_text_position</strong>(pos)  &#x21d2; Object </a>
     
 
     
@@ -269,7 +269,7 @@ its end.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#end%3D-instance_method" title="#end= (instance method)">#<strong>end=</strong>(*args)  &#x21d2; Object </a>
+      <a href="#end%3D-instance_method" title="#end= (instance method)">#<strong>end=</strong>(pt_or_entity)  &#x21d2; Object </a>
     
 
     
@@ -320,7 +320,7 @@ reference point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#offset_vector%3D-instance_method" title="#offset_vector= (instance method)">#<strong>offset_vector=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#offset_vector%3D-instance_method" title="#offset_vector (instance method)">#<strong>offset_vector</strong>(vec)  &#x21d2; Object </a>
     
 
     
@@ -371,7 +371,7 @@ at its start.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start%3D-instance_method" title="#start= (instance method)">#<strong>start=</strong>(*args)  &#x21d2; Object </a>
+      <a href="#start%3D-instance_method" title="#start= (instance method)">#<strong>start=</strong>(pt_or_entity)  &#x21d2; Object </a>
     
 
     
@@ -421,7 +421,7 @@ dimension line.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#text_position%3D-instance_method" title="#text_position= (instance method)">#<strong>text_position=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#text_position%3D-instance_method" title="#text_position (instance method)">#<strong>text_position</strong>(pos)  &#x21d2; Object </a>
     
 
     
@@ -569,7 +569,7 @@ class constants:</p>
       <div class="method_details ">
   <h3 class="signature " id="aligned_text_position=-instance_method">
   
-    #<strong>aligned_text_position=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>aligned_text_position</strong>(pos)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -601,7 +601,17 @@ values are class constants:</p>
       <pre class="example code"><code><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_aligned_text_position'>aligned_text_position</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>DimensionLinear</span><span class='op'>::</span><span class='const'>ALIGNED_TEXT_CENTER</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the text position that was set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -640,6 +650,9 @@ values are class constants:</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -739,7 +752,7 @@ its end.</p>
       <div class="method_details ">
   <h3 class="signature " id="end=-instance_method">
   
-    #<strong>end=</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>end=</strong>(pt_or_entity)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -771,7 +784,17 @@ entity it is referencing.</p>
 <span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_end'>end</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_edge'>edge</span><span class='comma'>,</span> <span class='id identifier rubyid_mp'>mp</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -823,6 +846,9 @@ entity it is referencing.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -914,7 +940,7 @@ reference point.</p>
       <div class="method_details ">
   <h3 class="signature " id="offset_vector=-instance_method">
   
-    #<strong>offset_vector=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>offset_vector</strong>(vec)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -941,7 +967,17 @@ reference point.</p>
 </span><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_offset_vector'>offset_vector</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the offset vector that was set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -980,6 +1016,9 @@ reference point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1079,7 +1118,7 @@ at its start.</p>
       <div class="method_details ">
   <h3 class="signature " id="start=-instance_method">
   
-    #<strong>start=</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>start=</strong>(pt_or_entity)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1111,7 +1150,17 @@ the entity it is referencing.</p>
 <span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_edge'>edge</span><span class='comma'>,</span> <span class='id identifier rubyid_mp'>mp</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns self</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1163,6 +1212,9 @@ the entity it is referencing.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1266,7 +1318,7 @@ dimension line. Valid values are class constants:</p>
       <div class="method_details ">
   <h3 class="signature " id="text_position=-instance_method">
   
-    #<strong>text_position=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>text_position</strong>(pos)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1297,7 +1349,17 @@ dimension line. Valid values are class constants:</p>
       <pre class="example code"><code><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_text_position'>text_position</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>DimensionLinear</span><span class='op'>::</span><span class='const'>TEXT_CENTERED</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the text position that was set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1336,6 +1398,9 @@ dimension line. Valid values are class constants:</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1361,7 +1426,7 @@ dimension line. Valid values are class constants:</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:20 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

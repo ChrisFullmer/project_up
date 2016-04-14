@@ -218,7 +218,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#contains%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#contains%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -242,7 +242,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(arg)  &#x21d2; Object </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -266,7 +266,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|item| ... } &#x21d2; Object </a>
     
 
     
@@ -314,7 +314,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#include%3F-instance_method" title="#include? (instance method)">#<strong>include?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#include%3F-instance_method" title="#contains? (instance method)">#<strong>contains?</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -338,7 +338,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#insert-instance_method" title="#insert (instance method)">#<strong>insert</strong>(*args)  &#x21d2; Object </a>
+      <a href="#insert-instance_method" title="#insert (instance method)">#<strong>insert</strong>(object)  &#x21d2; Object </a>
     
 
     
@@ -521,7 +521,7 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
       <div class="method_details ">
   <h3 class="signature " id="contains?-instance_method">
   
-    #<strong>contains?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>contains?</strong>(object)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -551,7 +551,18 @@ make use of Ruby&#39;s Set class unless they need backward compatibility.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the set contains the object, false if the set does
+not contain the object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -590,6 +601,13 @@ contain the object.</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -623,7 +641,7 @@ contain the object.</p>
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    #<strong>delete</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>delete</strong>(object)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -659,7 +677,17 @@ contain the object.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns object - the object that was deleted.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -698,6 +726,9 @@ contain the object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -721,7 +752,7 @@ contain the object.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|item| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -748,20 +779,15 @@ contain the object.</p>
     
   </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>item</tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>item - variables that will hold each object as it is found.</p>
-</div>
       
     </li>
   
@@ -871,7 +897,7 @@ contain the object.</p>
       <div class="method_details ">
   <h3 class="signature " id="include?-instance_method">
   
-    #<strong>include?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>contains?</strong>(object)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -901,7 +927,18 @@ contain the object.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the set contains the object, false if the set does
+not contain the object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -940,6 +977,13 @@ contain the object.</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -973,7 +1017,7 @@ contain the object.</p>
       <div class="method_details ">
   <h3 class="signature " id="insert-instance_method">
   
-    #<strong>insert</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>insert</strong>(object)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1003,7 +1047,17 @@ contain the object.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns size - the number of objects in the set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1042,6 +1096,9 @@ contain the object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1282,7 +1339,7 @@ contain the object.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:56 2016 by
+  Generated on Tue Apr 12 20:17:11 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

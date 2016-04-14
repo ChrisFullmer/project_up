@@ -463,30 +463,6 @@ colors are listed in the following table.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#blend-class_method" title="blend (class method)">.<strong>blend</strong>(arg1, arg2, arg3)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>in uncommented for now.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#names-class_method" title="names (class method)">.<strong>names</strong>  &#x21d2; Object </a>
     
 
@@ -545,7 +521,7 @@ by SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#alpha%3D-instance_method" title="#alpha= (instance method)">#<strong>alpha=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#alpha%3D-instance_method" title="#alpha= (instance method)">#<strong>alpha=</strong>(alpha)  &#x21d2; Object </a>
     
 
     
@@ -569,7 +545,7 @@ by SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#blend-instance_method" title="#blend (instance method)">#<strong>blend</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#blend-instance_method" title="#blend (instance method)">#<strong>blend</strong>(color2, weight)  &#x21d2; Object </a>
     
 
     
@@ -617,7 +593,7 @@ by SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#blue%3D-instance_method" title="#blue= (instance method)">#<strong>blue=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#blue%3D-instance_method" title="#blue= (instance method)">#<strong>blue=</strong>(blue)  &#x21d2; Object </a>
     
 
     
@@ -665,7 +641,7 @@ by SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#green%3D-instance_method" title="#green= (instance method)">#<strong>green=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#green%3D-instance_method" title="#green= (instance method)">#<strong>green=</strong>(green)  &#x21d2; Object </a>
     
 
     
@@ -739,7 +715,7 @@ by SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#red%3D-instance_method" title="#red= (instance method)">#<strong>red=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#red%3D-instance_method" title="#red= (instance method)">#<strong>red=</strong>(red)  &#x21d2; Object </a>
     
 
     
@@ -842,7 +818,11 @@ by SketchUp.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>initialize</strong>(red, green, blue)  &#x21d2; <tt><span class='object_link'><a href="" title="Sketchup::Color (class)">Sketchup::Color</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="" title="Sketchup::Color (class)">Sketchup::Color</a></span></tt> </span>
+    
   
 
   
@@ -874,23 +854,35 @@ by SketchUp.</p>
 <span class='id identifier rubyid_face'>face</span><span class='period'>.</span><span class='id identifier rubyid_material'>material</span><span class='period'>.</span><span class='id identifier rubyid_alpha'>alpha</span> <span class='op'>=</span> <span class='float'>0.5</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(red, green, blue)  &#x21d2; <tt><span class='object_link'><a href="" title="Sketchup::Color (class)">Sketchup::Color</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>red_or_name</span>
+        <span class='name'>red</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>A red value between 0 and 255, or a string name of a color that currently
-exists in SketchUp. See the table at the start of this class description
-for more info.</p>
+<p>A red value between 0 and 255.</p>
 </div>
       
     </li>
@@ -900,7 +892,7 @@ for more info.</p>
         <span class='name'>green</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -916,7 +908,7 @@ for more info.</p>
         <span class='name'>blue</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -928,6 +920,48 @@ for more info.</p>
     </li>
   
 </ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="" title="Sketchup::Color (class)">Sketchup::Color</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A string name of a color that currently exists in SketchUp. See the table
+at the start of this class description for more info.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -957,30 +991,7 @@ for more info.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="blend-class_method">
-  
-    .<strong>blend</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>in uncommented for now. 12/18/2008</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="names-class_method">
+  <h3 class="signature first" id="names-class_method">
   
     .<strong>names</strong>  &#x21d2; <tt>Object</tt> 
   
@@ -1124,7 +1135,7 @@ is transparent, 255 is opaque.</p>
       <div class="method_details ">
   <h3 class="signature " id="alpha=-instance_method">
   
-    #<strong>alpha=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>alpha=</strong>(alpha)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1149,7 +1160,17 @@ transparent, 255 is opaque.</p>
 <span class='id identifier rubyid_alpha'>alpha</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span><span class='period'>.</span><span class='id identifier rubyid_alpha'>alpha</span> <span class='op'>=</span> <span class='int'>255</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns alpha - the newly set opacity value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1188,6 +1209,9 @@ transparent, 255 is opaque.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1211,7 +1235,7 @@ transparent, 255 is opaque.</p>
       <div class="method_details ">
   <h3 class="signature " id="blend-instance_method">
   
-    #<strong>blend</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>blend</strong>(color2, weight)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1240,7 +1264,17 @@ get color1.</p>
 <span class='id identifier rubyid_color3'>color3</span> <span class='op'>=</span> <span class='id identifier rubyid_color1'>color1</span><span class='period'>.</span><span class='id identifier rubyid_blend'>blend</span> <span class='id identifier rubyid_color2'>color2</span><span class='comma'>,</span> <span class='float'>0.5</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns color3 - the newly blended Color object if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1295,6 +1329,9 @@ get color1.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1387,7 +1424,7 @@ comprised of red, green, and blue values.</p>
       <div class="method_details ">
   <h3 class="signature " id="blue=-instance_method">
   
-    #<strong>blue=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>blue=</strong>(blue)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1419,7 +1456,17 @@ comprised of red, green, and blue values.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns blue - the new blue value for the color if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1458,6 +1505,9 @@ comprised of red, green, and blue values.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1555,7 +1605,7 @@ comprised of red, green, and blue values.</p>
       <div class="method_details ">
   <h3 class="signature " id="green=-instance_method">
   
-    #<strong>green=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>green=</strong>(green)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1586,7 +1636,17 @@ comprised of red, green, and blue values.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns green - the new green value for the color if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1625,6 +1685,9 @@ comprised of red, green, and blue values.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1721,7 +1784,7 @@ comprised of red, green, and blue values.</p>
       <div class="method_details ">
   <h3 class="signature " id="red=-instance_method">
   
-    #<strong>red=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>red=</strong>(red)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1747,7 +1810,17 @@ comprised of red, green, and blue values.</p>
 <span class='id identifier rubyid_setting'>setting</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span><span class='period'>.</span><span class='id identifier rubyid_red'>red</span><span class='op'>=</span><span class='int'>200</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns red - the new red value for the color if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1786,6 +1859,9 @@ comprised of red, green, and blue values.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2016,7 +2092,7 @@ returned array will contain 4 integer values (RGBA) between 0 and 255.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:58 2016 by
+  Generated on Tue Apr 12 20:17:14 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

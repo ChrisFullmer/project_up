@@ -186,7 +186,7 @@ called from your toolbars.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#new-class_method" title="new (class method)">.<strong>new</strong>(arg)  &#x21d2; Object </a>
+      <a href="#new-class_method" title="new (class method)">.<strong>new</strong>(toolbarname)  &#x21d2; Object </a>
     
 
     
@@ -219,7 +219,7 @@ called from your toolbars.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_item-instance_method" title="#add_item (instance method)">#<strong>add_item</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_item-instance_method" title="#add_item (instance method)">#<strong>add_item</strong>(command)  &#x21d2; Object </a>
     
 
     
@@ -243,7 +243,7 @@ called from your toolbars.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_separator-instance_method" title="#add_separator (instance method)">#<strong>add_separator</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_separator-instance_method" title="#add_separator (instance method)">#<strong>add_separator</strong>  &#x21d2; Object </a>
     
 
     
@@ -292,7 +292,7 @@ module.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|key, value| ... } &#x21d2; Object </a>
     
 
     
@@ -317,7 +317,7 @@ a toolbar.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_last_state-instance_method" title="#get_last_state (instance method)">#<strong>get_last_state</strong>(arg)  &#x21d2; Object </a>
+      <a href="#get_last_state-instance_method" title="#get_last_state (instance method)">#<strong>get_last_state</strong>  &#x21d2; Object </a>
     
 
     
@@ -342,7 +342,7 @@ visible in the previous session of SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#hide-instance_method" title="#hide (instance method)">#<strong>hide</strong>(arg)  &#x21d2; Object </a>
+      <a href="#hide-instance_method" title="#hide (instance method)">#<strong>hide</strong>  &#x21d2; Object </a>
     
 
     
@@ -390,7 +390,7 @@ visible in the previous session of SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>(arg)  &#x21d2; Object </a>
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
     
 
     
@@ -414,7 +414,7 @@ visible in the previous session of SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#restore-instance_method" title="#restore (instance method)">#<strong>restore</strong>(arg)  &#x21d2; Object </a>
+      <a href="#restore-instance_method" title="#restore (instance method)">#<strong>restore</strong>  &#x21d2; Object </a>
     
 
     
@@ -439,7 +439,7 @@ location and show if not hidden.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>(arg)  &#x21d2; Object </a>
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>  &#x21d2; Object </a>
     
 
     
@@ -487,7 +487,7 @@ location and show if not hidden.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#visible%3F-instance_method" title="#visible? (instance method)">#<strong>visible?</strong>(arg)  &#x21d2; Object </a>
+      <a href="#visible%3F-instance_method" title="#visible? (instance method)">#<strong>visible?</strong>  &#x21d2; Object </a>
     
 
     
@@ -521,7 +521,7 @@ location and show if not hidden.</p>
       <div class="method_details first">
   <h3 class="signature first" id="new-class_method">
   
-    .<strong>new</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>new</strong>(toolbarname)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -544,7 +544,17 @@ location and show if not hidden.</p>
       <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'>UI</span><span class='op'>::</span><span class='const'>Toolbar</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns toolbar - the newly created toolbar object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -583,6 +593,9 @@ location and show if not hidden.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -612,7 +625,7 @@ location and show if not hidden.</p>
       <div class="method_details first">
   <h3 class="signature first" id="add_item-instance_method">
   
-    #<strong>add_item</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_item</strong>(command)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -635,7 +648,17 @@ location and show if not hidden.</p>
       <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_command'>command</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns toolbar - the toolbar where the command was just added</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -674,6 +697,9 @@ location and show if not hidden.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -697,7 +723,7 @@ location and show if not hidden.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_separator-instance_method">
   
-    #<strong>add_separator</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_separator</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -721,6 +747,16 @@ location and show if not hidden.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns toolbar - the toolbar where the line separator was just added</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -739,6 +775,9 @@ location and show if not hidden.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -828,7 +867,7 @@ module.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|key, value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -862,15 +901,14 @@ a toolbar.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key,value</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>, <tt>value</tt>)</span>
       
       
       
@@ -882,7 +920,6 @@ a toolbar.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -924,7 +961,7 @@ a toolbar.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_last_state-instance_method">
   
-    #<strong>get_last_state</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_last_state</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -992,7 +1029,7 @@ visible in the previous session of SketchUp.</p>
       <div class="method_details ">
   <h3 class="signature " id="hide-instance_method">
   
-    #<strong>hide</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>hide</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1138,7 +1175,7 @@ visible in the previous session of SketchUp.</p>
       <div class="method_details ">
   <h3 class="signature " id="name-instance_method">
   
-    #<strong>name</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1210,7 +1247,7 @@ visible in the previous session of SketchUp.</p>
       <div class="method_details ">
   <h3 class="signature " id="restore-instance_method">
   
-    #<strong>restore</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>restore</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1276,7 +1313,7 @@ location and show if not hidden.</p>
       <div class="method_details ">
   <h3 class="signature " id="show-instance_method">
   
-    #<strong>show</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1419,7 +1456,7 @@ location and show if not hidden.</p>
       <div class="method_details ">
   <h3 class="signature " id="visible?-instance_method">
   
-    #<strong>visible?</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>visible?</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1495,7 +1532,7 @@ location and show if not hidden.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:00 2016 by
+  Generated on Tue Apr 12 20:17:16 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

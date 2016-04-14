@@ -194,7 +194,7 @@ gocorp_swiveldriver/Resources/es/swiveldriver.strings</code></pre>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -220,7 +220,7 @@ in the Resources folder.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(filename)  &#x21d2; Object </a>
     
 
     
@@ -301,7 +301,7 @@ found in the Resources folder.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -324,7 +324,17 @@ found in the Resources folder.</p>
       <pre class="example code"><code><span class='id identifier rubyid_swiveldriver_langHandler'>swiveldriver_langHandler</span> <span class='op'>=</span> <span class='const'>LanguageHandler</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swiveldriver.strings</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the new LanguageHandler object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -345,6 +355,9 @@ UTF-8 encoding.</p>
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -376,7 +389,7 @@ UTF-8 encoding.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -402,7 +415,17 @@ in the Resources folder.</p>
 <span class='id identifier rubyid_localized_string'>localized_string</span> <span class='op'>=</span> <span class='id identifier rubyid_swiveldriver_langHandler'>swiveldriver_langHandler</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>String 1</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the localized string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -441,6 +464,9 @@ in the Resources folder.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -599,7 +625,7 @@ found in the Resources folder.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -226,7 +226,7 @@ that you would have picked if you were using the select tool).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#boundingbox_pick-instance_method" title="#boundingbox_pick (instance method)">#<strong>boundingbox_pick</strong>(*args)  &#x21d2; Object </a>
+      <a href="#boundingbox_pick-instance_method" title="#boundingbox_pick (instance method)">#<strong>boundingbox_pick</strong>(bounding_box, pick_type, transformation = IDENTITY)  &#x21d2; Object </a>
     
 
     
@@ -275,7 +275,7 @@ pick records).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#depth_at-instance_method" title="#depth_at (instance method)">#<strong>depth_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#depth_at-instance_method" title="#depth_at (instance method)">#<strong>depth_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -300,7 +300,7 @@ entities in the list of pick records.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_pick-instance_method" title="#do_pick (instance method)">#<strong>do_pick</strong>(*args)  &#x21d2; Object </a>
+      <a href="#do_pick-instance_method" title="#do_pick (instance method)">#<strong>do_pick</strong>(x, y, aperture = 0)  &#x21d2; Object </a>
     
 
     
@@ -324,7 +324,7 @@ entities in the list of pick records.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#element_at-instance_method" title="#element_at (instance method)">#<strong>element_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#element_at-instance_method" title="#element_at (instance method)">#<strong>element_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -349,7 +349,7 @@ picked elements.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#init-instance_method" title="#init (instance method)">#<strong>init</strong>(*args)  &#x21d2; Object </a>
+      <a href="#init-instance_method" title="#init (instance method)">#<strong>init</strong>(x, y, aperture = 0)  &#x21d2; Object </a>
     
 
     
@@ -373,7 +373,7 @@ picked elements.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#leaf_at-instance_method" title="#leaf_at (instance method)">#<strong>leaf_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#leaf_at-instance_method" title="#leaf_at (instance method)">#<strong>leaf_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -397,7 +397,7 @@ picked elements.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path_at-instance_method" title="#path_at (instance method)">#<strong>path_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#path_at-instance_method" title="#path_at (instance method)">#<strong>path_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -422,7 +422,7 @@ pick list (as an array).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pick_segment-instance_method" title="#pick_segment (instance method)">#<strong>pick_segment</strong>(*args)  &#x21d2; Object </a>
+      <a href="#pick_segment-instance_method" title="#pick_segment (instance method)">#<strong>pick_segment</strong>(array_or_list, x, y, aperture = 0)  &#x21d2; Object </a>
     
 
     
@@ -471,7 +471,7 @@ is defined by an array of points.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#picked_element-instance_method" title="#picked_element (instance method)">#<strong>picked_element</strong>(*args)  &#x21d2; Object </a>
+      <a href="#picked_element-instance_method" title="#picked_element (instance method)">#<strong>picked_element</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -520,7 +520,7 @@ an edge or a face, picked.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#test_point-instance_method" title="#test_point (instance method)">#<strong>test_point</strong>(*args)  &#x21d2; Object </a>
+      <a href="#test_point-instance_method" title="#test_point (instance method)">#<strong>test_point</strong>(point, x, y, aperture = 0)  &#x21d2; Object </a>
     
 
     
@@ -545,7 +545,7 @@ selected using the default or given pick aperture.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transformation_at-instance_method" title="#transformation_at (instance method)">#<strong>transformation_at</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transformation_at-instance_method" title="#transformation_at (instance method)">#<strong>transformation_at</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -594,7 +594,7 @@ pick path index in the pick helper.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#window_pick-instance_method" title="#window_pick (instance method)">#<strong>window_pick</strong>(arg1, arg2, arg3)  &#x21d2; Object </a>
+      <a href="#window_pick-instance_method" title="#window_pick (instance method)">#<strong>window_pick</strong>(start_point, end_point, pick_type)  &#x21d2; Object </a>
     
 
     
@@ -773,7 +773,7 @@ calling this method.</p>
       <div class="method_details ">
   <h3 class="signature " id="boundingbox_pick-instance_method">
   
-    #<strong>boundingbox_pick</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>boundingbox_pick</strong>(bounding_box, pick_type, transformation = IDENTITY)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -809,7 +809,17 @@ similar to how the Selection tool works.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The number of Entity objects picked</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -853,6 +863,8 @@ select entities partially contained.</p>
         <span class='type'>(<tt>optional</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>IDENTITY</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -882,6 +894,9 @@ BoundingBox that allows for a rotation.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -971,7 +986,7 @@ pick records)</p>
       <div class="method_details ">
   <h3 class="signature " id="depth_at-instance_method">
   
-    #<strong>depth_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>depth_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1000,7 +1015,17 @@ entities in the list of pick records.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns integer - the depth of the entity if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1039,6 +1064,9 @@ entities in the list of pick records.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1062,7 +1090,7 @@ entities in the list of pick records.</p>
       <div class="method_details ">
   <h3 class="signature " id="do_pick-instance_method">
   
-    #<strong>do_pick</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>do_pick</strong>(x, y, aperture = 0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1089,7 +1117,17 @@ coordinates of the point at which would want to do a pick.</p>
       <pre class="example code"><code><span class='id identifier rubyid_ph'>ph</span> <span class='op'>=</span> <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_pick_helpernum'>pick_helpernum</span> <span class='op'>=</span> <span class='id identifier rubyid_ph'>ph</span><span class='period'>.</span><span class='id identifier rubyid_do_pick'>do_pick</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Integer - The number of Entity objects picked</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1124,6 +1162,24 @@ coordinates of the point at which would want to do a pick.</p>
       
     </li>
   
+    <li>
+      
+        <span class='name'>aperture</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The size of the pick-aperture.</p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1144,6 +1200,9 @@ coordinates of the point at which would want to do a pick.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1167,7 +1226,7 @@ coordinates of the point at which would want to do a pick.</p>
       <div class="method_details ">
   <h3 class="signature " id="element_at-instance_method">
   
-    #<strong>element_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>element_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1199,7 +1258,18 @@ picked elements. This element will be from the active entities.</p>
 <span class='comment'># You would iterate the same elements in all_picked.</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns entity - the entity at the index position in the list of picked
+entities.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1238,6 +1308,9 @@ picked elements. This element will be from the active entities.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1261,7 +1334,7 @@ picked elements. This element will be from the active entities.</p>
       <div class="method_details ">
   <h3 class="signature " id="init-instance_method">
   
-    #<strong>init</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>init</strong>(x, y, aperture = 0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1294,7 +1367,17 @@ want to call test_point or pick_segment on a lot of points.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns p - the (receiver) PickHelper Object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1337,6 +1420,8 @@ want to call test_point or pick_segment on a lot of points.</p>
         <span class='type'>(<tt>optional</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1365,6 +1450,9 @@ want to call test_point or pick_segment on a lot of points.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1388,7 +1476,7 @@ want to call test_point or pick_segment on a lot of points.</p>
       <div class="method_details ">
   <h3 class="signature " id="leaf_at-instance_method">
   
-    #<strong>leaf_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>leaf_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1421,7 +1509,17 @@ another component, leaf_at returns the face.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns entity - the leaf entity</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1460,6 +1558,9 @@ another component, leaf_at returns the face.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1483,7 +1584,7 @@ another component, leaf_at returns the face.</p>
       <div class="method_details ">
   <h3 class="signature " id="path_at-instance_method">
   
-    #<strong>path_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>path_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1519,7 +1620,17 @@ item will be a drawing element that is not a group, component or image.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns array - an array of entities including the leaf</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1558,6 +1669,9 @@ item will be a drawing element that is not a group, component or image.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1581,7 +1695,7 @@ item will be a drawing element that is not a group, component or image.</p>
       <div class="method_details ">
   <h3 class="signature " id="pick_segment-instance_method">
   
-    #<strong>pick_segment</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>pick_segment</strong>(array_or_list, x, y, aperture = 0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1622,7 +1736,18 @@ is -2).</p>
 </span><span class='id identifier rubyid_picked'>picked</span> <span class='op'>=</span> <span class='id identifier rubyid_ph'>ph</span><span class='period'>.</span><span class='id identifier rubyid_pick_segment'>pick_segment</span><span class='lparen'>(</span><span class='id identifier rubyid_segment'>segment</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns index - an index of the point in the array if you clicked on a
+point or an index of a segment if you clicked on a segment (if successful)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1682,6 +1807,8 @@ array containing Point3d objects.</p>
         <span class='type'>(<tt>optional but requires x and y</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1711,6 +1838,9 @@ index of a segment if you clicked on a segment (if successful)</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1804,7 +1934,7 @@ before calling this method.</p>
       <div class="method_details ">
   <h3 class="signature " id="picked_element-instance_method">
   
-    #<strong>picked_element</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>picked_element</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1834,6 +1964,32 @@ calling this method.</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns element - a drawing element that is not an edge or face if
+successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1852,6 +2008,9 @@ calling this method.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1945,7 +2104,7 @@ before calling this method.</p>
       <div class="method_details ">
   <h3 class="signature " id="test_point-instance_method">
   
-    #<strong>test_point</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>test_point</strong>(point, x, y, aperture = 0)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1985,7 +2144,17 @@ arguments.</p>
 <span class='id identifier rubyid_picked'>picked</span> <span class='op'>=</span> <span class='id identifier rubyid_ph'>ph</span><span class='period'>.</span><span class='id identifier rubyid_test_point'>test_point</span><span class='lparen'>(</span><span class='id identifier rubyid_point'>point</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_aperture'>aperture</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns would_be_selected - true or false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2044,6 +2213,8 @@ arguments.</p>
         <span class='type'>(<tt>optional</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -2072,6 +2243,9 @@ arguments.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2095,7 +2269,7 @@ arguments.</p>
       <div class="method_details ">
   <h3 class="signature " id="transformation_at-instance_method">
   
-    #<strong>transformation_at</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transformation_at</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2129,7 +2303,17 @@ entities.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation - the transformation found</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2168,6 +2352,9 @@ entities.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2256,7 +2443,7 @@ entities.</p>
       <div class="method_details ">
   <h3 class="signature " id="window_pick-instance_method">
   
-    #<strong>window_pick</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
+    #<strong>window_pick</strong>(start_point, end_point, pick_type)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2285,7 +2472,17 @@ Selection tool works. The z value of the points passed in are ignored.</p>
 <span class='id identifier rubyid_num_picked'>num_picked</span> <span class='op'>=</span> <span class='id identifier rubyid_ph'>ph</span><span class='period'>.</span><span class='id identifier rubyid_window_pick'>window_pick</span><span class='lparen'>(</span><span class='id identifier rubyid_start_point'>start_point</span><span class='comma'>,</span> <span class='id identifier rubyid_end_point'>end_point</span><span class='comma'>,</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>PickHelper</span><span class='op'>::</span><span class='const'>PICK_CROSSING</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The number of Entity objects picked</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2357,6 +2554,9 @@ select entities partially contained.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2382,7 +2582,7 @@ select entities partially contained.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

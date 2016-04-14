@@ -234,7 +234,7 @@ Location…)</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-class_method" title="each_key (class method)">.<strong>each_key</strong>  &#x21d2; Object </a>
+      <a href="#each_key-class_method" title="each_key (class method)">.<strong>each_key</strong> {|key| ... } &#x21d2; Object </a>
     
 
     
@@ -292,7 +292,7 @@ attribute keys.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -316,7 +316,7 @@ attribute keys.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
     
 
     
@@ -341,7 +341,7 @@ info options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -389,7 +389,7 @@ info options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|key, value| ... } &#x21d2; Object </a>
     
 
     
@@ -413,7 +413,7 @@ info options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong>  &#x21d2; Object </a>
+      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong> {|key| ... } &#x21d2; Object </a>
     
 
     
@@ -437,7 +437,7 @@ info options.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_pair-instance_method" title="#each_pair (instance method)">#<strong>each_pair</strong>  &#x21d2; Object </a>
+      <a href="#each_pair-instance_method" title="#each_pair (instance method)">#<strong>each_pair</strong> {|key, value| ... } &#x21d2; Object </a>
     
 
     
@@ -511,7 +511,7 @@ collection.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(arg)  &#x21d2; Object </a>
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(observer)  &#x21d2; Object </a>
     
 
     
@@ -582,7 +582,7 @@ collection.</p>
       <div class="method_details first">
   <h3 class="signature first" id="each_key-class_method">
   
-    .<strong>each_key</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>each_key</strong> {|key| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -605,15 +605,14 @@ collection.</p>
       <pre class="example code"><code><span class='id identifier rubyid_shadowinfo'>shadowinfo</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>)</span>
       
       
       
@@ -625,7 +624,6 @@ collection.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -739,7 +737,7 @@ attribute keys</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -762,7 +760,17 @@ attribute keys</p>
       <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_shadowinfo'>shadowinfo</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - the value that is retrieved.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -801,6 +809,9 @@ attribute keys</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -824,7 +835,7 @@ attribute keys</p>
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]=</strong>(key, value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -853,7 +864,15 @@ info options.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_value'>value</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -889,6 +908,9 @@ info options.</p>
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -931,7 +953,7 @@ info options.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_observer-instance_method">
   
-    #<strong>add_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>add_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -954,7 +976,17 @@ info options.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_add_observer'>add_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -993,6 +1025,9 @@ info options.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1082,7 +1117,7 @@ info options.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|key, value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1110,6 +1145,55 @@ info options.</p>
     
   </div>
 
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>key</tt>, <tt>value</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A variables that will hold each key as it is found.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A variables that will hold each value as it is found.</p>
+</div>
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1151,7 +1235,7 @@ info options.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_key-instance_method">
   
-    #<strong>each_key</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_key</strong> {|key| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1174,15 +1258,14 @@ info options.</p>
       <pre class="example code"><code><span class='id identifier rubyid_shadowinfo'>shadowinfo</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>key</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>key</tt>)</span>
       
       
       
@@ -1194,7 +1277,6 @@ info options.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1236,7 +1318,7 @@ info options.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_pair-instance_method">
   
-    #<strong>each_pair</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each_pair</strong> {|key, value| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1264,6 +1346,55 @@ info options.</p>
     
   </div>
 
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>key</tt>, <tt>value</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A variables that will hold each key as it is found.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A variables that will hold each value as it is found.</p>
+</div>
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1440,7 +1571,7 @@ collection</p>
       <div class="method_details ">
   <h3 class="signature " id="remove_observer-instance_method">
   
-    #<strong>remove_observer</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>remove_observer</strong>(observer)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1464,7 +1595,17 @@ object.</p>
       <pre class="example code"><code><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_remove_observer'>remove_observer</span> <span class='id identifier rubyid_observer'>observer</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if successful, false if unsuccessful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1503,6 +1644,9 @@ object.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1597,7 +1741,7 @@ collection</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:02 2016 by
+  Generated on Tue Apr 12 20:17:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

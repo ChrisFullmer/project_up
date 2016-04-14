@@ -184,7 +184,7 @@ See the Array class for details.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#linear_combination-class_method" title="linear_combination (class method)">.<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; Object </a>
+      <a href="#linear_combination-class_method" title="linear_combination (class method)">.<strong>linear_combination</strong>(weight1, point1, weight2, point2)  &#x21d2; Object </a>
     
 
     
@@ -218,7 +218,7 @@ combination of two points.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -244,7 +244,7 @@ points together.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#--instance_method" title="#- (instance method)">#<strong>-</strong>(arg)  &#x21d2; Object </a>
+      <a href="#--instance_method" title="#- (instance method)">#<strong>-</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -269,7 +269,7 @@ and z values of a point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -294,7 +294,7 @@ closer to the origin.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -318,7 +318,7 @@ closer to the origin.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(index)  &#x21d2; Object </a>
     
 
     
@@ -343,7 +343,7 @@ index.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(arg1, arg2)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(new_value)  &#x21d2; Object </a>
     
 
     
@@ -393,7 +393,7 @@ being cloned.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distance-instance_method" title="#distance (instance method)">#<strong>distance</strong>(arg)  &#x21d2; Object </a>
+      <a href="#distance-instance_method" title="#distance (instance method)">#<strong>distance</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -418,7 +418,7 @@ point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distance_to_line-instance_method" title="#distance_to_line (instance method)">#<strong>distance_to_line</strong>(*args)  &#x21d2; Object </a>
+      <a href="#distance_to_line-instance_method" title="#distance_to_line (instance method)">#<strong>distance_to_line</strong>(line)  &#x21d2; Object </a>
     
 
     
@@ -443,7 +443,7 @@ a line.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distance_to_plane-instance_method" title="#distance_to_plane (instance method)">#<strong>distance_to_plane</strong>(*args)  &#x21d2; Object </a>
+      <a href="#distance_to_plane-instance_method" title="#distance_to_plane (instance method)">#<strong>distance_to_plane</strong>(plane)  &#x21d2; Object </a>
     
 
     
@@ -468,7 +468,7 @@ to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(x, y, z)  &#x21d2; Object </a>
     
 
     
@@ -518,7 +518,7 @@ to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#offset-instance_method" title="#offset (instance method)">#<strong>offset</strong>(*args)  &#x21d2; Object </a>
+      <a href="#offset-instance_method" title="#offset (instance method)">#<strong>offset</strong>(vector, length = vector.length)  &#x21d2; Object </a>
     
 
     
@@ -543,7 +543,7 @@ point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#offset%21-instance_method" title="#offset! (instance method)">#<strong>offset!</strong>(*args)  &#x21d2; Object </a>
+      <a href="#offset%21-instance_method" title="#offset! (instance method)">#<strong>offset!</strong>(vector, length = vector.length)  &#x21d2; Object </a>
     
 
     
@@ -567,7 +567,7 @@ point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_line%3F-instance_method" title="#on_line? (instance method)">#<strong>on_line?</strong>(*args)  &#x21d2; Object </a>
+      <a href="#on_line%3F-instance_method" title="#on_line? (instance method)">#<strong>on_line?</strong>(line)  &#x21d2; Object </a>
     
 
     
@@ -591,7 +591,7 @@ point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_plane%3F-instance_method" title="#on_plane? (instance method)">#<strong>on_plane?</strong>(*args)  &#x21d2; Object </a>
+      <a href="#on_plane%3F-instance_method" title="#on_plane? (instance method)">#<strong>on_plane?</strong>(plane)  &#x21d2; Object </a>
     
 
     
@@ -615,7 +615,7 @@ point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#project_to_line-instance_method" title="#project_to_line (instance method)">#<strong>project_to_line</strong>(*args)  &#x21d2; Object </a>
+      <a href="#project_to_line-instance_method" title="#project_to_line (instance method)">#<strong>project_to_line</strong>(line)  &#x21d2; Object </a>
     
 
     
@@ -640,7 +640,7 @@ closest to this point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#project_to_plane-instance_method" title="#project_to_plane (instance method)">#<strong>project_to_plane</strong>(*args)  &#x21d2; Object </a>
+      <a href="#project_to_plane-instance_method" title="#project_to_plane (instance method)">#<strong>project_to_plane</strong>(plane)  &#x21d2; Object </a>
     
 
     
@@ -665,7 +665,7 @@ is closest to the point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(*args)  &#x21d2; Object </a>
+      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(x, y, z)  &#x21d2; Object </a>
     
 
     
@@ -737,7 +737,7 @@ is closest to the point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform-instance_method" title="#transform (instance method)">#<strong>transform</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(transform)  &#x21d2; Object </a>
     
 
     
@@ -761,7 +761,7 @@ is closest to the point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#transform%21-instance_method" title="#transform! (instance method)">#<strong>transform!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#transform%21-instance_method" title="#transform (instance method)">#<strong>transform</strong>(transform)  &#x21d2; Object </a>
     
 
     
@@ -786,7 +786,7 @@ create a new point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#vector_to-instance_method" title="#vector_to (instance method)">#<strong>vector_to</strong>(arg)  &#x21d2; Object </a>
+      <a href="#vector_to-instance_method" title="#vector_to (instance method)">#<strong>vector_to</strong>(point2)  &#x21d2; Object </a>
     
 
     
@@ -834,7 +834,7 @@ create a new point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#x%3D-instance_method" title="#x= (instance method)">#<strong>x=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#x%3D-instance_method" title="#x= (instance method)">#<strong>x=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -882,7 +882,7 @@ create a new point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#y%3D-instance_method" title="#y= (instance method)">#<strong>y=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#y%3D-instance_method" title="#y= (instance method)">#<strong>y=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -930,7 +930,7 @@ create a new point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#z%3D-instance_method" title="#z= (instance method)">#<strong>z=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#z%3D-instance_method" title="#z= (instance method)">#<strong>z=</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -960,7 +960,7 @@ create a new point.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>initialize</strong>(x, y, z)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -994,7 +994,17 @@ values, it creates a point at (x,y,0).</p>
 </span><span class='id identifier rubyid_pt3'>pt3</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>100</span><span class='comma'>,</span><span class='int'>200</span><span class='comma'>,</span><span class='int'>300</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the newly created Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1047,6 +1057,9 @@ values, it creates a point at (x,y,0).</p>
   
 </ul>
 
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1077,7 +1090,7 @@ values, it creates a point at (x,y,0).</p>
       <div class="method_details first">
   <h3 class="signature first" id="linear_combination-class_method">
   
-    .<strong>linear_combination</strong>(arg1, arg2, arg3, arg4)  &#x21d2; <tt>Object</tt> 
+    .<strong>linear_combination</strong>(weight1, point1, weight2, point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1114,7 +1127,17 @@ point = weight1 * point1 + weight2 * point2.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1201,6 +1224,9 @@ point = weight1 * point1 + weight2 * point2.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1230,7 +1256,7 @@ point = weight1 * point1 + weight2 * point2.</p>
       <div class="method_details first">
   <h3 class="signature first" id="+-instance_method">
   
-    #<strong>+</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>+</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1256,7 +1282,17 @@ points together.</p>
 <span class='id identifier rubyid_pt'>pt</span> <span class='op'>=</span> <span class='id identifier rubyid_pt'>pt</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>10</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1295,6 +1331,9 @@ points together.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1318,7 +1357,7 @@ points together.</p>
       <div class="method_details ">
   <h3 class="signature " id="--instance_method">
   
-    #<strong>-</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>-</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1343,7 +1382,17 @@ and z values of a point.</p>
 <span class='id identifier rubyid_pt'>pt</span> <span class='op'>=</span> <span class='id identifier rubyid_pt'>pt</span> <span class='op'>-</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>10</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vector - a Vector object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1382,6 +1431,9 @@ and z values of a point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1405,7 +1457,7 @@ and z values of a point.</p>
       <div class="method_details ">
   <h3 class="signature " id="<-instance_method">
   
-    #<strong>&lt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1431,7 +1483,17 @@ closer to the origin.</p>
 <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_pt1'>pt1</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_pt2'>pt2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if the point2 is closer to the origin.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1470,6 +1532,9 @@ closer to the origin.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1493,7 +1558,7 @@ closer to the origin.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>==</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1534,24 +1599,19 @@ z coordinates, as in the following examples:</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span> <span class='op'>==</span> <span class='id identifier rubyid_point2'>point2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>point1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d object.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if both points are equal; false if points are not
+equal</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -1589,6 +1649,9 @@ z coordinates, as in the following examples:</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1612,7 +1675,7 @@ z coordinates, as in the following examples:</p>
       <div class="method_details ">
   <h3 class="signature " id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(index)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1639,7 +1702,17 @@ index.</p>
 </span><span class='id identifier rubyid_yvalue'>yvalue</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns value - an x, y, or z value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1678,6 +1751,9 @@ index.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1701,7 +1777,7 @@ index.</p>
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(arg1, arg2)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]=</strong>(new_value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1726,7 +1802,17 @@ the specific index of the value.</p>
 <span class='id identifier rubyid_yvalue'>yvalue</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='int'>4</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - the newly set x, y, or z value if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1765,6 +1851,9 @@ the specific index of the value.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1855,7 +1944,7 @@ being cloned.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance-instance_method">
   
-    #<strong>distance</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>distance</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1881,7 +1970,17 @@ point.</p>
 <span class='id identifier rubyid_distance'>distance</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_distance'>distance</span> <span class='id identifier rubyid_point2'>point2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns distance - the distance in current units</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1920,6 +2019,9 @@ point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1943,7 +2045,7 @@ point.</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_line-instance_method">
   
-    #<strong>distance_to_line</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>distance_to_line</strong>(line)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1971,7 +2073,18 @@ a line.</p>
 <span class='id identifier rubyid_distance'>distance</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_distance_to_line'>distance_to_line</span> <span class='id identifier rubyid_line'>line</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns distance - the distance between a point and line in current units
+if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2011,6 +2124,9 @@ successful</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2034,7 +2150,7 @@ successful</p>
       <div class="method_details ">
   <h3 class="signature " id="distance_to_plane-instance_method">
   
-    #<strong>distance_to_plane</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>distance_to_plane</strong>(plane)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2060,7 +2176,18 @@ to a plane.</p>
       <pre class="example code"><code><span class='id identifier rubyid_distance'>distance</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_distance_to_plane'>distance_to_plane</span> <span class='id identifier rubyid_plane'>plane</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns distance - a distance between a point and a plane in current units
+if successful</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2100,6 +2227,9 @@ successful</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2193,7 +2323,7 @@ automatically when an object is output using a print command like
       <div class="method_details ">
   <h3 class="signature " id="offset-instance_method">
   
-    #<strong>offset</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>offset</strong>(vector, length = vector.length)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2219,7 +2349,17 @@ point. The length of the vector must not be zero.</p>
 <span class='id identifier rubyid_point2'>point2</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_offset!'>offset!</span> <span class='id identifier rubyid_vector'>vector</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point2 - a new Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2243,8 +2383,10 @@ point. The length of the vector must not be zero.</p>
         <span class='name'>length</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'></span>
       
+      
+        <em class="default">(defaults to: <tt>vector.length</tt>)</em>
       
       
         &mdash;
@@ -2275,6 +2417,9 @@ to the vector length.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2298,7 +2443,7 @@ to the vector length.</p>
       <div class="method_details ">
   <h3 class="signature " id="offset!-instance_method">
   
-    #<strong>offset!</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>offset!</strong>(vector, length = vector.length)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2326,7 +2471,17 @@ is modified.</p>
 <span class='id identifier rubyid_point2'>point2</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_offset!'>offset!</span> <span class='id identifier rubyid_vector'>vector</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point2 - a new Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2341,6 +2496,25 @@ is modified.</p>
         &mdash;
         <div class='inline'>
 <p>A Vector3d object to offset the point by.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>length</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>vector.length</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the distance to offset. If not provided, the offset is my a distance equal
+to the vector length.</p>
 </div>
       
     </li>
@@ -2365,6 +2539,9 @@ is modified.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2388,7 +2565,7 @@ is modified.</p>
       <div class="method_details ">
   <h3 class="signature " id="on_line?-instance_method">
   
-    #<strong>on_line?</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>on_line?</strong>(line)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2415,7 +2592,18 @@ is modified.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_on_line?'>on_line?</span> <span class='id identifier rubyid_line'>line</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the point is on the line; false if the point is
+not on the line</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2454,6 +2642,13 @@ line</p>
       
     </li>
   
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
     <li>
       
       
@@ -2487,7 +2682,7 @@ line</p>
       <div class="method_details ">
   <h3 class="signature " id="on_plane?-instance_method">
   
-    #<strong>on_plane?</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>on_plane?</strong>(plane)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2515,6 +2710,32 @@ line</p>
     
   </div>
 
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if the point is on the plane; false if the point is
+not on the plane</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>plane</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2532,6 +2753,13 @@ the plane</p>
 </div>
       
     </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
@@ -2566,7 +2794,7 @@ the plane</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_line-instance_method">
   
-    #<strong>project_to_line</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>project_to_line</strong>(line)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2594,7 +2822,17 @@ closest to this point.</p>
 <span class='id identifier rubyid_projected_point'>projected_point</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_project_to_line'>project_to_line</span> <span class='id identifier rubyid_line'>line</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the Point3d that is on a line closest to the point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2634,6 +2872,9 @@ closest to this point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2657,7 +2898,7 @@ closest to this point.</p>
       <div class="method_details ">
   <h3 class="signature " id="project_to_plane-instance_method">
   
-    #<strong>project_to_plane</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>project_to_plane</strong>(plane)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2687,7 +2928,17 @@ BY + CZ + D = 0. See Geom for details.</p>
 <span class='id identifier rubyid_projected_point'>projected_point</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_project_to_plane'>project_to_plane</span> <span class='id identifier rubyid_plane'>plane</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the Point3d that is on a plane closest to the point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2726,6 +2977,9 @@ BY + CZ + D = 0. See Geom for details.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2749,7 +3003,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="set!-instance_method">
   
-    #<strong>set!</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    #<strong>set!</strong>(x, y, z)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2773,7 +3027,17 @@ BY + CZ + D = 0. See Geom for details.</p>
 <span class='id identifier rubyid_point'>point</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_set!'>set!</span> <span class='int'>100</span><span class='comma'>,</span><span class='int'>200</span><span class='comma'>,</span><span class='int'>300</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - the newly created Point3d object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -2844,6 +3108,9 @@ BY + CZ + D = 0. See Geom for details.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3003,7 +3270,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform-instance_method">
   
-    #<strong>transform</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transform!</strong>(transform)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3031,7 +3298,17 @@ BY + CZ + D = 0. See Geom for details.</p>
 <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_transform!'>transform!</span> <span class='id identifier rubyid_transform'>transform</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3070,6 +3347,9 @@ BY + CZ + D = 0. See Geom for details.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3093,7 +3373,7 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="transform!-instance_method">
   
-    #<strong>transform!</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>transform</strong>(transform)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3120,7 +3400,17 @@ create a new point.</p>
 <span class='id identifier rubyid_point3'>point3</span> <span class='op'>=</span> <span class='id identifier rubyid_point1'>point1</span><span class='period'>.</span><span class='id identifier rubyid_transform'>transform</span> <span class='id identifier rubyid_transform'>transform</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformed_point - the new point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3159,6 +3449,9 @@ create a new point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3182,7 +3475,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="vector_to-instance_method">
   
-    #<strong>vector_to</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>vector_to</strong>(point2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3213,7 +3506,17 @@ create a new point.</p>
 </span><span class='id identifier rubyid_pt1'>pt1</span><span class='period'>.</span><span class='id identifier rubyid_vector_to'>vector_to</span><span class='lparen'>(</span><span class='id identifier rubyid_pt2'>pt2</span><span class='rparen'>)</span> <span class='comment'># is equivalent to (pt2 - pt1)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns vector - a Vector object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3252,6 +3555,9 @@ create a new point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3341,7 +3647,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="x=-instance_method">
   
-    #<strong>x=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>x=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3365,7 +3671,17 @@ create a new point.</p>
 <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='int'>2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns x - the newly set x value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3404,6 +3720,9 @@ create a new point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3493,7 +3812,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="y=-instance_method">
   
-    #<strong>y=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>y=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3517,7 +3836,17 @@ create a new point.</p>
 <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='int'>2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns y - the newly set y value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3556,6 +3885,9 @@ create a new point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3645,7 +3977,7 @@ create a new point.</p>
       <div class="method_details ">
   <h3 class="signature " id="z=-instance_method">
   
-    #<strong>z=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>z=</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3669,7 +4001,17 @@ create a new point.</p>
 <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='int'>2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns z - the newly set z value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -3708,6 +4050,9 @@ create a new point.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -3733,7 +4078,7 @@ create a new point.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:00 2016 by
+  Generated on Tue Apr 12 20:17:16 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

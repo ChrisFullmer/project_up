@@ -163,7 +163,7 @@ a model.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(index_or_name)  &#x21d2; Object </a>
     
 
     
@@ -187,7 +187,7 @@ a model.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|schema| ... } &#x21d2; Object </a>
     
 
     
@@ -260,7 +260,7 @@ which are the same as the names of the schemas.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#load_schema-instance_method" title="#load_schema (instance method)">#<strong>load_schema</strong>(arg)  &#x21d2; Object </a>
+      <a href="#load_schema-instance_method" title="#load_schema (instance method)">#<strong>load_schema</strong>(file)  &#x21d2; Object </a>
     
 
     
@@ -309,7 +309,7 @@ model.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unload_schema-instance_method" title="#unload_schema (instance method)">#<strong>unload_schema</strong>(arg)  &#x21d2; Object </a>
+      <a href="#unload_schema-instance_method" title="#unload_schema (instance method)">#<strong>unload_schema</strong>(schema_name)  &#x21d2; Object </a>
     
 
     
@@ -344,7 +344,7 @@ previously loaded into a model.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(index_or_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -371,7 +371,18 @@ previously loaded into a model.</p>
 </span><span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_classifications'>classifications</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns schema - a ClassificationSchema object if successful, otherwise
+nil.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -410,6 +421,9 @@ previously loaded into a model.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -433,7 +447,7 @@ previously loaded into a model.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>each</strong> {|schema| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -458,15 +472,14 @@ previously loaded into a model.</p>
 <span class='rbrace'>}</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
-        <span class='name'>schema</span>
       
-      
-        <span class='type'></span>
+        <span class='type'>(<tt>schema</tt>)</span>
       
       
       
@@ -479,7 +492,6 @@ found.</p>
     </li>
   
 </ul>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -652,7 +664,7 @@ which are the same as the names of the schemas.</p>
       <div class="method_details ">
   <h3 class="signature " id="load_schema-instance_method">
   
-    #<strong>load_schema</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>load_schema</strong>(file)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -678,7 +690,17 @@ model.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_load_schema'>load_schema</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns True if successful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -717,6 +739,9 @@ model.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -805,7 +830,7 @@ model.</p>
       <div class="method_details ">
   <h3 class="signature " id="unload_schema-instance_method">
   
-    #<strong>unload_schema</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>unload_schema</strong>(schema_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -830,7 +855,17 @@ previously loaded into a model.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_unload_schema'>unload_schema</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IFC 2x3</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns True if successful.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -869,6 +904,9 @@ previously loaded into a model.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -894,7 +932,7 @@ previously loaded into a model.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:20 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

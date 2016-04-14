@@ -198,7 +198,7 @@ attached.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#arc_curve%3D-instance_method" title="#arc_curve= (instance method)">#<strong>arc_curve=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#arc_curve%3D-instance_method" title="#arc_curve= (instance method)">#<strong>arc_curve=</strong>(arc_curve)  &#x21d2; Object </a>
     
 
     
@@ -248,7 +248,7 @@ the dimension text is attached.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#leader_break_point%3D-instance_method" title="#leader_break_point= (instance method)">#<strong>leader_break_point=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#leader_break_point%3D-instance_method" title="#leader_break_point (instance method)">#<strong>leader_break_point</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -406,7 +406,7 @@ attached.</p>
       <div class="method_details ">
   <h3 class="signature " id="arc_curve=-instance_method">
   
-    #<strong>arc_curve=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>arc_curve=</strong>(arc_curve)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -430,7 +430,17 @@ dimension is attached.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_arc_curve'>arc_curve</span> <span class='op'>=</span> <span class='id identifier rubyid_arc'>arc</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The ArcCurve object to which the dimension was attached.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -469,6 +479,9 @@ dimension is attached.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -559,7 +572,7 @@ the dimension text is attached.</p>
       <div class="method_details ">
   <h3 class="signature " id="leader_break_point=-instance_method">
   
-    #<strong>leader_break_point=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>leader_break_point</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -583,7 +596,17 @@ where the dimension text is attached.</p>
       <pre class="example code"><code><span class='id identifier rubyid_dim'>dim</span><span class='period'>.</span><span class='id identifier rubyid_leader_break_point'>leader_break_point</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the point that was set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -622,6 +645,9 @@ where the dimension text is attached.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -719,7 +745,7 @@ circle on the opposite side.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:04 2016 by
+  Generated on Tue Apr 12 20:17:20 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

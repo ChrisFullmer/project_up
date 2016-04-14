@@ -190,7 +190,7 @@ method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(layer2)  &#x21d2; Object </a>
     
 
     
@@ -214,7 +214,7 @@ method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(layer2)  &#x21d2; Object </a>
     
 
     
@@ -262,7 +262,7 @@ method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#color%3D-instance_method" title="#color= (instance method)">#<strong>color=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#color%3D-instance_method" title="#color= (instance method)">#<strong>color=</strong>(color)  &#x21d2; Object </a>
     
 
     
@@ -310,7 +310,7 @@ method.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name%3D-instance_method" title="#name= (instance method)">#<strong>name=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#name%3D-instance_method" title="#name= (instance method)">#<strong>name=</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -359,7 +359,7 @@ layer for new pages and existing pages.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#page_behavior%3D-instance_method" title="#page_behavior= (instance method)">#<strong>page_behavior=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#page_behavior%3D-instance_method" title="#page_behavior= (instance method)">#<strong>page_behavior=</strong>(pagebehavior)  &#x21d2; Object </a>
     
 
     
@@ -384,7 +384,7 @@ behavior on existing and new pages.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#visible%3D-instance_method" title="#visible= (instance method)">#<strong>visible=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#visible%3D-instance_method" title="#visible= (instance method)">#<strong>visible=</strong>(is_visible)  &#x21d2; Object </a>
     
 
     
@@ -453,7 +453,7 @@ behavior on existing and new pages.</p>
       <div class="method_details first">
   <h3 class="signature first" id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;=&gt;</strong>(layer2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -483,24 +483,19 @@ names.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_layer1'>layer1</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_layer2'>layer2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>layer1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A Layer object.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - -1 if layer1 is less than layer2. 1 if layer2 is less than
+layer1. 0 if layer1 and layer2 are equal.</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -539,6 +534,9 @@ names.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -562,7 +560,7 @@ names.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>==</strong>(layer2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -589,24 +587,19 @@ names.</p>
 <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_layer1'>layer1</span> <span class='op'>==</span> <span class='id identifier rubyid_layer2'>layer2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>layer1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A Layer object.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if layer1 and layer2 are equal. false if layer1 and
+layer2 are not equal.</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -645,6 +638,9 @@ are not equal.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -736,7 +732,7 @@ are not equal.</p>
       <div class="method_details ">
   <h3 class="signature " id="color=-instance_method">
   
-    #<strong>color=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>color=</strong>(color)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -762,7 +758,17 @@ are not equal.</p>
 <span class='id identifier rubyid_new_layer'>new_layer</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>192</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns color</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -801,6 +807,9 @@ are not equal.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -892,7 +901,7 @@ are not equal.</p>
       <div class="method_details ">
   <h3 class="signature " id="name=-instance_method">
   
-    #<strong>name=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>name=</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -918,7 +927,17 @@ are not equal.</p>
 <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_new_layer'>new_layer</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new test layer</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns name - the newly set name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -957,6 +976,9 @@ are not equal.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1071,7 +1093,7 @@ does not contain the visibility state of a layer.</p>
       <div class="method_details ">
   <h3 class="signature " id="page_behavior=-instance_method">
   
-    #<strong>page_behavior=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>page_behavior=</strong>(pagebehavior)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1113,7 +1135,18 @@ would trigger the validation check in SketchUp that would reset the
 <span class='id identifier rubyid_layer'>layer</span><span class='period'>.</span><span class='id identifier rubyid_page_behavior'>page_behavior</span> <span class='op'>=</span> <span class='id identifier rubyid_behavior'>behavior</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns pagebehavior - an integer representing the default visibility of
+the layer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1152,6 +1185,9 @@ would trigger the validation check in SketchUp that would reset the
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1175,7 +1211,7 @@ would trigger the validation check in SketchUp that would reset the
       <div class="method_details ">
   <h3 class="signature " id="visible=-instance_method">
   
-    #<strong>visible=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>visible=</strong>(is_visible)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1203,7 +1239,15 @@ would trigger the validation check in SketchUp that would reset the
 </span><span class='id identifier rubyid_new_layer'>new_layer</span><span class='period'>.</span><span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>false</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1223,6 +1267,9 @@ would trigger the validation check in SketchUp that would reset the
     </li>
   
 </ul>
+
+
+</div>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -1326,7 +1373,7 @@ would trigger the validation check in SketchUp that would reset the
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:58 2016 by
+  Generated on Tue Apr 12 20:17:14 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

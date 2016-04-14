@@ -165,7 +165,7 @@ Internet.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#axes-class_method" title="axes (class method)">.<strong>axes</strong>(*args)  &#x21d2; Object </a>
+      <a href="#axes-class_method" title="axes (class method)">.<strong>axes</strong>(origin, xaxis, yaxis, zaxis)  &#x21d2; Object </a>
     
 
     
@@ -191,7 +191,7 @@ vectors.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#interpolate-class_method" title="interpolate (class method)">.<strong>interpolate</strong>(arg1, arg2, arg3)  &#x21d2; Object </a>
+      <a href="#interpolate-class_method" title="interpolate (class method)">.<strong>interpolate</strong>(transform1, transform2, paramter)  &#x21d2; Object </a>
     
 
     
@@ -216,7 +216,7 @@ result of interpolating between two other transformations.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotation-class_method" title="rotation (class method)">.<strong>rotation</strong>(arg1, arg2, arg3)  &#x21d2; Object </a>
+      <a href="#rotation-class_method" title="rotation (class method)">.<strong>rotation</strong>(point, vector, angle)  &#x21d2; Object </a>
     
 
     
@@ -265,7 +265,7 @@ about an axis.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#translation-class_method" title="translation (class method)">.<strong>translation</strong>(arg)  &#x21d2; Object </a>
+      <a href="#translation-class_method" title="translation (class method)">.<strong>translation</strong>(vector)  &#x21d2; Object </a>
     
 
     
@@ -299,7 +299,7 @@ translation.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2A-instance_method" title="#* (instance method)">#<strong>*</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%2A-instance_method" title="#* (instance method)">#<strong>*</strong>(point1)  &#x21d2; Object </a>
     
 
     
@@ -470,7 +470,7 @@ identity transform.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(arg)  &#x21d2; Object </a>
+      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(transform2)  &#x21d2; Object </a>
     
 
     
@@ -597,7 +597,27 @@ define the Transformation.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(point)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(transform)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(origin, zaxis)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(origin, xaxis, yaxis)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(pt, axis, angle)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(xaxis, yaxis, zaxis, origin)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
   
 
   
@@ -610,37 +630,6 @@ define the Transformation.</p>
 
 <p>You can use this method or one of the more specific methods for creating
 specific kinds of Transformations.</p>
-
-<p>Geom::Transformation.new with no arguments creates a new identify
-Transformation.</p>
-
-<p>Geom::Transformation.new(pt) creates a Transformation that translates the
-origin to pt.</p>
-
-<p>Geom::Transformation.new(vec) creates a Transformation that translates by
-vector vec.</p>
-
-<p>Geom::Transformation.new(transform) creates a Transformation that is a copy
-of another Transformation. This is equivalent to transform.clone.</p>
-
-<p>Geom::Transformation.new(array) creates a Transformation from a 16 element
-Array.</p>
-
-<p>Geom::Transformation.new(scale) creates a Transformation that does uniform
-scaling.</p>
-
-<p>Geom::Transformation.new(origin, zaxis) creates a Transformation where
-origin is the new origin, and zaxis is the z axis. The x and y axes are
-determined using an arbitrary axis rule.</p>
-
-<p>Geom::Transformation.new(pt, xaxis, yaxis) creates a Transformation given a
-new origin, x axis and y axis.</p>
-
-<p>Geom::Transformation.new(pt, axis, angle) creates a Transformation that
-rotates by angle (given in radians) about a line defined by pt and axis.</p>
-
-<p>Geom::Transformation.new(xaxis, yaxis, zaxis, origin) creates a
-Transformation from 3 axes and an origin.</p>
 
 
   </div>
@@ -660,59 +649,406 @@ Transformation from 3 axes and an origin.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns identity Transformation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(point)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Translates the origin to point.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
       
-        <span class='name'>param1</span>
+        <span class='name'>point</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d, Vector3d, Transformation, Array, or Float, depending on the kind
-of transformation you wish to create (see comments)</p>
-</div>
       
     </li>
   
-    <li>
-      
-        <span class='name'>param2</span>
-      
-      
-        <span class='type'>(<tt>optional</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>An axis (see comments)</p>
+</ul>
+
+
 </div>
+      </li>
+    
       
-    </li>
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(vector)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
-        <span class='name'>param3</span>
+        <span class='name'>vector</span>
       
       
-        <span class='type'>(<tt>optional</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(transform)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a Transformation that is a copy of another Transformation. This is
+equivalent to <span class='object_link'><a href="#clone-instance_method" title="Geom::Transformation#clone (method)">#clone</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>transform</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(array)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>Creates</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;Float&gt;</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>An axis or angle (see comments)</p>
+<p>a Transformation from a 16 element Array.</p>
 </div>
       
     </li>
   
 </ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a transformation that does uniform scaling.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>scale</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(origin, zaxis)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a Transformation where origin is the new origin, and zaxis is the z
+axis. The x and y axes are determined using an arbitrary axis rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>origin</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>zaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(origin, xaxis, yaxis)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a Transformation given a new origin, x axis and y axis.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>origin</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>xaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>yaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(pt, axis, angle)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a Transformation that rotates by angle (given in radians) about a
+line defined by pt and axis.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>origin</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>axis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(xaxis, yaxis, zaxis, origin)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>xaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>yaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>zaxis</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Vector3d.html" title="Geom::Vector3d (class)">Geom::Vector3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>origin</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Point3d.html" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -744,7 +1080,7 @@ of transformation you wish to create (see comments)</p>
       <div class="method_details first">
   <h3 class="signature first" id="axes-class_method">
   
-    .<strong>axes</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    .<strong>axes</strong>(origin, xaxis, yaxis, zaxis)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -770,7 +1106,17 @@ vectors.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_t'>t</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation - a new Transformation object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -857,6 +1203,9 @@ vectors.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -880,7 +1229,7 @@ vectors.</p>
       <div class="method_details ">
   <h3 class="signature " id="interpolate-class_method">
   
-    .<strong>interpolate</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
+    .<strong>interpolate</strong>(transform1, transform2, paramter)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -915,7 +1264,17 @@ transformation1 or transformation2.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_t3'>t3</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation3 - the new Transformation object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -986,6 +1345,9 @@ transformation1 or transformation2.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1009,7 +1371,7 @@ transformation1 or transformation2.</p>
       <div class="method_details ">
   <h3 class="signature " id="rotation-class_method">
   
-    .<strong>rotation</strong>(arg1, arg2, arg3)  &#x21d2; <tt>Object</tt> 
+    .<strong>rotation</strong>(point, vector, angle)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1035,7 +1397,17 @@ about an axis.</p>
       <pre class="example code"><code><span class='id identifier rubyid_transformation'>transformation</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Transformation</span><span class='period'>.</span><span class='id identifier rubyid_rotation'>rotation</span> <span class='id identifier rubyid_point'>point</span><span class='comma'>,</span> <span class='id identifier rubyid_vector'>vector</span><span class='comma'>,</span> <span class='id identifier rubyid_angle'>angle</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation - a new Transformation object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1107,6 +1479,9 @@ about the axis set by the second parameter.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1130,7 +1505,15 @@ about the axis set by the second parameter.</p>
       <div class="method_details ">
   <h3 class="signature " id="scaling-class_method">
   
-    .<strong>scaling</strong>(*args)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">.<strong>scaling</strong>(scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">.<strong>scaling</strong>(xscale, yscale, zscale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">.<strong>scaling</strong>(point, scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
+      <span class="overload">.<strong>scaling</strong>(point, xscale, yscale, zscale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+    
   
 
   
@@ -1140,16 +1523,6 @@ about the axis set by the second parameter.</p>
   <div class="discussion">
     
 <p>The scaling method is used to create a Transformation that does scaling.</p>
-
-<pre class="code"><code class="">- t = Geom::Transformation.scaling scale
-- t = Geom::Transformation.scaling xscale, yscale, zscale
-- t = Geom::Transformation.scaling point, scale
-- t = Geom::Transformation.scaling point, xscale, yscale, zscale
-
-- With one argument, it does a uniform scale about the origin.
-- With two arguments, it does a uniform scale about an arbitrary point.
-- With three arguments, it does a non-uniform scale about the origin.
-- With four arguments it does a non-uniform scale about an arbitrary point.</code></pre>
 
 
   </div>
@@ -1164,7 +1537,23 @@ about the axis set by the second parameter.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_t'>t</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>scaling</strong>(scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>With one argument, it does a uniform scale about the origin.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1179,6 +1568,207 @@ about the axis set by the second parameter.</p>
         &mdash;
         <div class='inline'>
 <p>A single numeric value used to set a global scale factor for the transform.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>scaling</strong>(xscale, yscale, zscale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>With three arguments, it does a non-uniform scale about the origin.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>xscale</span>
+      
+      
+        <span class='type'>(<tt>optional</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A numeric value specifying the scale factor in the x direction for the
+transform.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>yscale</span>
+      
+      
+        <span class='type'>(<tt>optional</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A numeric value specifying the scale factor in the y direction for the
+transform.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>zscale</span>
+      
+      
+        <span class='type'>(<tt>optional</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A numeric value specifying the scale factor in the z direction for the
+transform.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>scaling</strong>(point, scale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>With two arguments, it does a uniform scale about an arbitrary point.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Point3d object.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>scale</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A single numeric value used to set a global scale factor for the transform.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>scaling</strong>(point, xscale, yscale, zscale)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>With four arguments it does a non-uniform scale about an arbitrary point.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A Point3d object.</p>
 </div>
       
     </li>
@@ -1234,22 +1824,6 @@ transform.</p>
       
     </li>
   
-    <li>
-      
-        <span class='name'>point</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A Point3d object.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1258,18 +1832,19 @@ transform.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Transformation (class)">Geom::Transformation</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>transformation - a new Transformation object</p>
-</div>
       
     </li>
   
 </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1293,7 +1868,7 @@ transform.</p>
       <div class="method_details ">
   <h3 class="signature " id="translation-class_method">
   
-    .<strong>translation</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    .<strong>translation</strong>(vector)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1319,7 +1894,17 @@ translation.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_t'>t</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation - a new Transformation object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1358,6 +1943,9 @@ translation.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1387,7 +1975,7 @@ translation.</p>
       <div class="method_details first">
   <h3 class="signature first" id="*-instance_method">
   
-    #<strong>*</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>*</strong>(point1)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1414,7 +2002,17 @@ translation.</p>
 <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='id identifier rubyid_point3'>point3</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation - a new Transformation object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1453,6 +2051,9 @@ translation.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1824,7 +2425,7 @@ is not the identity transform.</p>
       <div class="method_details ">
   <h3 class="signature " id="set!-instance_method">
   
-    #<strong>set!</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>set!</strong>(transform2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1849,7 +2450,17 @@ is not the identity transform.</p>
       <pre class="example code"><code><span class='id identifier rubyid_transformation1'>transformation1</span> <span class='op'>=</span> <span class='id identifier rubyid_transformation1'>transformation1</span><span class='period'>.</span><span class='id identifier rubyid_set!'>set!</span> <span class='id identifier rubyid_transformation2'>transformation2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns transformation1 - a Transformation object matching transform2</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1888,6 +2499,9 @@ is not the identity transform.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2187,7 +2801,7 @@ transformation</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:03 2016 by
+  Generated on Tue Apr 12 20:17:20 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -163,7 +163,7 @@ the TextureWriter class as well.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_back_UVQ-instance_method" title="#get_back_UVQ (instance method)">#<strong>get_back_UVQ</strong>(arg)  &#x21d2; Object </a>
+      <a href="#get_back_UVQ-instance_method" title="#get_back_UVQ (instance method)">#<strong>get_back_UVQ</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -188,7 +188,7 @@ face.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_front_UVQ-instance_method" title="#get_front_UVQ (instance method)">#<strong>get_front_UVQ</strong>(arg)  &#x21d2; Object </a>
+      <a href="#get_front_UVQ-instance_method" title="#get_front_UVQ (instance method)">#<strong>get_front_UVQ</strong>(point)  &#x21d2; Object </a>
     
 
     
@@ -222,7 +222,7 @@ face.</p>
       <div class="method_details first">
   <h3 class="signature first" id="get_back_UVQ-instance_method">
   
-    #<strong>get_back_UVQ</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_back_UVQ</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -250,7 +250,19 @@ face.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d containing the UV coordinates where the X value
+is the U value, the Y value is the V value and the Z value is a Q value
+(which is not used).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -291,6 +303,9 @@ not used).</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -314,7 +329,7 @@ not used).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_front_UVQ-instance_method">
   
-    #<strong>get_front_UVQ</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_front_UVQ</strong>(point)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -342,7 +357,19 @@ face.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns point - a Point3d containing the UV coordinates where the X value
+is the U value, the Y value is the V value and the Z value is a Q value
+(which is not used).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -383,6 +410,9 @@ not used).</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -408,7 +438,7 @@ not used).</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:22:01 2016 by
+  Generated on Tue Apr 12 20:17:17 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

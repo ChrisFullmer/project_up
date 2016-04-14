@@ -117,6 +117,15 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Prior to SketchUp 2015, Length used to be derived from Float. This is no
+longer the case.</p>
+</div>
+  </div>
+
+
 <p>Because length units are used so often in SketchUp, a special class has
 been added to make it easier to work with length values. You can use a
 Length object any place that you would use a Float.</p>
@@ -152,9 +161,6 @@ Ruby Numeric class to do units conversions.</p>
 <p>The setting for the Length format and Length unit can be retrieved from the
 model options by querying the “UnitsOptions” OptionsProvider for
 “LengthFormat” and “LengthUnit” respectively.</p>
-
-<p>Note: Prior to SketchUp 2015, Length used to be derived from Float. This is
-no longer the case.</p>
 
 
   </div>
@@ -196,7 +202,7 @@ no longer the case.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -220,7 +226,7 @@ no longer the case.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C%3D-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -245,7 +251,7 @@ another length.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -270,7 +276,7 @@ another length.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -294,7 +300,7 @@ another length.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3E-instance_method" title="#&gt; (instance method)">#<strong>&gt;</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3E-instance_method" title="#&gt; (instance method)">#<strong>&gt;</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -319,7 +325,7 @@ length.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3E%3D-instance_method" title="#&gt;= (instance method)">#<strong>&gt;=</strong>(arg)  &#x21d2; Object </a>
+      <a href="#%3E%3D-instance_method" title="#&gt;= (instance method)">#<strong>&gt;=</strong>(length2)  &#x21d2; Object </a>
     
 
     
@@ -429,7 +435,7 @@ the model.</p>
       <div class="method_details first">
   <h3 class="signature first" id="<-instance_method">
   
-    #<strong>&lt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -461,24 +467,19 @@ the model.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if length1 is &lt; length2; false if length1 is not
+&lt; length2</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -517,6 +518,9 @@ length2</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -540,7 +544,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id="<=-instance_method">
   
-    #<strong>&lt;=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;=</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -570,24 +574,19 @@ another length.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if length1 is &lt;= length2; false if length1 is not
+&lt;= length2</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -626,6 +625,9 @@ length2</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -649,7 +651,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&lt;=&gt;</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -677,24 +679,18 @@ tolerance into account.</p>
 <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_length1'>length1</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_length2'>length2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns result - the result of the comparison</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -732,6 +728,9 @@ tolerance into account.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -755,7 +754,7 @@ tolerance into account.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>==</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -783,24 +782,19 @@ SketchUp uses for comparing lengths.</p>
 <span class='id identifier rubyid_is_equal'>is_equal</span> <span class='op'>=</span> <span class='id identifier rubyid_length1'>length1</span> <span class='op'>==</span> <span class='id identifier rubyid_length2'>length2</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if length1 is == length2; false if length1 is not ==
+length2</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -838,6 +832,9 @@ SketchUp uses for comparing lengths.</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -861,7 +858,7 @@ SketchUp uses for comparing lengths.</p>
       <div class="method_details ">
   <h3 class="signature " id=">-instance_method">
   
-    #<strong>&gt;</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&gt;</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -894,24 +891,19 @@ length.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if length1 is &gt; length2; false if length1 is not
+&gt; length2</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -950,6 +942,9 @@ length2</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -973,7 +968,7 @@ length2</p>
       <div class="method_details ">
   <h3 class="signature " id=">=-instance_method">
   
-    #<strong>&gt;=</strong>(arg)  &#x21d2; <tt>Object</tt> 
+    #<strong>&gt;=</strong>(length2)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1006,24 +1001,19 @@ another length.</p>
 <span class='kw'>end</span></code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>length1</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A length value.</p>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Returns status - true if length1 is &gt;= length2; false if length1 is not
+&gt;= length2</p>
+
+
+  </div>
 </div>
-      
-    </li>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
     <li>
       
@@ -1062,6 +1052,9 @@ length2</p>
     </li>
   
 </ul>
+
+</div>
+
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1290,7 +1283,7 @@ return a nicely formatted length in feet.)</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 30 17:21:55 2016 by
+  Generated on Tue Apr 12 20:17:10 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 
