@@ -34,7 +34,7 @@
   <script>
   $( document ).ready(function() {
       alert("this loaded");
-    if (typeof sketchup == 'function' || sketchup == 'object') { 
+    if (typeof sketchup == 'object') { 
       alert("its sketchup");
        sketchup.page_loaded("fake");
        alert("and we're back!");
