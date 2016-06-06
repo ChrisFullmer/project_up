@@ -35,7 +35,9 @@
   $( document ).ready(function() {
       alert("this loaded");
     if (typeof sketchup == 'function') { 
+      alert("its sketchup");
        sketchup.page_loaded("fake");
+       alert("and we're back!");
     }
   });  
   </script>
