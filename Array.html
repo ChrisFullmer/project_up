@@ -27,7 +27,7 @@
 
   
   <script>
-  function doneLoading(){
+  document.body.onload = function() {
     if (typeof sketchup == 'function') { 
        sketchup.page_loaded("fake");
     }
@@ -39,7 +39,7 @@
 
 
 </head>
-<body onload="doneLoading()">
+<body>
 
   <div id="su-header">
     <h1>
