@@ -32,7 +32,7 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
   <script>
-  document.onload = function() {
+  $( document ).ready(function() {
       alert("this loaded");
     if (typeof sketchup == 'function') { 
        sketchup.page_loaded("fake");
