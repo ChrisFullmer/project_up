@@ -29,7 +29,16 @@
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+  <script>
+  $( document ).ready(function() {
+    if (typeof sketchup == 'object') { 
+       sketchup.page_loaded("");
+    } else {
+      window.location = 'skp:page_loaded@nil';
+    }
+    });
 
+  </script>
 
 </head>
 <body>
