@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
-    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
-  <link rel='stylesheet' type='text/css'
-    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
@@ -16,9 +12,9 @@
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
-
   <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/rubyapi.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup::Tool";
@@ -31,16 +27,49 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
 </head>
 <body>
 
-  <div id="su-header">
-    <h1>
-      <a href="http://extensions.sketchup.com/developer_center">
-        <b>SketchUp</b> Developer Center
-      </a>
-    </h1>
-  </div>
+  <!-- SU - start -->
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div id="api-documentation-header">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="http://developer.sketchup.com" title="Home">
+                <img src="http://developer.sketchup.com/sites/help.sketchup.com/files/SU_Developer-RedWhite.png" alt="Home">
+            </a>
+            <a class="name navbar-brand" href="/en" title="Home">SketchUp Developer Center</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf"><a href="http://forums.sketchup.com/c/developers">Community</a></li>
+                    <li class="leaf"><a href="http://blog.sketchup.com/tags/developers">SketchUpdate Blog</a></li>
+                    <li class="leaf"><a href="http://www.sketchup.com/download" class="top-menu--download-button">Download</a></li>
+                    <li class="last expanded dropdown">
+                        <a href="http://www.trimble.com" class="trimble-top-menu-item dropdown-toggle" data-target="#" data-toggle="dropdown"><img src="http://www.sketchup.com/sites/developers.sketchup.com/files/core/trimble-logo-white.png"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="first leaf"><a href="http://connect.trimble.com/">Trimble Connect</a></li>
+                            <li class="leaf"><a href="https://www.trimble.com/Corporate/About_Trimble.aspx">About Trimble</a></li>
+                            <li class="last leaf"><a href="http://buildings.trimble.com/">Trimble Buildings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- SU - end -->
 
   <div id="su-content">
 
@@ -257,7 +286,7 @@ different tool was selected.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The draw method is called by SketchUp whenever the view is refreshed to
+<p>The <span class='object_link'><a href="#draw-instance_method" title="Sketchup::Tool#draw (method)">#draw</a></span> method is called by SketchUp whenever the view is refreshed to
 allow the tool to do its own drawing.</p>
 </div></span>
   
@@ -367,7 +396,7 @@ context menu.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#onCancel-instance_method" title="#reason (instance method)">#<strong>reason</strong>(reason, view)  &#x21d2; Object </a>
+      <a href="#onCancel-instance_method" title="#onCancel (instance method)">#<strong>onCancel</strong>(reason, view)  &#x21d2; Object </a>
     
 
     
@@ -1054,10 +1083,20 @@ different tool was selected.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The draw method is called by SketchUp whenever the view is refreshed to
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If you draw outside the model bounds you need to implement
+<span class='object_link'><a href="#getExtents-instance_method" title="Sketchup::Tool#getExtents (method)">#getExtents</a></span> which return a bounding box large enough to include the
+points you draw. Otherwise your drawing will be clipped.</p>
+</div>
+  </div>
+
+
+<p>The <span class='object_link'><a href="#draw-instance_method" title="Sketchup::Tool#draw (method)">#draw</a></span> method is called by SketchUp whenever the view is refreshed to
 allow the tool to do its own drawing. If the tool has some temporary
 graphics that it wants displayed while it is active, it should implement
-this method and draw to the View.</p>
+this method and draw to the <span class='object_link'><a href="View.html" title="Sketchup::View (class)">View</a></span>.</p>
 
 
   </div>
@@ -1069,7 +1108,20 @@ this method and draw to the View.</p>
     
       
       <pre class="example code"><code><span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_view'>view</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Your tool can draw into view: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_view'>view</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='comment'># Draw a square.
+</span>  <span class='id identifier rubyid_points'>points</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>9</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>9</span><span class='comma'>,</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='rbracket'>]</span>
+  <span class='comment'># Fill
+</span>  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_drawing_color'>drawing_color</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>255</span><span class='comma'>,</span> <span class='int'>128</span><span class='comma'>,</span> <span class='int'>128</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='const'>GL_QUADS</span><span class='comma'>,</span> <span class='id identifier rubyid_points'>points</span><span class='rparen'>)</span>
+  <span class='comment'># Outline
+</span>  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_line_stipple'>line_stipple</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># Solid line
+</span>  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_drawing_color'>drawing_color</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>64</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='const'>GL_LINE_LOOP</span><span class='comma'>,</span> <span class='id identifier rubyid_points'>points</span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
     
   </div>
@@ -1091,7 +1143,7 @@ this method and draw to the View.</p>
         <span class='name'>view</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="View.html" title="Sketchup::View (class)">Sketchup::View</a></span></tt>)</span>
       
       
       
@@ -1125,6 +1177,15 @@ this method and draw to the View.</p>
 
 </div>
 
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#getExtents-instance_method" title="Sketchup::Tool#getExtents (method)">#getExtents</a></span></li>
+    
+      <li><span class='object_link'><a href="View.html#draw-instance_method" title="Sketchup::View#draw (method)">View#draw</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -1580,7 +1641,7 @@ buttons at the time. Added in SU2015.</p>
       <div class="method_details ">
   <h3 class="signature " id="onCancel-instance_method">
   
-    #<strong>reason</strong>(reason, view)  &#x21d2; <tt>Object</tt> 
+    #<strong>onCancel</strong>(reason, view)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4333,7 +4394,7 @@ middle mouse button.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Apr 12 20:17:15 2016 by
+  Generated on Thu Dec 15 09:55:28 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
-    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
-  <link rel='stylesheet' type='text/css'
-    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
@@ -16,9 +12,9 @@
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
-
   <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/rubyapi.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Sketchup";
@@ -31,16 +27,49 @@
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
 </head>
 <body>
 
-  <div id="su-header">
-    <h1>
-      <a href="http://extensions.sketchup.com/developer_center">
-        <b>SketchUp</b> Developer Center
-      </a>
-    </h1>
-  </div>
+  <!-- SU - start -->
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div id="api-documentation-header">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="http://developer.sketchup.com" title="Home">
+                <img src="http://developer.sketchup.com/sites/help.sketchup.com/files/SU_Developer-RedWhite.png" alt="Home">
+            </a>
+            <a class="name navbar-brand" href="/en" title="Home">SketchUp Developer Center</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf"><a href="http://forums.sketchup.com/c/developers">Community</a></li>
+                    <li class="leaf"><a href="http://blog.sketchup.com/tags/developers">SketchUpdate Blog</a></li>
+                    <li class="leaf"><a href="http://www.sketchup.com/download" class="top-menu--download-button">Download</a></li>
+                    <li class="last expanded dropdown">
+                        <a href="http://www.trimble.com" class="trimble-top-menu-item dropdown-toggle" data-target="#" data-toggle="dropdown"><img src="http://www.sketchup.com/sites/developers.sketchup.com/files/core/trimble-logo-white.png"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="first leaf"><a href="http://connect.trimble.com/">Trimble Connect</a></li>
+                            <li class="leaf"><a href="https://www.trimble.com/Corporate/About_Trimble.aspx">About Trimble</a></li>
+                            <li class="last leaf"><a href="http://buildings.trimble.com/">Trimble Buildings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- SU - end -->
 
   <div id="su-content">
 
@@ -158,11 +187,11 @@ model, and this is accessed via the Sketchup.active_model method.</p>
 <p class="children">
   
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Sketchup/Licensing.html" title="Sketchup::Licensing (module)">Licensing</a></span>, <span class='object_link'><a href="Sketchup/RegionalSettings.html" title="Sketchup::RegionalSettings (module)">RegionalSettings</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Sketchup/Http.html" title="Sketchup::Http (module)">Http</a></span>, <span class='object_link'><a href="Sketchup/Licensing.html" title="Sketchup::Licensing (module)">Licensing</a></span>, <span class='object_link'><a href="Sketchup/RegionalSettings.html" title="Sketchup::RegionalSettings (module)">RegionalSettings</a></span>
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Sketchup/Animation.html" title="Sketchup::Animation (class)">Animation</a></span>, <span class='object_link'><a href="Sketchup/AppObserver.html" title="Sketchup::AppObserver (class)">AppObserver</a></span>, <span class='object_link'><a href="Sketchup/ArcCurve.html" title="Sketchup::ArcCurve (class)">ArcCurve</a></span>, <span class='object_link'><a href="Sketchup/AttributeDictionaries.html" title="Sketchup::AttributeDictionaries (class)">AttributeDictionaries</a></span>, <span class='object_link'><a href="Sketchup/AttributeDictionary.html" title="Sketchup::AttributeDictionary (class)">AttributeDictionary</a></span>, <span class='object_link'><a href="Sketchup/Axes.html" title="Sketchup::Axes (class)">Axes</a></span>, <span class='object_link'><a href="Sketchup/Behavior.html" title="Sketchup::Behavior (class)">Behavior</a></span>, <span class='object_link'><a href="Sketchup/Camera.html" title="Sketchup::Camera (class)">Camera</a></span>, <span class='object_link'><a href="Sketchup/ClassificationSchema.html" title="Sketchup::ClassificationSchema (class)">ClassificationSchema</a></span>, <span class='object_link'><a href="Sketchup/Classifications.html" title="Sketchup::Classifications (class)">Classifications</a></span>, <span class='object_link'><a href="Sketchup/Color.html" title="Sketchup::Color (class)">Color</a></span>, <span class='object_link'><a href="Sketchup/ComponentDefinition.html" title="Sketchup::ComponentDefinition (class)">ComponentDefinition</a></span>, <span class='object_link'><a href="Sketchup/ComponentInstance.html" title="Sketchup::ComponentInstance (class)">ComponentInstance</a></span>, <span class='object_link'><a href="Sketchup/Console.html" title="Sketchup::Console (class)">Console</a></span>, <span class='object_link'><a href="Sketchup/ConstructionLine.html" title="Sketchup::ConstructionLine (class)">ConstructionLine</a></span>, <span class='object_link'><a href="Sketchup/ConstructionPoint.html" title="Sketchup::ConstructionPoint (class)">ConstructionPoint</a></span>, <span class='object_link'><a href="Sketchup/Curve.html" title="Sketchup::Curve (class)">Curve</a></span>, <span class='object_link'><a href="Sketchup/DefinitionList.html" title="Sketchup::DefinitionList (class)">DefinitionList</a></span>, <span class='object_link'><a href="Sketchup/DefinitionObserver.html" title="Sketchup::DefinitionObserver (class)">DefinitionObserver</a></span>, <span class='object_link'><a href="Sketchup/DefinitionsObserver.html" title="Sketchup::DefinitionsObserver (class)">DefinitionsObserver</a></span>, <span class='object_link'><a href="Sketchup/Dimension.html" title="Sketchup::Dimension (class)">Dimension</a></span>, <span class='object_link'><a href="Sketchup/DimensionLinear.html" title="Sketchup::DimensionLinear (class)">DimensionLinear</a></span>, <span class='object_link'><a href="Sketchup/DimensionObserver.html" title="Sketchup::DimensionObserver (class)">DimensionObserver</a></span>, <span class='object_link'><a href="Sketchup/DimensionRadial.html" title="Sketchup::DimensionRadial (class)">DimensionRadial</a></span>, <span class='object_link'><a href="Sketchup/Drawingelement.html" title="Sketchup::Drawingelement (class)">Drawingelement</a></span>, <span class='object_link'><a href="Sketchup/Edge.html" title="Sketchup::Edge (class)">Edge</a></span>, <span class='object_link'><a href="Sketchup/EdgeUse.html" title="Sketchup::EdgeUse (class)">EdgeUse</a></span>, <span class='object_link'><a href="Sketchup/Entities.html" title="Sketchup::Entities (class)">Entities</a></span>, <span class='object_link'><a href="Sketchup/EntitiesObserver.html" title="Sketchup::EntitiesObserver (class)">EntitiesObserver</a></span>, <span class='object_link'><a href="Sketchup/Entity.html" title="Sketchup::Entity (class)">Entity</a></span>, <span class='object_link'><a href="Sketchup/EntityObserver.html" title="Sketchup::EntityObserver (class)">EntityObserver</a></span>, <span class='object_link'><a href="Sketchup/ExtensionsManager.html" title="Sketchup::ExtensionsManager (class)">ExtensionsManager</a></span>, <span class='object_link'><a href="Sketchup/Face.html" title="Sketchup::Face (class)">Face</a></span>, <span class='object_link'><a href="Sketchup/Group.html" title="Sketchup::Group (class)">Group</a></span>, <span class='object_link'><a href="Sketchup/Image.html" title="Sketchup::Image (class)">Image</a></span>, <span class='object_link'><a href="Sketchup/Importer.html" title="Sketchup::Importer (class)">Importer</a></span>, <span class='object_link'><a href="Sketchup/InputPoint.html" title="Sketchup::InputPoint (class)">InputPoint</a></span>, <span class='object_link'><a href="Sketchup/InstanceObserver.html" title="Sketchup::InstanceObserver (class)">InstanceObserver</a></span>, <span class='object_link'><a href="Sketchup/Layer.html" title="Sketchup::Layer (class)">Layer</a></span>, <span class='object_link'><a href="Sketchup/Layers.html" title="Sketchup::Layers (class)">Layers</a></span>, <span class='object_link'><a href="Sketchup/LayersObserver.html" title="Sketchup::LayersObserver (class)">LayersObserver</a></span>, <span class='object_link'><a href="Sketchup/Loop.html" title="Sketchup::Loop (class)">Loop</a></span>, <span class='object_link'><a href="Sketchup/Material.html" title="Sketchup::Material (class)">Material</a></span>, <span class='object_link'><a href="Sketchup/Materials.html" title="Sketchup::Materials (class)">Materials</a></span>, <span class='object_link'><a href="Sketchup/MaterialsObserver.html" title="Sketchup::MaterialsObserver (class)">MaterialsObserver</a></span>, <span class='object_link'><a href="Sketchup/Menu.html" title="Sketchup::Menu (class)">Menu</a></span>, <span class='object_link'><a href="Sketchup/Model.html" title="Sketchup::Model (class)">Model</a></span>, <span class='object_link'><a href="Sketchup/ModelObserver.html" title="Sketchup::ModelObserver (class)">ModelObserver</a></span>, <span class='object_link'><a href="Sketchup/OptionsManager.html" title="Sketchup::OptionsManager (class)">OptionsManager</a></span>, <span class='object_link'><a href="Sketchup/OptionsProvider.html" title="Sketchup::OptionsProvider (class)">OptionsProvider</a></span>, <span class='object_link'><a href="Sketchup/OptionsProviderObserver.html" title="Sketchup::OptionsProviderObserver (class)">OptionsProviderObserver</a></span>, <span class='object_link'><a href="Sketchup/Page.html" title="Sketchup::Page (class)">Page</a></span>, <span class='object_link'><a href="Sketchup/Pages.html" title="Sketchup::Pages (class)">Pages</a></span>, <span class='object_link'><a href="Sketchup/PagesObserver.html" title="Sketchup::PagesObserver (class)">PagesObserver</a></span>, <span class='object_link'><a href="Sketchup/PickHelper.html" title="Sketchup::PickHelper (class)">PickHelper</a></span>, <span class='object_link'><a href="Sketchup/RenderingOptions.html" title="Sketchup::RenderingOptions (class)">RenderingOptions</a></span>, <span class='object_link'><a href="Sketchup/RenderingOptionsObserver.html" title="Sketchup::RenderingOptionsObserver (class)">RenderingOptionsObserver</a></span>, <span class='object_link'><a href="Sketchup/SectionPlane.html" title="Sketchup::SectionPlane (class)">SectionPlane</a></span>, <span class='object_link'><a href="Sketchup/Selection.html" title="Sketchup::Selection (class)">Selection</a></span>, <span class='object_link'><a href="Sketchup/SelectionObserver.html" title="Sketchup::SelectionObserver (class)">SelectionObserver</a></span>, <span class='object_link'><a href="Sketchup/Set.html" title="Sketchup::Set (class)">Set</a></span>, <span class='object_link'><a href="Sketchup/ShadowInfo.html" title="Sketchup::ShadowInfo (class)">ShadowInfo</a></span>, <span class='object_link'><a href="Sketchup/ShadowInfoObserver.html" title="Sketchup::ShadowInfoObserver (class)">ShadowInfoObserver</a></span>, <span class='object_link'><a href="Sketchup/Style.html" title="Sketchup::Style (class)">Style</a></span>, <span class='object_link'><a href="Sketchup/Styles.html" title="Sketchup::Styles (class)">Styles</a></span>, <span class='object_link'><a href="Sketchup/Text.html" title="Sketchup::Text (class)">Text</a></span>, <span class='object_link'><a href="Sketchup/Texture.html" title="Sketchup::Texture (class)">Texture</a></span>, <span class='object_link'><a href="Sketchup/TextureWriter.html" title="Sketchup::TextureWriter (class)">TextureWriter</a></span>, <span class='object_link'><a href="Sketchup/Tool.html" title="Sketchup::Tool (class)">Tool</a></span>, <span class='object_link'><a href="Sketchup/Tools.html" title="Sketchup::Tools (class)">Tools</a></span>, <span class='object_link'><a href="Sketchup/ToolsObserver.html" title="Sketchup::ToolsObserver (class)">ToolsObserver</a></span>, <span class='object_link'><a href="Sketchup/UVHelper.html" title="Sketchup::UVHelper (class)">UVHelper</a></span>, <span class='object_link'><a href="Sketchup/Vertex.html" title="Sketchup::Vertex (class)">Vertex</a></span>, <span class='object_link'><a href="Sketchup/View.html" title="Sketchup::View (class)">View</a></span>, <span class='object_link'><a href="Sketchup/ViewObserver.html" title="Sketchup::ViewObserver (class)">ViewObserver</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Sketchup/Animation.html" title="Sketchup::Animation (class)">Animation</a></span>, <span class='object_link'><a href="Sketchup/AppObserver.html" title="Sketchup::AppObserver (class)">AppObserver</a></span>, <span class='object_link'><a href="Sketchup/ArcCurve.html" title="Sketchup::ArcCurve (class)">ArcCurve</a></span>, <span class='object_link'><a href="Sketchup/AttributeDictionaries.html" title="Sketchup::AttributeDictionaries (class)">AttributeDictionaries</a></span>, <span class='object_link'><a href="Sketchup/AttributeDictionary.html" title="Sketchup::AttributeDictionary (class)">AttributeDictionary</a></span>, <span class='object_link'><a href="Sketchup/Axes.html" title="Sketchup::Axes (class)">Axes</a></span>, <span class='object_link'><a href="Sketchup/Behavior.html" title="Sketchup::Behavior (class)">Behavior</a></span>, <span class='object_link'><a href="Sketchup/Camera.html" title="Sketchup::Camera (class)">Camera</a></span>, <span class='object_link'><a href="Sketchup/ClassificationSchema.html" title="Sketchup::ClassificationSchema (class)">ClassificationSchema</a></span>, <span class='object_link'><a href="Sketchup/Classifications.html" title="Sketchup::Classifications (class)">Classifications</a></span>, <span class='object_link'><a href="Sketchup/Color.html" title="Sketchup::Color (class)">Color</a></span>, <span class='object_link'><a href="Sketchup/ComponentDefinition.html" title="Sketchup::ComponentDefinition (class)">ComponentDefinition</a></span>, <span class='object_link'><a href="Sketchup/ComponentInstance.html" title="Sketchup::ComponentInstance (class)">ComponentInstance</a></span>, <span class='object_link'><a href="Sketchup/Console.html" title="Sketchup::Console (class)">Console</a></span>, <span class='object_link'><a href="Sketchup/ConstructionLine.html" title="Sketchup::ConstructionLine (class)">ConstructionLine</a></span>, <span class='object_link'><a href="Sketchup/ConstructionPoint.html" title="Sketchup::ConstructionPoint (class)">ConstructionPoint</a></span>, <span class='object_link'><a href="Sketchup/Curve.html" title="Sketchup::Curve (class)">Curve</a></span>, <span class='object_link'><a href="Sketchup/DefinitionList.html" title="Sketchup::DefinitionList (class)">DefinitionList</a></span>, <span class='object_link'><a href="Sketchup/DefinitionObserver.html" title="Sketchup::DefinitionObserver (class)">DefinitionObserver</a></span>, <span class='object_link'><a href="Sketchup/DefinitionsObserver.html" title="Sketchup::DefinitionsObserver (class)">DefinitionsObserver</a></span>, <span class='object_link'><a href="Sketchup/Dimension.html" title="Sketchup::Dimension (class)">Dimension</a></span>, <span class='object_link'><a href="Sketchup/DimensionLinear.html" title="Sketchup::DimensionLinear (class)">DimensionLinear</a></span>, <span class='object_link'><a href="Sketchup/DimensionObserver.html" title="Sketchup::DimensionObserver (class)">DimensionObserver</a></span>, <span class='object_link'><a href="Sketchup/DimensionRadial.html" title="Sketchup::DimensionRadial (class)">DimensionRadial</a></span>, <span class='object_link'><a href="Sketchup/Drawingelement.html" title="Sketchup::Drawingelement (class)">Drawingelement</a></span>, <span class='object_link'><a href="Sketchup/Edge.html" title="Sketchup::Edge (class)">Edge</a></span>, <span class='object_link'><a href="Sketchup/EdgeUse.html" title="Sketchup::EdgeUse (class)">EdgeUse</a></span>, <span class='object_link'><a href="Sketchup/Entities.html" title="Sketchup::Entities (class)">Entities</a></span>, <span class='object_link'><a href="Sketchup/EntitiesObserver.html" title="Sketchup::EntitiesObserver (class)">EntitiesObserver</a></span>, <span class='object_link'><a href="Sketchup/Entity.html" title="Sketchup::Entity (class)">Entity</a></span>, <span class='object_link'><a href="Sketchup/EntityObserver.html" title="Sketchup::EntityObserver (class)">EntityObserver</a></span>, <span class='object_link'><a href="Sketchup/ExtensionsManager.html" title="Sketchup::ExtensionsManager (class)">ExtensionsManager</a></span>, <span class='object_link'><a href="Sketchup/Face.html" title="Sketchup::Face (class)">Face</a></span>, <span class='object_link'><a href="Sketchup/Group.html" title="Sketchup::Group (class)">Group</a></span>, <span class='object_link'><a href="Sketchup/Image.html" title="Sketchup::Image (class)">Image</a></span>, <span class='object_link'><a href="Sketchup/Importer.html" title="Sketchup::Importer (class)">Importer</a></span>, <span class='object_link'><a href="Sketchup/InputPoint.html" title="Sketchup::InputPoint (class)">InputPoint</a></span>, <span class='object_link'><a href="Sketchup/InstanceObserver.html" title="Sketchup::InstanceObserver (class)">InstanceObserver</a></span>, <span class='object_link'><a href="Sketchup/InstancePath.html" title="Sketchup::InstancePath (class)">InstancePath</a></span>, <span class='object_link'><a href="Sketchup/Layer.html" title="Sketchup::Layer (class)">Layer</a></span>, <span class='object_link'><a href="Sketchup/Layers.html" title="Sketchup::Layers (class)">Layers</a></span>, <span class='object_link'><a href="Sketchup/LayersObserver.html" title="Sketchup::LayersObserver (class)">LayersObserver</a></span>, <span class='object_link'><a href="Sketchup/Loop.html" title="Sketchup::Loop (class)">Loop</a></span>, <span class='object_link'><a href="Sketchup/Material.html" title="Sketchup::Material (class)">Material</a></span>, <span class='object_link'><a href="Sketchup/Materials.html" title="Sketchup::Materials (class)">Materials</a></span>, <span class='object_link'><a href="Sketchup/MaterialsObserver.html" title="Sketchup::MaterialsObserver (class)">MaterialsObserver</a></span>, <span class='object_link'><a href="Sketchup/Menu.html" title="Sketchup::Menu (class)">Menu</a></span>, <span class='object_link'><a href="Sketchup/Model.html" title="Sketchup::Model (class)">Model</a></span>, <span class='object_link'><a href="Sketchup/ModelObserver.html" title="Sketchup::ModelObserver (class)">ModelObserver</a></span>, <span class='object_link'><a href="Sketchup/OptionsManager.html" title="Sketchup::OptionsManager (class)">OptionsManager</a></span>, <span class='object_link'><a href="Sketchup/OptionsProvider.html" title="Sketchup::OptionsProvider (class)">OptionsProvider</a></span>, <span class='object_link'><a href="Sketchup/OptionsProviderObserver.html" title="Sketchup::OptionsProviderObserver (class)">OptionsProviderObserver</a></span>, <span class='object_link'><a href="Sketchup/Page.html" title="Sketchup::Page (class)">Page</a></span>, <span class='object_link'><a href="Sketchup/Pages.html" title="Sketchup::Pages (class)">Pages</a></span>, <span class='object_link'><a href="Sketchup/PagesObserver.html" title="Sketchup::PagesObserver (class)">PagesObserver</a></span>, <span class='object_link'><a href="Sketchup/PickHelper.html" title="Sketchup::PickHelper (class)">PickHelper</a></span>, <span class='object_link'><a href="Sketchup/RenderingOptions.html" title="Sketchup::RenderingOptions (class)">RenderingOptions</a></span>, <span class='object_link'><a href="Sketchup/RenderingOptionsObserver.html" title="Sketchup::RenderingOptionsObserver (class)">RenderingOptionsObserver</a></span>, <span class='object_link'><a href="Sketchup/SectionPlane.html" title="Sketchup::SectionPlane (class)">SectionPlane</a></span>, <span class='object_link'><a href="Sketchup/Selection.html" title="Sketchup::Selection (class)">Selection</a></span>, <span class='object_link'><a href="Sketchup/SelectionObserver.html" title="Sketchup::SelectionObserver (class)">SelectionObserver</a></span>, <span class='object_link'><a href="Sketchup/Set.html" title="Sketchup::Set (class)">Set</a></span>, <span class='object_link'><a href="Sketchup/ShadowInfo.html" title="Sketchup::ShadowInfo (class)">ShadowInfo</a></span>, <span class='object_link'><a href="Sketchup/ShadowInfoObserver.html" title="Sketchup::ShadowInfoObserver (class)">ShadowInfoObserver</a></span>, <span class='object_link'><a href="Sketchup/Style.html" title="Sketchup::Style (class)">Style</a></span>, <span class='object_link'><a href="Sketchup/Styles.html" title="Sketchup::Styles (class)">Styles</a></span>, <span class='object_link'><a href="Sketchup/Text.html" title="Sketchup::Text (class)">Text</a></span>, <span class='object_link'><a href="Sketchup/Texture.html" title="Sketchup::Texture (class)">Texture</a></span>, <span class='object_link'><a href="Sketchup/TextureWriter.html" title="Sketchup::TextureWriter (class)">TextureWriter</a></span>, <span class='object_link'><a href="Sketchup/Tool.html" title="Sketchup::Tool (class)">Tool</a></span>, <span class='object_link'><a href="Sketchup/Tools.html" title="Sketchup::Tools (class)">Tools</a></span>, <span class='object_link'><a href="Sketchup/ToolsObserver.html" title="Sketchup::ToolsObserver (class)">ToolsObserver</a></span>, <span class='object_link'><a href="Sketchup/UVHelper.html" title="Sketchup::UVHelper (class)">UVHelper</a></span>, <span class='object_link'><a href="Sketchup/Vertex.html" title="Sketchup::Vertex (class)">Vertex</a></span>, <span class='object_link'><a href="Sketchup/View.html" title="Sketchup::View (class)">View</a></span>, <span class='object_link'><a href="Sketchup/ViewObserver.html" title="Sketchup::ViewObserver (class)">ViewObserver</a></span>
     
   
 </p>
@@ -779,7 +808,7 @@ currently registered with SketchUp.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#install_from_archive-class_method" title="install_from_archive (class method)">.<strong>install_from_archive</strong>(filename)  &#x21d2; Object </a>
+      <a href="#install_from_archive-class_method" title="install_from_archive (class method)">.<strong>install_from_archive</strong>(filename)  &#x21d2; Boolean </a>
     
 
     
@@ -1122,7 +1151,7 @@ value within the specified sub-section section of a .INI file or registry
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register_extension-class_method" title="register_extension (class method)">.<strong>register_extension</strong>(extension, load_on_start)  &#x21d2; Object </a>
+      <a href="#register_extension-class_method" title="register_extension (class method)">.<strong>register_extension</strong>(extension, load_on_start = false)  &#x21d2; Boolean </a>
     
 
     
@@ -1246,7 +1275,7 @@ files.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#send_action-class_method" title="send_action (class method)">.<strong>send_action</strong>(action)  &#x21d2; Object </a>
+      <a href="#send_action-class_method" title="send_action (class method)">.<strong>send_action</strong>(action)  &#x21d2; boolean </a>
     
 
     
@@ -1543,7 +1572,7 @@ entry box that appears at the bottom on the SketchUp window.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#write_default-class_method" title="write_default (class method)">.<strong>write_default</strong>(section, key, value)  &#x21d2; Object </a>
+      <a href="#write_default-class_method" title="write_default (class method)">.<strong>write_default</strong>(section, key, value)  &#x21d2; Boolean </a>
     
 
     
@@ -3790,7 +3819,7 @@ with the shortcut and the command separated by a tab, similar to
       <div class="method_details ">
   <h3 class="signature " id="install_from_archive-class_method">
   
-    .<strong>install_from_archive</strong>(filename)  &#x21d2; <tt>Object</tt> 
+    .<strong>install_from_archive</strong>(filename)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3843,7 +3872,7 @@ have a .rbz file extension.</p>
   <div class="docstring">
   <div class="discussion">
     
-<p>Returns extensionsmanager - an ExtensionsManager object.</p>
+<p>Returns .</p>
 
 
   </div>
@@ -3876,13 +3905,13 @@ have a .rbz file extension.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>extensionsmanager - an ExtensionsManager object.</p>
+<p>.</p>
 </div>
       
     </li>
@@ -3891,6 +3920,52 @@ have a .rbz file extension.</p>
 
 </div>
 
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Interrupt</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the user cancel the installation.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Exception</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the archive cannot be found.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Exception</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the archive cannot be installed.</p>
+</div>
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -5102,7 +5177,7 @@ successful.</p>
       <div class="method_details ">
   <h3 class="signature " id="register_extension-class_method">
   
-    .<strong>register_extension</strong>(extension, load_on_start)  &#x21d2; <tt>Object</tt> 
+    .<strong>register_extension</strong>(extension, load_on_start = false)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -5146,7 +5221,7 @@ SketchUp&#39;s extension manager (in SketchUp preferences).</p>
   <div class="docstring">
   <div class="discussion">
     
-<p>Returns status - true if extension registered properly</p>
+<p>Returns <code>true</code> if extension registered properly</p>
 
 
   </div>
@@ -5160,7 +5235,7 @@ SketchUp&#39;s extension manager (in SketchUp preferences).</p>
         <span class='name'>extension</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="SketchupExtension.html" title="SketchupExtension (class)">SketchupExtension</a></span></tt>)</span>
       
       
       
@@ -5176,8 +5251,10 @@ SketchUp&#39;s extension manager (in SketchUp preferences).</p>
         <span class='name'>load_on_start</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
       
       
         &mdash;
@@ -5196,13 +5273,13 @@ that it will load automatically whenever SketchUp restarts.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>status - true if extension registered properly</p>
+<p><code>true</code> if extension registered properly</p>
 </div>
       
     </li>
@@ -5444,8 +5521,10 @@ object.</p>
 files. This is an alias of the Sketchup.load method.</p>
 
 <p>You do not need to include the file extension on the path. This method will
-look for .rb first (unencrypted) and then .rbe (encrypted) and finally .rbs
-(the deprecated scrambled format) files.</p>
+look for .rbe first (encrypted) and then .rbs (the deprecated scrambled
+format) and finally .rb (unencrypted) files. The loading order was changed
+in SketchUp 2016 when the new .rbe encryption was introduced. Prior to
+SketchUp 2016 the loading order was first .rb then .rbs.</p>
 
 
   </div>
@@ -5652,7 +5731,7 @@ thumbnail.</p>
       <div class="method_details ">
   <h3 class="signature " id="send_action-class_method">
   
-    .<strong>send_action</strong>(action)  &#x21d2; <tt>Object</tt> 
+    .<strong>send_action</strong>(action)  &#x21d2; <tt>boolean</tt> 
   
 
   
@@ -5665,207 +5744,401 @@ thumbnail.</p>
 action asynchronously.</p>
 
 <p>Valid actions are:</p>
-
-<pre class="code"><code class="">- showRubyPanel:
-- viewBack:
-- viewBottom:
-- viewFront:
-- viewIso:
-- viewLeft:
-- viewRight:
-- viewTop:
-- viewPerspective:
-- viewShowAxes:
-- viewShowHidden:
-- viewZoomExtents:
-- viewZoomToSelection:
-- viewUndo:
-- selectOrbitTool:
-- selectPositionCameraTool:
-- selectDollyTool:
-- selectTurnTool:
-- selectWalkTool:
-- selectZoomTool:
-- selectFieldOfViewTool:
-- selectZoomWindowTool:
-- pageAdd:
-- pageDelete:
-- pageUpdate:
-- pageNext:
-- pagePrevious:
-- renderWireframe:
-- renderHiddenLine:
-- renderMonochrome:
-- renderShaded:
-- renderTextures:
-- selectArcTool:
-- selectArc3PointTool:
-- selectArc3PointPieTool:
-- selectAxisTool:
-- selectCircleTool:
-- selectEraseTool:
-- selectFreehandTool:
-- selectLineTool:
-- selectMeasureTool:
-- selectMoveTool:
-- selectOffsetTool:
-- selectPaintTool:
-- selectPolygonTool:
-- selectProtractorTool:
-- selectPushPullTool:
-- selectRectangleTool:
-- selectRectangle3PointTool:
-- selectRotateTool:
-- selectScaleTool:
-- selectSectionPlaneTool:
-- selectTextTool:
-- selectDimensionTool:
-- selectExtrudeTool:
-- selectSelectionTool:
-- editUndo:
-- editRedo:
-- editHide:
-- editUnhide:
-- fixNonPlanarFaces:</code></pre>
+<ul><li>
+<p>showRubyPanel:</p>
+</li><li>
+<p>viewBack:</p>
+</li><li>
+<p>viewBottom:</p>
+</li><li>
+<p>viewFront:</p>
+</li><li>
+<p>viewIso:</p>
+</li><li>
+<p>viewLeft:</p>
+</li><li>
+<p>viewRight:</p>
+</li><li>
+<p>viewTop:</p>
+</li><li>
+<p>viewPerspective:</p>
+</li><li>
+<p>viewShowAxes:</p>
+</li><li>
+<p>viewShowHidden:</p>
+</li><li>
+<p>viewZoomExtents:</p>
+</li><li>
+<p>viewZoomToSelection:</p>
+</li><li>
+<p>viewUndo:</p>
+</li><li>
+<p>selectOrbitTool:</p>
+</li><li>
+<p>selectPositionCameraTool:</p>
+</li><li>
+<p>selectDollyTool:</p>
+</li><li>
+<p>selectTurnTool:</p>
+</li><li>
+<p>selectWalkTool:</p>
+</li><li>
+<p>selectZoomTool:</p>
+</li><li>
+<p>selectFieldOfViewTool:</p>
+</li><li>
+<p>selectZoomWindowTool:</p>
+</li><li>
+<p>pageAdd:</p>
+</li><li>
+<p>pageDelete:</p>
+</li><li>
+<p>pageUpdate:</p>
+</li><li>
+<p>pageNext:</p>
+</li><li>
+<p>pagePrevious:</p>
+</li><li>
+<p>renderWireframe:</p>
+</li><li>
+<p>renderHiddenLine:</p>
+</li><li>
+<p>renderMonochrome:</p>
+</li><li>
+<p>renderShaded:</p>
+</li><li>
+<p>renderTextures:</p>
+</li><li>
+<p>selectArcTool:</p>
+</li><li>
+<p>selectArc3PointTool:</p>
+</li><li>
+<p>selectArc3PointPieTool:</p>
+</li><li>
+<p>selectAxisTool:</p>
+</li><li>
+<p>selectCircleTool:</p>
+</li><li>
+<p>selectEraseTool:</p>
+</li><li>
+<p>selectFreehandTool:</p>
+</li><li>
+<p>selectLineTool:</p>
+</li><li>
+<p>selectMeasureTool:</p>
+</li><li>
+<p>selectMoveTool:</p>
+</li><li>
+<p>selectOffsetTool:</p>
+</li><li>
+<p>selectPaintTool:</p>
+</li><li>
+<p>selectPolygonTool:</p>
+</li><li>
+<p>selectProtractorTool:</p>
+</li><li>
+<p>selectPushPullTool:</p>
+</li><li>
+<p>selectRectangleTool:</p>
+</li><li>
+<p>selectRectangle3PointTool:</p>
+</li><li>
+<p>selectRotateTool:</p>
+</li><li>
+<p>selectScaleTool:</p>
+</li><li>
+<p>selectSectionPlaneTool:</p>
+</li><li>
+<p>selectTextTool:</p>
+</li><li>
+<p>selectDimensionTool:</p>
+</li><li>
+<p>selectExtrudeTool:</p>
+</li><li>
+<p>selectSelectionTool:</p>
+</li><li>
+<p>editUndo:</p>
+</li><li>
+<p>editRedo:</p>
+</li><li>
+<p>editHide:</p>
+</li><li>
+<p>editUnhide:</p>
+</li><li>
+<p>fixNonPlanarFaces:</p>
+</li></ul>
 
 <p>Added in SketchUp 8.0+:</p>
+<ul><li>
+<p>addBuilding:</p>
+</li><li>
+<p>getPhotoTexture:</p>
+</li><li>
+<p>selectImageIglooTool:</p>
+</li><li>
+<p>selectNorthTool:</p>
+</li></ul>
 
-<pre class="code"><code class="">- addBuilding:
-- getPhotoTexture:
-- selectImageIglooTool:
-- selectNorthTool:</code></pre>
+<p>Added in SketchUp 2013+:</p>
+<ul><li>
+<p>showExtensionStore:</p>
+</li></ul>
 
 <p>Removed in SketchUp 2013+:</p>
-
-<pre class="code"><code class="">- addBuilding:</code></pre>
+<ul><li>
+<p>addBuilding:</p>
+</li></ul>
 
 <p>On the PC only, you can also send these numeric values. (Note that these
 are officially “unsupported” and are not guaranteed to work in current or
 future versions of the API.)</p>
-
-<pre class="code"><code class="">- 10501: set view to Top
-- 10502: set view to Front
-- 10503: set view to Rear
-- 10504: set view to Left
-- 10505: set view to Right
-- 10506: set view to Bottom
-- 10507: set view to Axonometric
-- 10510: set render mode to Wire
-- 10511: set render mode to Hidden lines removal
-- 10512: set render mode to Surfaces Shading
-- 10513: set render mode to Transparency
-- 10519: set camera to ortho (removes perspective)
-- 10520: walk tool
-- 10521: display the System Preferences dialog box (Files tab)
-- 10522: removes axes display
-- 10523: pan tool
-- 10525: set the interactive eye height feature
-- 10526: zoom window
-- 10527: zoom extents
-- 10529: zoom out 2
-- 10531: toggle the Standard toolbar
-- 10532: toggle the Camera toolbar
-- 10533: display the Shadows Settings dialog box
-- 10537: toggle the Views toolbar
-- 10538: display the System Preferences dialog box (Display tab)
-- 10545: toggle Color ByLayer
-- 10546: toggle Shadows toolbar
-- 10551: toogle Large icons
-- 10576: toggle Render Mode toolbar
-- 10596: set Render Mode to No Transparency (Preferences)
-- 10597: set Render Mode to Wire (Preferences)
-- 10598: set Render Mode to Transparency (Preferences)
-- 10599: set Render Mode to Surfaces Shading (Preferences)
-- 10600: set Render Mode to Texture (Preferences)
-- 10601: set Render Mode to No Texture (Preferences)
-- 10602: toggle Shadows
-- 10603: toggle Profiles
-- 10604: toggle Extension Lines
-- 10605: toggle Jitter edges
-- 21019: hide Status bar and VCB
-- 21020: show Status bar and VCB
-- 21022: hide Status bar and VCB
-- 21023: place 3d text box
-- 21024: select the Measure tool
-- 21031: select the Freehand Draw tool
-- 21041: select the PushPull tool
-- 21048: select the Move tool
-- 21052: hide selected objects
-- 21056: create face with selected edges closed loop
-- 21057: select the Protractor tool
-- 21060: display Components Window
-- 21061: toggle Draw toolbar
-- 21063: toggle Model Bounding Box display
-- 21065: select the Arc tool
-- 21067: creat a new Page
-- 21069: select the Arc 3 Point tool
-- 21070: select the Arc 3 Point Pie tool
-- 21074: show the Materials Browser Window
-- 21076: display the Preferences dialog box (Text activated)
-- 21077: display the Tip of the day Window
-- 21078: select the Paint Bucket tool
-- 21080: display the Page Manager Window
-- 21082: display the Macros Dialog Box
-- 21086: display the Components Browser Window
-- 21094: select the Rectangle tool
-- 21095: select the Polygon tool
-- 21096: select the Circle tool
-- 21098: open the Open Window
-- 21100: select the Offset tool
-- 21101: slect all objects
-- 21112: open the Import Window
-- 21124: launch the validity check tool
-- 21126: select the Axes tool
-- 21029: select the Rotate tool
-- 21032: toggle Layer toolbar
-- 21036: display the Save as Window
-- 21046: spin the model a full 360&amp;deg; and display report
-- 21047: fast Pick Time report
-- 21049: open the Export model Window
-- 21169: select the Position Camera tool
-- 21170: display the Preferences, Tour Guide activated
-- 21180: create a new Page just right of selected page
-- 21200: display the Insert Image Window
-- 21233: display Area of selected face
-- 21234: display Area of all faces with selected material
-- 21236: select the Scale tool
-- 21237: display the Export 2D Graphics Window
-- 21245: display a Polygon Offset Factors dialog box
-- 21276: reverse selected face(s)
-- 21287: select the Divide feature
-- 21337: select the Section Plane Placement tool
-- 21354: open the Layer Window
-- 21386: open the Export Animation Window
-- 21405: select the Text tool
-- 21406: display Fog dialog box
-- 21410: select the Dim tool
-- 21433: toggle Edit toolbar
-- 21442: select the FollowMe tool
-- 21448: select the Axes tool
-- 21453: select all objects
-- 21460: display Licence
-- 21462: display Authorization dialog box
-- 21463: display un-authorizing message
-- 21464: display Open Licence files (Network) Window
-- 21466: display Quick reference Card in Adobe Reader
-- 21467: display Licences in use dialog box
-- 21469: zoom extents to selected objects
-- 21476: perform a non-planar check on selected objects
-- 21477: list accelerators in window
-- 21485: erase selected objects
-- 21487: display Edit current material dialog box
-- 21485: erase all new created pages
-- 21488: display Entity Info Window
-- 21490: display Soften Edges Window
-- 21491: display Profiles
-- 21492: display Extended Edges
-- 21493: display Jitter Lines
-- 21494: select Field of view tool
-- 21513: display the outliner
-- 21520: override Tile Rendering Size dialog box
-- 21525: select the FollowMe tool
-- 21542: display the Insert Image Window
-- 21560 and up: causes a runtime Error</code></pre>
+<ul><li>
+<p>10501: set view to Top</p>
+</li><li>
+<p>10502: set view to Front</p>
+</li><li>
+<p>10503: set view to Rear</p>
+</li><li>
+<p>10504: set view to Left</p>
+</li><li>
+<p>10505: set view to Right</p>
+</li><li>
+<p>10506: set view to Bottom</p>
+</li><li>
+<p>10507: set view to Axonometric</p>
+</li><li>
+<p>10510: set render mode to Wire</p>
+</li><li>
+<p>10511: set render mode to Hidden lines removal</p>
+</li><li>
+<p>10512: set render mode to Surfaces Shading</p>
+</li><li>
+<p>10513: set render mode to Transparency</p>
+</li><li>
+<p>10519: set camera to ortho (removes perspective)</p>
+</li><li>
+<p>10520: walk tool</p>
+</li><li>
+<p>10521: display the System Preferences dialog box (Files tab)</p>
+</li><li>
+<p>10522: removes axes display</p>
+</li><li>
+<p>10523: pan tool</p>
+</li><li>
+<p>10525: set the interactive eye height feature</p>
+</li><li>
+<p>10526: zoom window</p>
+</li><li>
+<p>10527: zoom extents</p>
+</li><li>
+<p>10529: zoom out 2</p>
+</li><li>
+<p>10531: toggle the Standard toolbar</p>
+</li><li>
+<p>10532: toggle the Camera toolbar</p>
+</li><li>
+<p>10533: display the Shadows Settings dialog box</p>
+</li><li>
+<p>10537: toggle the Views toolbar</p>
+</li><li>
+<p>10538: display the System Preferences dialog box (Display tab)</p>
+</li><li>
+<p>10545: toggle Color ByLayer</p>
+</li><li>
+<p>10546: toggle Shadows toolbar</p>
+</li><li>
+<p>10551: toogle Large icons</p>
+</li><li>
+<p>10576: toggle Render Mode toolbar</p>
+</li><li>
+<p>10596: set Render Mode to No Transparency (Preferences)</p>
+</li><li>
+<p>10597: set Render Mode to Wire (Preferences)</p>
+</li><li>
+<p>10598: set Render Mode to Transparency (Preferences)</p>
+</li><li>
+<p>10599: set Render Mode to Surfaces Shading (Preferences)</p>
+</li><li>
+<p>10600: set Render Mode to Texture (Preferences)</p>
+</li><li>
+<p>10601: set Render Mode to No Texture (Preferences)</p>
+</li><li>
+<p>10602: toggle Shadows</p>
+</li><li>
+<p>10603: toggle Profiles</p>
+</li><li>
+<p>10604: toggle Extension Lines</p>
+</li><li>
+<p>10605: toggle Jitter edges</p>
+</li><li>
+<p>21019: hide Status bar and VCB</p>
+</li><li>
+<p>21020: show Status bar and VCB</p>
+</li><li>
+<p>21022: hide Status bar and VCB</p>
+</li><li>
+<p>21023: place 3d text box</p>
+</li><li>
+<p>21024: select the Measure tool</p>
+</li><li>
+<p>21031: select the Freehand Draw tool</p>
+</li><li>
+<p>21041: select the PushPull tool</p>
+</li><li>
+<p>21048: select the Move tool</p>
+</li><li>
+<p>21052: hide selected objects</p>
+</li><li>
+<p>21056: create face with selected edges closed loop</p>
+</li><li>
+<p>21057: select the Protractor tool</p>
+</li><li>
+<p>21060: display Components Window</p>
+</li><li>
+<p>21061: toggle Draw toolbar</p>
+</li><li>
+<p>21063: toggle Model Bounding Box display</p>
+</li><li>
+<p>21065: select the Arc tool</p>
+</li><li>
+<p>21067: creat a new Page</p>
+</li><li>
+<p>21069: select the Arc 3 Point tool</p>
+</li><li>
+<p>21070: select the Arc 3 Point Pie tool</p>
+</li><li>
+<p>21074: show the Materials Browser Window</p>
+</li><li>
+<p>21076: display the Preferences dialog box (Text activated)</p>
+</li><li>
+<p>21077: display the Tip of the day Window</p>
+</li><li>
+<p>21078: select the Paint Bucket tool</p>
+</li><li>
+<p>21080: display the Page Manager Window</p>
+</li><li>
+<p>21082: display the Macros Dialog Box</p>
+</li><li>
+<p>21086: display the Components Browser Window</p>
+</li><li>
+<p>21094: select the Rectangle tool</p>
+</li><li>
+<p>21095: select the Polygon tool</p>
+</li><li>
+<p>21096: select the Circle tool</p>
+</li><li>
+<p>21098: open the Open Window</p>
+</li><li>
+<p>21100: select the Offset tool</p>
+</li><li>
+<p>21101: slect all objects</p>
+</li><li>
+<p>21112: open the Import Window</p>
+</li><li>
+<p>21124: launch the validity check tool</p>
+</li><li>
+<p>21126: select the Axes tool</p>
+</li><li>
+<p>21029: select the Rotate tool</p>
+</li><li>
+<p>21032: toggle Layer toolbar</p>
+</li><li>
+<p>21036: display the Save as Window</p>
+</li><li>
+<p>21046: spin the model a full 360&amp;deg; and display report</p>
+</li><li>
+<p>21047: fast Pick Time report</p>
+</li><li>
+<p>21049: open the Export model Window</p>
+</li><li>
+<p>21169: select the Position Camera tool</p>
+</li><li>
+<p>21170: display the Preferences, Tour Guide activated</p>
+</li><li>
+<p>21180: create a new Page just right of selected page</p>
+</li><li>
+<p>21200: display the Insert Image Window</p>
+</li><li>
+<p>21233: display Area of selected face</p>
+</li><li>
+<p>21234: display Area of all faces with selected material</p>
+</li><li>
+<p>21236: select the Scale tool</p>
+</li><li>
+<p>21237: display the Export 2D Graphics Window</p>
+</li><li>
+<p>21245: display a Polygon Offset Factors dialog box</p>
+</li><li>
+<p>21276: reverse selected face(s)</p>
+</li><li>
+<p>21287: select the Divide feature</p>
+</li><li>
+<p>21337: select the Section Plane Placement tool</p>
+</li><li>
+<p>21354: open the Layer Window</p>
+</li><li>
+<p>21386: open the Export Animation Window</p>
+</li><li>
+<p>21405: select the Text tool</p>
+</li><li>
+<p>21406: display Fog dialog box</p>
+</li><li>
+<p>21410: select the Dim tool</p>
+</li><li>
+<p>21433: toggle Edit toolbar</p>
+</li><li>
+<p>21442: select the FollowMe tool</p>
+</li><li>
+<p>21448: select the Axes tool</p>
+</li><li>
+<p>21453: select all objects</p>
+</li><li>
+<p>21460: display Licence</p>
+</li><li>
+<p>21462: display Authorization dialog box</p>
+</li><li>
+<p>21463: display un-authorizing message</p>
+</li><li>
+<p>21464: display Open Licence files (Network) Window</p>
+</li><li>
+<p>21466: display Quick reference Card in Adobe Reader</p>
+</li><li>
+<p>21467: display Licences in use dialog box</p>
+</li><li>
+<p>21469: zoom extents to selected objects</p>
+</li><li>
+<p>21476: perform a non-planar check on selected objects</p>
+</li><li>
+<p>21477: list accelerators in window</p>
+</li><li>
+<p>21485: erase selected objects</p>
+</li><li>
+<p>21487: display Edit current material dialog box</p>
+</li><li>
+<p>21485: erase all new created pages</p>
+</li><li>
+<p>21488: display Entity Info Window</p>
+</li><li>
+<p>21490: display Soften Edges Window</p>
+</li><li>
+<p>21491: display Profiles</p>
+</li><li>
+<p>21492: display Extended Edges</p>
+</li><li>
+<p>21493: display Jitter Lines</p>
+</li><li>
+<p>21494: select Field of view tool</p>
+</li><li>
+<p>21513: display the outliner</p>
+</li><li>
+<p>21520: override Tile Rendering Size dialog box</p>
+</li><li>
+<p>21525: select the FollowMe tool</p>
+</li><li>
+<p>21542: display the Insert Image Window</p>
+</li><li>
+<p>21560 and up: causes a runtime Error</p>
+</li></ul>
 
 
   </div>
@@ -5883,7 +6156,7 @@ future versions of the API.)</p>
   <div class="docstring">
   <div class="discussion">
     
-<p>Returns result - true if successful, false if unsuccessful</p>
+<p>Returns <code>true</code> if successful, <code>false</code> if unsuccessful</p>
 
 
   </div>
@@ -5897,7 +6170,7 @@ future versions of the API.)</p>
         <span class='name'>action</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>, <tt>Integer</tt>)</span>
       
       
       
@@ -5916,13 +6189,13 @@ future versions of the API.)</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
-<p>result - true if successful, false if unsuccessful</p>
+<p><code>true</code> if successful, <code>false</code> if unsuccessful</p>
 </div>
       
     </li>
@@ -5941,7 +6214,7 @@ future versions of the API.)</p>
       
         
         <div class='inline'>
-<p>SketchUp 6.0 (changes in SketchUp 8.0/2013)</p>
+<p>SketchUp 6.0</p>
 </div>
       
     </li>
@@ -6924,7 +7197,7 @@ integer value as follows:</p>
       <div class="method_details ">
   <h3 class="signature " id="write_default-class_method">
   
-    .<strong>write_default</strong>(section, key, value)  &#x21d2; <tt>Object</tt> 
+    .<strong>write_default</strong>(section, key, value)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -6935,11 +7208,8 @@ integer value as follows:</p>
     
 <p>The write_default method is used to set the string associated with a
 variable within the specified sub-section of a .plist file on the Mac or
-the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
-<dl class="rdoc-list label-list"><dt>Version
-<dd>
-<p>section).</p>
-</dd></dl>
+the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp
+[Version] section).</p>
 
 
   </div>
@@ -6950,8 +7220,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_write_default'>write_default</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>section</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my_value</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_write_default'>write_default</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>section</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my_value</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -6972,7 +7241,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
         <span class='name'>section</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -6988,7 +7257,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
         <span class='name'>key</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -7004,7 +7273,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
         <span class='name'>value</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -7023,11 +7292,11 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
-        
+        &mdash;
         <div class='inline'>
 <p>result - True if successful, false if unsuccessful.</p>
 </div>
@@ -7063,7 +7332,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Apr 12 20:17:09 2016 by
+  Generated on Thu Dec 15 09:55:21 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

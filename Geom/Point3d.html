@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
-    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
-  <link rel='stylesheet' type='text/css'
-    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
@@ -16,9 +12,9 @@
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
-
   <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/rubyapi.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Geom::Point3d";
@@ -31,16 +27,49 @@
   <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
 </head>
 <body>
 
-  <div id="su-header">
-    <h1>
-      <a href="http://extensions.sketchup.com/developer_center">
-        <b>SketchUp</b> Developer Center
-      </a>
-    </h1>
-  </div>
+  <!-- SU - start -->
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div id="api-documentation-header">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="http://developer.sketchup.com" title="Home">
+                <img src="http://developer.sketchup.com/sites/help.sketchup.com/files/SU_Developer-RedWhite.png" alt="Home">
+            </a>
+            <a class="name navbar-brand" href="/en" title="Home">SketchUp Developer Center</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf"><a href="http://forums.sketchup.com/c/developers">Community</a></li>
+                    <li class="leaf"><a href="http://blog.sketchup.com/tags/developers">SketchUpdate Blog</a></li>
+                    <li class="leaf"><a href="http://www.sketchup.com/download" class="top-menu--download-button">Download</a></li>
+                    <li class="last expanded dropdown">
+                        <a href="http://www.trimble.com" class="trimble-top-menu-item dropdown-toggle" data-target="#" data-toggle="dropdown"><img src="http://www.sketchup.com/sites/developers.sketchup.com/files/core/trimble-logo-white.png"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="first leaf"><a href="http://connect.trimble.com/">Trimble Connect</a></li>
+                            <li class="leaf"><a href="https://www.trimble.com/Corporate/About_Trimble.aspx">About Trimble</a></li>
+                            <li class="last leaf"><a href="http://buildings.trimble.com/">Trimble Buildings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- SU - end -->
 
   <div id="su-content">
 
@@ -468,7 +497,7 @@ to a plane.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(x, y, z)  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Object </a>
     
 
     
@@ -665,7 +694,7 @@ is closest to the point.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(x, y, z)  &#x21d2; Object </a>
+      <a href="#set%21-instance_method" title="#set! (instance method)">#<strong>set!</strong>(*args)  &#x21d2; Object </a>
     
 
     
@@ -680,7 +709,7 @@ is closest to the point.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The set! method is used to set the values of the Point3d.</p>
+<p>The <span class='object_link'><a href="#set%21-instance_method" title="Geom::Point3d#set! (method)">#set!</a></span> method is used to set the values of the Point3d.</p>
 </div></span>
   
 </li>
@@ -960,7 +989,21 @@ create a new point.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(x, y, z)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(x, y, z = 0.0)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(point3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(array3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(array2d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(input_point)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(vertex)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
   
 
   
@@ -970,9 +1013,6 @@ create a new point.</p>
   <div class="discussion">
     
 <p>The new method is used to create a new 3D point.</p>
-
-<p>With no arguments, this creates a point at the origin (0,0,0). With two
-values, it creates a point at (x,y,0).</p>
 
 
   </div>
@@ -995,11 +1035,30 @@ values, it creates a point at (x,y,0).</p>
     
   </div>
 
-  <div class="docstring">
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
   <div class="discussion">
     
-<p>Returns point - the newly created Point3d object</p>
 
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(x, y, z = 0.0)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
 
   </div>
 </div>
@@ -1012,7 +1071,7 @@ values, it creates a point at (x,y,0).</p>
         <span class='name'>x</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
       
       
       
@@ -1028,7 +1087,7 @@ values, it creates a point at (x,y,0).</p>
         <span class='name'>y</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
       
       
       
@@ -1044,8 +1103,10 @@ values, it creates a point at (x,y,0).</p>
         <span class='name'>z</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>0.0</tt>)</em>
       
       
         &mdash;
@@ -1059,6 +1120,159 @@ values, it creates a point at (x,y,0).</p>
 
 
 </div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(point3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>point3d</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(array3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array3d</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(array2d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array2d</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(input_point)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input_point</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Sketchup/InputPoint.html" title="Sketchup::InputPoint (class)">Sketchup::InputPoint</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(vertex)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>vertex</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Sketchup/Vertex.html" title="Sketchup::Vertex (class)">Sketchup::Vertex</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -3003,7 +3217,11 @@ BY + CZ + D = 0. See Geom for details.</p>
       <div class="method_details ">
   <h3 class="signature " id="set!-instance_method">
   
-    #<strong>set!</strong>(x, y, z)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>set!</strong>(point3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
+      <span class="overload">#<strong>set!</strong>(array3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+    
   
 
   
@@ -3012,7 +3230,7 @@ BY + CZ + D = 0. See Geom for details.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The set! method is used to set the values of the Point3d.</p>
+<p>The <span class='object_link'><a href="#set%21-instance_method" title="Geom::Point3d#set! (method)">#set!</a></span> method is used to set the values of the Point3d.</p>
 
 
   </div>
@@ -3028,11 +3246,15 @@ BY + CZ + D = 0. See Geom for details.</p>
     
   </div>
 
-  <div class="docstring">
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>set!</strong>(point3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
   <div class="discussion">
     
-<p>Returns point - the newly created Point3d object</p>
-
 
   </div>
 </div>
@@ -3042,49 +3264,12 @@ BY + CZ + D = 0. See Geom for details.</p>
   
     <li>
       
-        <span class='name'>x</span>
+        <span class='name'>point3d</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>The location along the x axis .</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>y</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The location along the y axis.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>z</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The location along the z axis.</p>
-</div>
       
     </li>
   
@@ -3096,20 +3281,61 @@ BY + CZ + D = 0. See Geom for details.</p>
     <li>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
       
       
-      
-        
-        <div class='inline'>
-<p>point - the newly created Point3d object</p>
-</div>
       
     </li>
   
 </ul>
 
 </div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>set!</strong>(array3d)  &#x21d2; <tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array3d</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>(<span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="../Numeric.html" title="Numeric (class)">Numeric</a></span>)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Geom::Point3d (class)">Geom::Point3d</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Version:</p>
 <ul class="version">
@@ -4078,7 +4304,7 @@ create a new point.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Apr 12 20:17:16 2016 by
+  Generated on Thu Dec 15 09:55:27 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 

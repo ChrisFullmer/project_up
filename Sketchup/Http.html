@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Module: Sketchup::Licensing
+  Module: Sketchup::Http
   
     &mdash; SketchUp Ruby API Documentation
   
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/rubyapi.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Sketchup::Licensing";
+  pathId = "Sketchup::Http";
   relpath = '../';
 </script>
 
@@ -82,10 +82,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../_index.html">Index (L)</a> &raquo;
+    <a href="../_index.html">Index (H)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span>
      &raquo; 
-    <span class="title">Licensing</span>
+    <span class="title">Http</span>
   
 </div>
 
@@ -107,7 +107,7 @@
 
       <iframe id="search_frame" src="../class_list.html"></iframe>
 
-      <div id="content"><h1>Module: Sketchup::Licensing
+      <div id="content"><h1>Module: Sketchup::Http
   
   
   
@@ -128,15 +128,9 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>The Sketchup::Licensing module contains methods for extensions purchased
-from Extension Warehouse to check their licensing status. It is advised to
-place these calls inside encrypted Ruby (.rbe) files. This API is also
-exposed via the SketchUp C API. Extensions that already use native code
-should prefer using the native API, which should be more secure than their
-Ruby API counterparts.</p>
-
-<p>See the <a href="../tutorial_licensing">Licensing Tutorial</a> for more
-details.</p>
+<p>The <span class='object_link'><a href="" title="Sketchup::Http (module)">Http</a></span> module provides interfaces to create asynchronous HTTP
+requests. This is an alternative to the Net::Http module that comes with
+Ruby StdLib - which is known to have issues within SketchUp.</p>
 
 
   </div>
@@ -153,7 +147,7 @@ details.</p>
       
         
         <div class='inline'>
-<p>SketchUp 2015</p>
+<p>SketchUp 2017</p>
 </div>
       
     </li>
@@ -166,7 +160,7 @@ details.</p>
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Licensing/ExtensionLicense.html" title="Sketchup::Licensing::ExtensionLicense (class)">ExtensionLicense</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Http/Request.html" title="Sketchup::Http::Request (class)">Request</a></span>, <span class='object_link'><a href="Http/Response.html" title="Sketchup::Http::Response (class)">Response</a></span>
     
   
 </p>
@@ -175,19 +169,40 @@ details.</p>
   
     <dl class="constants">
       
-        <dt id="LICENSED-constant" class="">Sketchup::Licensing::LICENSED
+        <dt id="GET-constant" class="">Sketchup::Http::GET
         </dt>
       
-        <dt id="EXPIRED-constant" class="">Sketchup::Licensing::EXPIRED
+        <dt id="POST-constant" class="">Sketchup::Http::POST
         </dt>
       
-        <dt id="TRIAL-constant" class="">Sketchup::Licensing::TRIAL
+        <dt id="PUT-constant" class="">Sketchup::Http::PUT
         </dt>
       
-        <dt id="TRIAL_EXPIRED-constant" class="">Sketchup::Licensing::TRIAL_EXPIRED
+        <dt id="DELETE-constant" class="">Sketchup::Http::DELETE
         </dt>
       
-        <dt id="NOT_LICENSED-constant" class="">Sketchup::Licensing::NOT_LICENSED
+        <dt id="HEAD-constant" class="">Sketchup::Http::HEAD
+        </dt>
+      
+        <dt id="OPTIONS-constant" class="">Sketchup::Http::OPTIONS
+        </dt>
+      
+        <dt id="PATCH-constant" class="">Sketchup::Http::PATCH
+        </dt>
+      
+        <dt id="STATUS_UNKNOWN-constant" class="">Sketchup::Http::STATUS_UNKNOWN
+        </dt>
+      
+        <dt id="STATUS_SUCCESS-constant" class="">Sketchup::Http::STATUS_SUCCESS
+        </dt>
+      
+        <dt id="STATUS_PENDING-constant" class="">Sketchup::Http::STATUS_PENDING
+        </dt>
+      
+        <dt id="STATUS_CANCELED-constant" class="">Sketchup::Http::STATUS_CANCELED
+        </dt>
+      
+        <dt id="STATUS_FAILED-constant" class="">Sketchup::Http::STATUS_FAILED
         </dt>
       
     </dl>
@@ -199,154 +214,7 @@ details.</p>
 
 
 
-  
-    <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
 
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#get_extension_license-class_method" title="get_extension_license (class method)">.<strong>get_extension_license</strong>(extension_id)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Acquires a license for a given extension.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="get_extension_license-class_method">
-  
-    .<strong>get_extension_license</strong>(extension_id)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Acquires a license for a given extension.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_ext_id'>ext_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4e215280-dd23-40c4-babb-b8a8dd29d5ee</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_ext_lic'>ext_lic</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='op'>::</span><span class='const'>Licensing</span><span class='period'>.</span><span class='id identifier rubyid_get_extension_license'>get_extension_license</span><span class='lparen'>(</span><span class='id identifier rubyid_ext_id'>ext_id</span><span class='rparen'>)</span>
-<span class='kw'>if</span> <span class='id identifier rubyid_ext_lic'>ext_lic</span><span class='period'>.</span><span class='id identifier rubyid_licensed?'>licensed?</span>
-   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Extension is licensed.</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></code></pre>
-    
-  </div>
-
-  <div class="docstring">
-  <div class="discussion">
-    
-<p>Returns ExtensionLicense - an object representing licensing state for the
-extension. Do not store this object, retrieve it again when needed since
-licensing state may have changed.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>extension_id</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>String - The Extension Warehouse UUID for the extension.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        
-        <div class='inline'>
-<p>ExtensionLicense - an object representing licensing state for the
-extension. Do not store this object, retrieve it again when needed since
-licensing state may have changed.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
-<p class="tag_title">Version:</p>
-<ul class="version">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'>
-<p>SketchUp 2015</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-</div>
-    
-  </div>
 
 </div>
 

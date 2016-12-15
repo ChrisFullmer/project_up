@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
-    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
-  <link rel='stylesheet' type='text/css'
-    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
@@ -16,42 +12,74 @@
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
-
   <link rel="stylesheet" href="css/sketchup.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/rubyapi.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   pathId = "Array";
   relpath = '';
 </script>
 
-  
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico">
+  <link rel='stylesheet' type='text/css'
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
   <script>
+  // Every time this page is loaded, it sends this action to SketchUp, telling
+  // SketchUp that a new page has loaded that has example snippets that should
+  // be replaced with code editors. Nothing happens if the page is loaded in a
+  // regular browser - outside the SketchUp client.
   $( document ).ready(function() {
     if (typeof sketchup == 'object') { 
-       sketchup.page_loaded("");
-    } else {
-      window.location = 'skp:page_loaded@nil';
-    }
+       sketchup.page_loaded();
     });
-
   </script>
-  
 </head>
 <body>
 
-  <div id="su-header">
-    <h1>
-      <a href="http://extensions.sketchup.com/developer_center">
-        <b>SketchUp</b> Developer Center
-      </a>
-    </h1>
-  </div>
+  <!-- SU - start -->
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div id="api-documentation-header">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="http://developer.sketchup.com" title="Home">
+                <img src="http://developer.sketchup.com/sites/help.sketchup.com/files/SU_Developer-RedWhite.png" alt="Home">
+            </a>
+            <a class="name navbar-brand" href="/en" title="Home">SketchUp Developer Center</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf"><a href="http://forums.sketchup.com/c/developers">Community</a></li>
+                    <li class="leaf"><a href="http://blog.sketchup.com/tags/developers">SketchUpdate Blog</a></li>
+                    <li class="leaf"><a href="http://www.sketchup.com/download" class="top-menu--download-button">Download</a></li>
+                    <li class="last expanded dropdown">
+                        <a href="http://www.trimble.com" class="trimble-top-menu-item dropdown-toggle" data-target="#" data-toggle="dropdown"><img src="http://www.sketchup.com/sites/developers.sketchup.com/files/core/trimble-logo-white.png"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="first leaf"><a href="http://connect.trimble.com/">Trimble Connect</a></li>
+                            <li class="leaf"><a href="https://www.trimble.com/Corporate/About_Trimble.aspx">About Trimble</a></li>
+                            <li class="last leaf"><a href="http://buildings.trimble.com/">Trimble Buildings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- SU - end -->
 
   <div id="su-content">
 
@@ -142,7 +170,6 @@ values.</p>
     <p class="tag_title">Examples:</p>
     
       
-
       <pre class="example code"><code><span class='comment'># An array of 3 values can represent a 1&quot; long vector pointing straight
 </span><span class='comment'># up in the z-direction.
 </span><span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span>
@@ -1557,9 +1584,9 @@ vectors.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_vector'>vector</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='comment'># This will return a Float, in this case 22.0
+      <pre class="example code"><code><span class='id identifier rubyid_vector'>vector</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Vector3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>12</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+<span class='comment'># This will return a Float, in this case 144.0
 </span><span class='id identifier rubyid_dot_product'>dot_product</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_dot'>dot</span><span class='lparen'>(</span><span class='id identifier rubyid_vector'>vector</span><span class='rparen'>)</span></code></pre>
     
   </div>
@@ -4051,7 +4078,7 @@ point to a second point.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Apr 12 20:17:11 2016 by
+  Generated on Thu Dec 15 11:01:01 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 
