@@ -1716,7 +1716,7 @@ focused.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='comment'># Sketchup.add_observer is used to add an object to the SketchUp object.
+      <pre class="example code"><code><span class='comment'># Sketchup.add_observer is used to add an observer to the SketchUp object.
 </span><span class='comment'>#
 </span><span class='comment'># This is an example of an observer that watches the application for
 </span><span class='comment'># new models and shows a messagebox when a new model is opened. See the
@@ -1902,13 +1902,13 @@ user later draws lines into it with the break edges feature reactivated.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code>Sketchup.break_edges=false
-is_on = Sketchup.break_edges?
-puts &quot;Break edges is on? #{is_on}
+      <pre class="example code"><code><span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_break_edges'>break_edges</span><span class='op'>=</span><span class='kw'>false</span>
+<span class='id identifier rubyid_is_on'>is_on</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_break_edges?'>break_edges?</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Break edges is on? </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_is_on'>is_on</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
-Sketchup.break_edges=true
-is_on = Sketchup.break_edges?
-puts &quot;Break edges is on? #{is_on}</code></pre>
+<span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_break_edges'>break_edges</span><span class='op'>=</span><span class='kw'>true</span>
+<span class='id identifier rubyid_is_on'>is_on</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_break_edges?'>break_edges?</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Break edges is on? </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_is_on'>is_on</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
 
@@ -4199,7 +4199,9 @@ product.</p>
     
       
       <pre class="example code"><code><span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_is_pro?'>is_pro?</span><span class='rparen'>)</span>
-  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_messagebox'>messagebox</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are running SU Pro.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are running SU Pro.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>else</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are not running Pro</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></code></pre>
     
   </div>
@@ -4394,8 +4396,8 @@ article for details.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='comment'>#This example will return false because the file provided has already
-</span><span class='comment'>#been loaded.
+      <pre class="example code"><code><span class='comment'># This example will return false because the file provided has already
+</span><span class='comment'># been loaded.
 </span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>drapetool2.rbe</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Plugins/su_sandbox/</span><span class='tstring_end'>&quot;</span></span>
 
@@ -4499,7 +4501,8 @@ included.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_open_file'>open_file</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>C:\\model.skp</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='comment'># This example finds the current SketchUp Template and opens it.
+</span><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_open_file'>open_file</span><span class='lparen'>(</span><span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -7029,7 +7032,7 @@ SB_VCB_VALUE.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_vcb_value'>vcb_value</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text Value</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_vcb_value'>vcb_value</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a test!</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
 
@@ -7409,7 +7412,7 @@ the registry on Windows (within the Software &gt; SketchUp &gt; SketchUp
 </div>
 
       <div id="footer">
-  Generated on Thu Dec 15 15:59:06 2016 by
+  Generated on Thu Dec 15 16:26:04 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 
