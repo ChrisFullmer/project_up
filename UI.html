@@ -1081,15 +1081,16 @@ cursors. SVG format for Windows and PDF format for OS X.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='kw'>nil</span>
-<span class='id identifier rubyid_cursor_path'>cursor_path</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_find_support_file'>find_support_file</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pointer.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Plugins/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='kw'>if</span> <span class='id identifier rubyid_cursor_path'>cursor_path</span>
-  <span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_create_cursor'>create_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_path'>cursor_path</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>MyTool</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_onSetCursor'>onSetCursor</span>
+    <span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_cursor_path'>cursor_path</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_find_support_file'>find_support_file</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cursor_drape_1.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Plugins/su_sandbox/images</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_create_cursor'>create_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_path'>cursor_path</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_set_cursor'>set_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_id'>cursor_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_onSetCursor'>onSetCursor</span>
-  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_set_cursor'>set_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_id'>cursor_id</span><span class='rparen'>)</span>
-<span class='kw'>end</span></code></pre>
+<span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_select_tool'>select_tool</span><span class='lparen'>(</span><span class='const'>MyTool</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -2501,16 +2502,16 @@ things like <span class='object_link'><a href="Sketchup/View.html#draw2d-instanc
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code># Scale a set of points representing 2d screen points to account for high
-# DPI monitors.
-points2d = [
-  Geom::Point3d.new(0, 0, 0),
-  Geom::Point3d.new(8, 0, 0),
-  Geom::Point3d.new(8, 4, 0),
-  Geom::Point3d.new(0, 4, 0)
-]
-tr = Geom::Transformation.scaling(UI.scale_factor)
-points2d.each { |point| point.transform!(tr)</code></pre>
+      <pre class="example code"><code><span class='comment'># Scale a set of points representing 2d screen points to account for high
+</span><span class='comment'># DPI monitors.
+</span><span class='id identifier rubyid_points2d'>points2d</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+  <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>8</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>8</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Point3d</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='rbracket'>]</span>
+<span class='id identifier rubyid_tr'>tr</span> <span class='op'>=</span> <span class='const'>Geom</span><span class='op'>::</span><span class='const'>Transformation</span><span class='period'>.</span><span class='id identifier rubyid_scaling'>scaling</span><span class='lparen'>(</span><span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_scale_factor'>scale_factor</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_points2d'>points2d</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_point'>point</span><span class='op'>|</span> <span class='id identifier rubyid_point'>point</span><span class='period'>.</span><span class='id identifier rubyid_transform!'>transform!</span><span class='lparen'>(</span><span class='id identifier rubyid_tr'>tr</span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
 
@@ -2711,9 +2712,16 @@ to indicate SketchUp&#39;s state.</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='kw'>def</span> <span class='id identifier rubyid_onSetCursor'>onSetCursor</span>
-  <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_set_cursor'>set_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_id'>cursor_id</span><span class='rparen'>)</span>
-<span class='kw'>end</span></code></pre>
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>MyTool</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_onSetCursor'>onSetCursor</span>
+    <span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_cursor_path'>cursor_path</span> <span class='op'>=</span> <span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_find_support_file'>find_support_file</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cursor_drape_1.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Plugins/su_sandbox/images</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cursor_id'>cursor_id</span> <span class='op'>=</span> <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_create_cursor'>create_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_path'>cursor_path</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='const'>UI</span><span class='period'>.</span><span class='id identifier rubyid_set_cursor'>set_cursor</span><span class='lparen'>(</span><span class='id identifier rubyid_cursor_id'>cursor_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Sketchup</span><span class='period'>.</span><span class='id identifier rubyid_active_model'>active_model</span><span class='period'>.</span><span class='id identifier rubyid_select_tool'>select_tool</span><span class='lparen'>(</span><span class='const'>MyTool</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -3795,7 +3803,7 @@ cross-platform script.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Dec 15 15:59:06 2016 by
+  Generated on Thu Dec 15 21:56:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
 </div>
 
